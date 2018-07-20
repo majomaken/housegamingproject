@@ -1,0 +1,411 @@
+body{
+	font-family: 'Roboto', sans-serif;
+	margin: 0 auto;
+	padding: 0;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	background-image: url(grieta.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+#picture{
+  width: 200px;
+  float: center;
+}
+
+h1{
+	font-family: 'Eater', cursive;
+	font-size: 50px;
+}
+h1:hover{
+	color: #00afef;
+}
+h2{
+	font-family: 'Eater', cursive;
+}
+h2:hover{
+	color: #00afef;
+}
+h3{
+margin-top: 80%;
+color: white;
+}
+#divprincipal{
+top:50%;
+left:50%;
+margin-left:80px;
+margin-right: 70px;
+}
+
+p{
+	font-size: 25px;
+	margin:20px;
+}
+.divp{
+	background-color: #33cccc6e;
+	float: left;
+	margin: 10px;
+	padding: 5px;
+	min-width: 250px;
+	min-height: 250px;
+	border: 1px solid black;
+	box-shadow: 0 1px blue;
+	text-align: center;
+	border-radius: 5%;
+	position: relative;
+	transition-duration: 2s;
+
+}
+.divp:hover{
+	background-color: #0befc5;
+	border-radius: 30%;
+}
+/* Morgana */
+#d1{
+	background-color: #eb0bef8c;
+	background-image: url(morgana.jpg);
+	border-radius: 15px;
+	background-size: cover;
+	background-position: center;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 90%;
+	height: 90%;
+	margin: auto;
+	position: absolute;
+	transition:transform 3s, border-radius 2s, background-image 1s, background-position 3s;
+	cursor: pointer;
+}
+#d1:hover{
+	border-radius: 50%;
+	width: 90%;
+	transform : scale(1.5);
+	z-index: 1;
+	background-image: url(morgana2.jpg);
+	background-position: right;
+	box-shadow: 20px 10px 30px black,
+	20px 15px 50px #19e461a1,
+	-20px 15px 50px #19e461a1,
+	-20px -15px 50px #19e461a1,
+	20px -15px 50px #19e461a1;
+}
+/* Brand */
+#d2{
+	background-color: #eb0bef8c;
+	background-image: url(Brand.jpg);
+	border-radius: 15px;
+	background-size: cover;
+	background-position: center;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 90%;
+	height: 90%;
+	margin: auto;
+	position: absolute;
+	transition: transform 3s, border-radius 2s;
+	transition:transform 3s, border-radius 2s, background-image 1s, background-position 3s;
+	cursor: pointer;
+	}
+#d2:hover{
+	border-radius: 50%;
+	width: 90%;
+	transform : scale(1.5);
+	background-image: url(brand2.jpg);
+	box-shadow: 20px 10px 30px black,
+	20px 15px 50px #e9ff34bd,
+	-20px 15px 50px #e9ff34bd,
+	-20px -15px 50px #e9ff34bd,
+	20px -15px 50px #e9ff34bd;
+	z-index: 1;
+}
+/* Pyke */
+#d3{
+	background-color: #eb0bef8c;
+	background-image: url(pyke.jpg);
+	border-radius: 15px;
+	background-size: cover;
+	background-position: center;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 90%;
+	height: 90%;
+	margin: auto;
+	position: absolute;
+	transition: transform 3s, border-radius 2s;
+	transition:transform 3s, border-radius 2s, background-image 1s, background-position 3s;
+	cursor: pointer;
+}
+#d3:hover{
+	border-radius: 50%;
+	width: 90%;
+	transform : scale(1.5);
+	background-position: -55px 0px;
+	background-image: url(pyke2.jpg);
+	box-shadow: 20px 10px 30px black,
+	20px 15px 50px #e9ff34bd,
+	-20px 15px 50px #e9ff34bd,
+	-20px -15px 50px #e9ff34bd,
+	20px -15px 50px #e9ff34bd;
+	z-index: 1;
+}
+/* Soraka */
+#d4{
+	background-color: #eb0bef8c;
+	background-image: url(soraka.jpg);
+	border-radius: 15px;
+	background-size: cover;
+	background-position: center;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 90%;
+	height: 90%;
+	margin: auto;
+	position: absolute;
+	transition: transform 3s, border-radius 2s;
+	transition:transform 3s, border-radius 2s, background-image 1s, background-position 3s;
+	cursor: pointer;
+}
+#d4:hover{
+	border-radius: 50%;
+	width: 90%;
+	background-image: url(soraka2.jpg);
+	background-position: -120px 0px ;
+	transform : scale(1.5);
+	box-shadow: 20px 10px 30px black,
+	20px 15px 50px #19e461a1,
+	-20px 15px 50px #19e461a1,
+	-20px -15px 50px #19e461a1,
+	20px -15px 50px #19e461a1;
+	z-index: 1;
+}
+/* Alistar */
+#d5{
+	background-color: #eb0bef8c;
+	background-image: url(alistar.jpg);
+	border-radius: 15px;
+	background-size: cover;
+	background-position: center;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 90%;
+	height: 90%;
+	margin: auto;
+	position: absolute;
+	transition: transform 3s, border-radius 2s;
+	transition:transform 3s, border-radius 2s, background-image 1s, background-position 3s;
+	cursor: pointer;
+}
+#d5:hover{
+	border-radius: 50%;
+	width: 90%;
+	background-image: url(alistar2.jpg);
+	transform : scale(1.5);
+	box-shadow: 20px 10px 30px black,
+	20px 15px 50px #19e461a1,
+	-20px 15px 50px #19e461a1,
+	-20px -15px 50px #19e461a1,
+	20px -15px 50px #19e461a1;
+	z-index: 1;
+}
+/* Nami */
+#d6{
+	background-color: #eb0bef8c;
+	background-image: url(nami.jpg);
+	border-radius: 15px;
+	background-size: cover;
+	background-position: center;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 90%;
+	height: 90%;
+	margin: auto;
+	position: absolute;
+	transition: transform 3s, border-radius 2s;
+	transition:transform 3s, border-radius 2s, background-image 1s, background-position 3s;
+	cursor: pointer;
+}
+#d6:hover{
+	border-radius: 50%;
+	width: 90%;
+	background-image: url(nami2.jpg);
+	background-position: -150px 0px;
+	transform : scale(1.5);
+	box-shadow: 20px 10px 30px black,
+	20px 15px 50px #ef0b0b9e,
+	-20px 15px 50px #ef0b0b9e,
+	-20px -15px 50px #ef0b0b9e,
+	20px -15px 50px #ef0b0b9e;
+	z-index: 1;
+}
+/* Zyra */
+#d7{
+	background-color: #eb0bef8c;
+	background-image: url(zyra.jpg);
+	border-radius: 15px;
+	background-size: cover;
+	background-position: center;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 90%;
+	height: 90%;
+	margin: auto;
+	position: absolute;
+	transition: transform 3s, border-radius 2s;
+	transition:transform 3s, border-radius 2s, background-image 1s, background-position 3s;
+	cursor: pointer;
+}
+#d7:hover{
+	border-radius: 50%;
+	width: 90%;
+	background-image: url(zyra2.jpg);
+	background-position: -130px 0px;
+	transform : scale(1.5);
+	box-shadow: 20px 10px 30px black,
+	20px 15px 50px #e9ff34bd,
+	-20px 15px 50px #e9ff34bd,
+	-20px -15px 50px #e9ff34bd,
+	20px -15px 50px #e9ff34bd;
+	z-index: 1;
+}
+/* Fiddlesticks */
+#d8{
+	background-color: #eb0bef8c;
+	background-image: url(fiddlesticks.jpg);
+	border-radius: 15px;
+	background-size: cover;
+	background-position: center;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 90%;
+	height: 90%;
+	margin: auto;
+	position: absolute;
+	transition: transform 3s, border-radius 2s;
+	transition:transform 3s, border-radius 2s, background-image 1s, background-position 3s;
+	cursor: pointer;
+}
+#d8:hover{
+	border-radius: 50%;
+	width: 90%;
+	background-image: url(fiddlesticks2.jpg);
+	background-position: -150px 0px;
+	transform : scale(1.5);
+	box-shadow: 20px 10px 30px black,
+	20px 15px 50px #e9ff34bd,
+	-20px 15px 50px #e9ff34bd,
+	-20px -15px 50px #e9ff34bd,
+	20px -15px 50px #e9ff34bd;
+	z-index: 1;
+}
+/* Bard */
+#d9{
+	background-color: #eb0bef8c;
+	background-image: url(bard.jpg);
+	border-radius: 15px;
+	background-size: cover;
+	background-position: center;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 90%;
+	height: 90%;
+	margin: auto;
+	position: absolute;
+	transition: transform 3s, border-radius 2s;
+	transition:transform 3s, border-radius 2s, background-image 1s, background-position 3s;
+	cursor: pointer;
+}
+#d9:hover{
+	border-radius: 50%;
+	width: 90%;
+	transform : scale(1.5);
+	background-image: url(bard2.jpg);
+	background-position: -150px 0px;
+	box-shadow: 20px 10px 30px black,
+	20px 15px 50px #ef0b0b9e,
+	-20px 15px 50px #ef0b0b9e,
+	-20px -15px 50px #ef0b0b9e,
+	20px -15px 50px #ef0b0b9e;
+	z-index: 1;
+}
+/* Taric */
+#d10{
+	background-color: #eb0bef8c;
+	background-image: url(taric.jpg);
+	border-radius: 15px;
+	background-size: cover;
+	background-position: center;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 90%;
+	height: 90%;
+	margin: auto;
+	position: absolute;
+	transition: transform 3s, border-radius 2s;
+	transition:transform 3s, border-radius 2s, background-image 1s, background-position 3s;
+	cursor: pointer;
+}
+#d10:hover{
+	border-radius: 50%;
+	width: 90%;
+	background-image: url(taric2.jpg);
+	background-position: -140px 0px;
+	transform : scale(1.5);
+	box-shadow: 20px 10px 30px black,
+	20px 15px 50px #e9ff34bd,
+	-20px 15px 50px #e9ff34bd,
+	-20px -15px 50px #e9ff34bd,
+	20px -15px 50px #e9ff34bd;
+	z-index: 1;
+}
+a{
+	text-decoration: none;
+	font-size: 80px;
+	padding: 20px;
+}
+a:hover{
+color:	#00afef;
+}
+footer{
+		font-family: 'Indie Flower', cursive;
+		float: left;
+	  margin-top:50px;
+    width:100%;
+    height:140px;
+    background-color:#0befc56e;
+		transition-duration: 3s;
+}
+footer:hover{
+	  background-color: transparent;
+}
