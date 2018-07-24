@@ -1,4 +1,3 @@
-## Este es un ejemplo del curso profesional de git and github by Platzi APPS.CO
 ## ¿Cual es el problema?
 Porfavor describe el problema que tienes con el codigo o la página
 ## ¿Cómo replicamos el bug?
