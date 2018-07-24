@@ -25,14 +25,14 @@ a{
   text-shadow: 3px 4px 3px #00afef99;
 }
 a:hover{
-  color: #00afef99;
+  color: #red;/*este*/
 }
 input[type="email"], input[type="password"], input[type="text"]{
   outline: none;
   padding: 20px;
   display: block;
   width: 300px;
-  border-radius: 3px;
+  border-radius: 4px;
   border: 1px solid #eee;
   margin: 20px auto;
 }
