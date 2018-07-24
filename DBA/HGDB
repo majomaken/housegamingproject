@@ -1,6 +1,14 @@
+
+Drop DATABASE HGDB;
 create DATABASE HGDB;
 
-
+/*tabla de imagenes donde se relacionan los registros de Avatar con su fuente*/
+create table Avatar(
+     AvatarId int auto_increment unique,
+     AvatarName Varchar(16),
+     AvatarSrc varchar(128),
+     AvatarType Varchar(16)
+);
 /*tabla de usuarios en general*/
 /*existen 3 tipos de moderador, coach y users*/
 create table `user`(
@@ -13,10 +21,15 @@ create table `user`(
      UsCity varchar(16) NOT NUll,
      UsEmail varchar(40) NOT NUll,
      UsPassword varchar(16) NOT NUll,
-     UsType varchar(8),
+     UsDocType varchar(16) NOT NUll,
+     UsDocument varchar(16) NOT NUll,
+     UsPhone varchar(16) NOT NUll,
+     UsType varchar(8) NOT NUll,
      UsCoins Int,
+     UsAvatar int,
      constraint US_register unique (UsHGTAG,UsEmail,UsNickname),
-     primary key (UsHGTAG)
+     primary key (UsHGTAG),
+     FOREIGN KEY (UsAvatar) REFERENCES Avatar(AvatarId)
 );
 /*tabla de juegos*/
 create table game(
@@ -66,10 +79,12 @@ create table certificate(
      CertiMaster int,
      UsHGTAG int,
      CourseId int,
+     CertiMedal int,
      primary key (CertiId),
      FOREIGN KEY (CertiMaster) REFERENCES `user`(UsHGTAG),
      FOREIGN KEY (UsHGTAG) REFERENCES `user`(UsHGTAG),
-     FOREIGN KEY (CourseId) REFERENCES course(CourseId)
+     FOREIGN KEY (CourseId) REFERENCES course(CourseId),
+     FOREIGN KEY (CertiMedal) REFERENCES Avatar(AvatarId)
 );
 /*tabla de sessiones que se generan al usar las pc's*/
 create table session(
@@ -125,7 +140,19 @@ create table invitations(
      FOREIGN KEY (InviSend) REFERENCES `user`(UsHGTAG),
      FOREIGN KEY (InviReceive) REFERENCES `user`(UsHGTAG)
 );
-
+/*tabla donde se guarda la relacion y el nick de cada usuario con los respectivos juegos*/
+create table GameReg(
+     GameRegId int auto_increment unique,
+     GameId int,
+     UsHGTAG int,
+     GameNick Varchar(32) not null,
+     GameLevel Varchar(32),
+     GameRange Varchar(32),
+     GameSince date,
+     primary key (GameRegId),
+     FOREIGN KEY (GameId) REFERENCES game(GameId),
+     FOREIGN KEY (UsHGTAG) REFERENCES `user`(UsHGTAG)
+);
 /*create table promotions(
      PromoId Int auto_increment unique,
      PromoName varchar(32),
