@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up</title>
+  </head>
+  <body>
+    <!-- La clase logo es para que se coloque el logo junto con el
+    h1 como lo hace blizzard -->
+    <h1 class="logo"></h1> <!--Esto se puede llamar atravez de un header con php
+    <?php require 'partials/header.php' ?> este es el codigo ejemplo-->
+    <section>
+      <h1>Create an account</h1>
+      <button type="button" name="facebook">Facebook</button>
+      <button type="button" name="google">Google</button>
+      <span> or
+      <form action="">
+        <input type="text" name="city" placeholder="city">
+        <!-- <fieldset> es una etiqueta nueva de html 5 para agrupar campos -->
+        <fieldset>
+          <input type="text" name="name" placeholder="First Name">
+          <input type="text" name="last name" placeholder="Last Name">
+          <input type="date" name="dateBirth">
+        </fieldset>
+
+        <fieldset>
+          <input type="email" placeholder="Email">
+          <input type="password" name="" placeholder="Password">
+        </fieldset>
+
+        <fieldset>
+          <input type="phone" name="phone" placeholder="Phone">
+          <select class="" name="Type Document">
+            <option value="CC">CC</option>
+            <option value="TI">TI</option>
+          </select>
+          <input type="text" name="document" placeholder="Document">
+        </fieldset>
+
+
+        <input type="submit" name="create_account" value="Create a free account">
+        <!-- Aquie usted decide el estilo como lo quiere si usa el boton o la etiqueta <a> para colocarle
+          la accion de ir al login -->
+        <button type="button" name="login"><a href="login.html">Already have an acoount?</a></button>
+      </form>
+    </section>
+    <footer><!--Esto se puede llamar atravez de un footer con php
+    <?php require 'partials/footer.php' ?> <- este es el codigo ejemplo-->
+    </footer>
+  </body>
+</html>
