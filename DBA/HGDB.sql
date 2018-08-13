@@ -6,13 +6,15 @@ create DATABASE HGDB;
 create table Avatar(
      AvatarId int auto_increment unique,
      AvatarName Varchar(16),
+     /*Para llamar una imgen se puede insertar por sql pero el tipo de dato es
+     LONGBLOB*/
      AvatarSrc varchar(128),
      AvatarType Varchar(16)
 );
 /*tabla de usuarios en general*/
 /*existen 3 tipos de moderador, coach y users*/
 create table `user`(
-     UsHGTAG int auto_increment unique,
+     UsHGTAG int auto_increment,
      UsFirstname varchar(10) NOT NUll,
      UsSecondname varchar(10) NOT NUll,
      UsLastname varchar(20) NOT NUll,
@@ -28,7 +30,7 @@ create table `user`(
      UsCoins Int,
      UsAvatar int,
      constraint US_register unique (UsHGTAG,UsEmail,UsNickname),
-     primary key (UsHGTAG),
+     PRIMARY KEY (UsHGTAG),
      FOREIGN KEY (UsAvatar) REFERENCES Avatar(AvatarId)
 );
 /*tabla de juegos*/
