@@ -8,156 +8,67 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 }
+.logo {
+  width: 150px;
+  height: 120px;
+  position: relative;
+}
 
 h1 {
   color: #00afef;
   margin-top: 10px;
   font-size: 40px;
-  position: relative;
-  left: 150px;
+  text-align: center;
 }
-
-.Inicio2 {
-  color: #00afef;
-  margin-top: 10px;
-  font-size: 40px;
-  margin-left: 210px;
+.options-register {
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
 }
-
-.btfb {
+.options-register button {
   background-color: #00afef;
   color: white;
-  width: 300px;
-  height: 30px;
-}
-
-.btg {
-  background-color: #00afef;
-  color: white;
-  width: 300px;
-  height: 30px;
-}
-
-.Logof {
-  width: 20px;
-  height: 20px;
-  margin-right: 110px;
-  margin-top: 3px;
-}
-
-.Facebook {
-  margin-top: -24px;
-}
-
-.Google {
-  margin-top: -24px;
+  width: 48%;
 }
 .icon {
   font-size: 20px;
 }
+fieldset {
+  margin: 0;
+  border: 0;
+}
+.form-register {
+  width: 95%;
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+  font-weight: 100;
+  font-size: 30px;
+}
+.container-input {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+input {
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 15px;
+}
+.filedset-side {
+  width: 48%;
+}
+.filedset-all {
+  width: 100%;
+}
+
+
 .Logog {
   width: 20px;
   height: 20px;
   margin-right: 100px;
   margin-top: 3px;
-}
-
-section {
-  margin-left: 380px;
-}
-
-.City {
-  width: 600px;
-  height: 24px;
-  margin-top: 20px;
-  color: #00afef;
-  background-color: #404040;
-}
-
-.logo {
-  width: 150px;
-  height: 120px;
-  position: relative;
-  margin-top: 20px;
-  margin-left: 230px;
-}
-
-.Nombre {
-  width: 290px;
-  height: 24px;
-  color: #00afef;
-  background-color: #404040;
-  position: relative;
-  right: 608px;
-  top: 40px;
-}
-
-.Apellido {
-  width: 300px;
-  height: 24px;
-  color: #00afef;
-  background-color: #404040;
-  position: relative;
-  left: 300px;
-  top: 10px;
-}
-
-.Fecha {
-  width: 130px;
-  height: 24px;
-  color: #00afef;
-  background-color: #404040;
-  position: relative;
-  top: 48px;
-  right: 308px;
-}
-
-.Correo {
-  width: 460px;
-  height: 24px;
-  color: #00afef;
-  background-color: #404040;
-  position: relative;
-  top: 48px;
-  right: 308px;
-}
-
-.Contraseña {
-  width: 290px;
-  height: 24px;
-  color: #00afef;
-  background-color: #404040;
-  position: relative;
-  top: 60px;
-}
-
-.Telefono {
-  width: 297px;
-  height: 24px;
-  color: #00afef;
-  background-color: #404040;
-  position: relative;
-  top: 60px;
-}
-
-.Tipo {
-  width: 130px;
-  height: 24px;
-  color: #00afef;
-  background-color: #404040;
-  position: relative;
-  right: 600px;
-  top: 100px;
-}
-
-.Documento {
-  width: 454px;
-  height: 21px;
-  color: #00afef;
-  background-color: #404040;
-  position: relative;
-  margin-left: 142px;
-  top: 72px;
 }
 
 .Terminos {
@@ -195,38 +106,8 @@ section {
   top: 120px;
 }
 
-.logoh {
-  width: 50px;
-  height: 150px;
-  background: url(../logohg.png);
-}
 
-.Contraseña2 {
-  width: 290px;
-  height: 24px;
-  color: #00afef;
-  background-color: #404040;
-  position: relative;
-  right: 124px;
-  top: 40px;
-}
 
-.Correo2 {
-  width: 290px;
-  height: 24px;
-  color: #00afef;
-  background-color: #404040;
-  position: relative;
-  top: 0px;
-  left: 175px;
-}
-
-.o {
-  color: #00afef;
-  position: relative;
-  top: 80px;
-  right: 355px;
-}
 
 .btfb2 {
   background-color: #00afef;
@@ -248,24 +129,10 @@ section {
   left: 155px;
 }
 
-.Facebook2 {
-  position: relative;
-  top: -24px;
-  right: -10px;
-}
 
-.Google2 {
-  position: relative;
-  top: -24px;
-  right: -5px;
-}
 
-.Cuenta2 {
-  position: relative;
-  top: 130px;
-  left: 120px;
-  font-size: 20px;
-}
+
+
 
 .Login {
   position: relative;

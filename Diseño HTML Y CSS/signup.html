@@ -10,41 +10,60 @@
         <link rel="stylesheet" type="text/css" href="assets/css/signup.css">
     </head>
     <body>
-        <section>
+
+          <header>
             <img class="logo" src="images/logohg.png">
             <h1>Crear una cuenta</h1>
+          </header>
+
+          <div class="options-register">
             <button class="btfb" type="button" name="facebook">
                 <i class="icon fab fa-facebook-f"></i><span>acebook</span>
             </button>
             <button  class="btg" type="button" name="google">
                   <i class="icon fab fa-google"></i><span>oogle</span>
             </button>
-
+          </div>
             <!-- Este or va con una linea como en la pagina de blizzard que indica que
                 puede elegir una de las dos opciones si login con f o g o entrar de la forma normal -->
 
 
             <form action="" class="form-register">
-                <input class="City" type="text" name="city" placeholder="Ciudad">
-                <!-- <fieldset> es una etiqueta nueva de html 5 para agrupar campos -->
-                <input class="Nombre" type="text" name="name" placeholder="Nombre">
-                <input  class="Apellido" type="text" name="last name" placeholder="Apellido">
-                <input class="Fecha" type="date" name="FECHA DE NACIMIENTO">
-                <input class="Correo" type="email" placeholder="Correo electrónico">
-                <input class="Contraseña" type="password" name="" placeholder="Contraseña">
-                <input class="Telefono" type="phone" name="phone" placeholder="Teléfono">
-                <select class="Tipo" name="Tipo de documento">
+              <div class="container-inputs">
+              <fieldset >
+                <input class="filedset-side" type="text" name="name" placeholder="Nombre">
+                <input class="filedset-side"  type="text" name="lastname" placeholder="Apellido">
+              </fieldset>
+
+              <fieldset >
+                <input class="filedset-all" type="text" name="city" placeholder="Ciudad">
+                <input class="filedset-all" type="date" name="FECHA DE NACIMIENTO">
+              </fieldset>
+
+              <fieldset >
+                <input class="filedset-all" type="email" placeholder="Correo electrónico">
+                <input class="filedset-all" type="password" name="" placeholder="Contraseña">
+              </fieldset>
+
+              <fieldset class="filedset-all">
+                <input  type="phone" name="phone" placeholder="Teléfono">
+              </fieldset>
+              <fieldset>
+                <select class="filedset-side" name="Tipo de documento">
                     <option value="CC">CC</option>
                     <option value="TI">TI</option>
                 </select>
-                <input class="Documento" type="text" name="document" placeholder="Documento">
+                <input class="filedset-side" type="text" name="document" placeholder="Documento">
+              </fieldset>
+
+                </div>
                 <label class="Terminos" >I agree to the <a href="#">Terms of Use</a> and I have read and acknowledge the <a class="Privacidad" href="#">Politica de privacidad</a></label>
                 <input class="Gratis" type="submit" name="create_account" value="Create a free account">
+                <button class="Cuenta" type="button" name="login"><a class="HG" href="login.html">¿Ya tienes una cuenta?</a></button>
+                </form>
                 <!-- Aquie usted decide el estilo como lo quiere si usa el boton o la etiqueta <a> para colocarle
                     la accion de ir al login -->
-                <button class="Cuenta" type="button" name="login"><a class="HG" href="login.html">¿Ya tienes una cuenta?</a></button>
-            </form>
-        </section>
+
         <footer>
             <!--Esto se puede llamar atravez de un footer con php
                 <?php require 'partials/footer.php' ?> <- este es el codigo ejemplo-->
