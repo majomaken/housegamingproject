@@ -1,0 +1,288 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url(https://i.pinimg.com/originals/1d/e8/5a/1de85a5cc10ac1f20c0d858921e64f7e.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+h1 {
+  color: #00afef;
+  margin-top: 10px;
+  font-size: 40px;
+  position: relative;
+  left: 150px;
+}
+
+.Inicio2 {
+  color: #00afef;
+  margin-top: 10px;
+  font-size: 40px;
+  margin-left: 210px;
+}
+
+.btfb {
+  background-color: #00afef;
+  color: white;
+  width: 300px;
+  height: 30px;
+}
+
+.btg {
+  background-color: #00afef;
+  color: white;
+  width: 300px;
+  height: 30px;
+}
+
+.Logof {
+  width: 20px;
+  height: 20px;
+  margin-right: 110px;
+  margin-top: 3px;
+}
+
+.Facebook {
+  margin-top: -24px;
+}
+
+.Google {
+  margin-top: -24px;
+}
+.icon {
+  font-size: 20px;
+}
+.Logog {
+  width: 20px;
+  height: 20px;
+  margin-right: 100px;
+  margin-top: 3px;
+}
+
+section {
+  margin-left: 380px;
+}
+
+.City {
+  width: 600px;
+  height: 24px;
+  margin-top: 20px;
+  color: #00afef;
+  background-color: #404040;
+}
+
+.logo {
+  width: 150px;
+  height: 120px;
+  position: relative;
+  margin-top: 20px;
+  margin-left: 230px;
+}
+
+.Nombre {
+  width: 290px;
+  height: 24px;
+  color: #00afef;
+  background-color: #404040;
+  position: relative;
+  right: 608px;
+  top: 40px;
+}
+
+.Apellido {
+  width: 300px;
+  height: 24px;
+  color: #00afef;
+  background-color: #404040;
+  position: relative;
+  left: 300px;
+  top: 10px;
+}
+
+.Fecha {
+  width: 130px;
+  height: 24px;
+  color: #00afef;
+  background-color: #404040;
+  position: relative;
+  top: 48px;
+  right: 308px;
+}
+
+.Correo {
+  width: 460px;
+  height: 24px;
+  color: #00afef;
+  background-color: #404040;
+  position: relative;
+  top: 48px;
+  right: 308px;
+}
+
+.Contraseña {
+  width: 290px;
+  height: 24px;
+  color: #00afef;
+  background-color: #404040;
+  position: relative;
+  top: 60px;
+}
+
+.Telefono {
+  width: 297px;
+  height: 24px;
+  color: #00afef;
+  background-color: #404040;
+  position: relative;
+  top: 60px;
+}
+
+.Tipo {
+  width: 130px;
+  height: 24px;
+  color: #00afef;
+  background-color: #404040;
+  position: relative;
+  right: 600px;
+  top: 100px;
+}
+
+.Documento {
+  width: 454px;
+  height: 21px;
+  color: #00afef;
+  background-color: #404040;
+  position: relative;
+  margin-left: 142px;
+  top: 72px;
+}
+
+.Terminos {
+  color: #00afef;
+  position: relative;
+  top: 110px;
+  right: 530px;
+}
+
+.Privacidad {
+  position: relative;
+  left: 800px;
+  top: -28px;
+}
+
+.Cuenta {
+  background-color: #00afef;
+  color: white;
+  width: 448px;
+  height: 35px
+	margin-top:100px;
+  position: relative;
+  top: 160px;
+  right: 452px;
+  padding: 5px;
+}
+
+.Gratis {
+  width: 448px;
+  height: 30px;
+  color: #FFF;
+  background-color: #00afef;
+  position: relative;
+  margin-left: -182px;
+  top: 120px;
+}
+
+.logoh {
+  width: 50px;
+  height: 150px;
+  background: url(../logohg.png);
+}
+
+.Contraseña2 {
+  width: 290px;
+  height: 24px;
+  color: #00afef;
+  background-color: #404040;
+  position: relative;
+  right: 124px;
+  top: 40px;
+}
+
+.Correo2 {
+  width: 290px;
+  height: 24px;
+  color: #00afef;
+  background-color: #404040;
+  position: relative;
+  top: 0px;
+  left: 175px;
+}
+
+.o {
+  color: #00afef;
+  position: relative;
+  top: 80px;
+  right: 355px;
+}
+
+.btfb2 {
+  background-color: #00afef;
+  color: white;
+  width: 150px;
+  height: 30px;
+  position: relative;
+  top: 115px;
+  right: 425px;
+}
+
+.btg2 {
+  background-color: #00afef;
+  color: white;
+  width: 150px;
+  height: 30px;
+  position: relative;
+  top: 81px;
+  left: 155px;
+}
+
+.Facebook2 {
+  position: relative;
+  top: -24px;
+  right: -10px;
+}
+
+.Google2 {
+  position: relative;
+  top: -24px;
+  right: -5px;
+}
+
+.Cuenta2 {
+  position: relative;
+  top: 130px;
+  left: 120px;
+  font-size: 20px;
+}
+
+.Login {
+  position: relative;
+  top: 55px;
+  left: 150px;
+  font-size: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: #00afef;
+}
+
+.HG {
+  color: #FFF;
+}
+
+ul {
+  font-style: none;
+}
