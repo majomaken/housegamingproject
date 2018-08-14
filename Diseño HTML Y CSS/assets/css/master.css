@@ -31,20 +31,28 @@ top:0;
 	position: relative;
 	display:inline-block;
 	margin-left:10px;
+	padding:15px 20px;
+	color: rgba(255, 255, 255, 0.7);
+	font-family:Helvetica, Arial;
+	text-decoration:none;
+	font-size:30px;
+	margin-bottom:20px;
+	position:relative;
+	bottom:30px;
 }
 
 
 
-.menumain > li > a{
+.menumain li a{
 	display: inline-block;
-		padding:10px 15px;
-	    color: #00afef;
+	padding:10px 15px;
+	color: #00afef;
 	font-family:Helvetica, Arial;
 	text-decoration:none;
 	font-size:20px;
 	margin-top:20px;
-		float:right;
-		bottom:30px;
+	float:right;
+	bottom:30px;
 
 }
 .menumain li a:hover{
@@ -141,11 +149,10 @@ top:0;
 	/*Logo*/
 
 	.logo{
-		width:60px;
-		height:50px;
+		width:100px;
 		margin-bottom:10px;
  }
- .Inicio{
+ .account{
  		padding:15px 20px;
 	    color: rgba(255, 255, 255, 0.7);
 	font-family:Helvetica, Arial;
@@ -154,64 +161,8 @@ top:0;
 	float:right;
 	position:relative;
 	bottom:30px;
-
-
-
-
  }
- .Logout{
- 	padding:15px 20px;
-	    color: rgba(255, 255, 255, 0.7);
-	font-family:Helvetica, Arial;
-	text-decoration:none;
-	font-size:30px;
-	margin-bottom:20px;
-	float:right;
-	position:relative;
-	bottom:30px;
 
- }
- .Consultas{
- 	padding:15px 20px;
-	    color: rgba(255, 255, 255, 0.7);
-	font-family:Helvetica, Arial;
-	text-decoration:none;
-	font-size:30px;
-	margin-bottom:20px;
-	position:relative;
-	bottom:30px;
-
- }
- .Locales{
- 	padding:15px 20px;
-	    color: rgba(255, 255, 255, 0.7);
-	font-family:Helvetica, Arial;
-	text-decoration:none;
-	font-size:30px;
-	margin-bottom:20px;
-	position:relative;
-	bottom:30px;
- }
-.Competitivo{
-	padding:15px 20px;
-	    color: rgba(255, 255, 255, 0.7);
-	font-family:Helvetica, Arial;
-	text-decoration:none;
-	font-size:30px;
-	margin-bottom:20px;
-	position:relative;
-	bottom:30px;
-}
-.Logo{
-	padding:15px 20px;
-	    color: rgba(255, 255, 255, 0.7);
-	font-family:Helvetica, Arial;
-	text-decoration:none;
-	font-size:30px;
-	margin-bottom:20px;
-	position:relative;
-	bottom:50px;
-}
 #palabra{
  position:relative;
  top:20px;
@@ -360,6 +311,20 @@ background-size:cover;
 background-repeat:no-repeat;
 border:solid 2px white; */
 
+}
+.container {
+	height: 0;
+	overflow: hidden;
+	padding-bottom: 56.25%;
+	padding-top: 30px;
+	position: relative;
+}
+.container video {
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
 }
 footer{
 		text-align:center;
