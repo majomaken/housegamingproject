@@ -1,497 +1,372 @@
 *{
-	margin:0px;
-	padding:0px;
-	box-sizing: border-box;
-	font-family: sans-serif;
+     margin:0px;
+     padding:0px;
+     box-sizing: border-box;
+     font-family: sans-serif;
 }
-body{
-    background-color:#000;
-    height:1000px;
-
-
-
-
+ body{
+     background-color:#000;
 }
-.nav{
-top:0;
-	position:absolute;
-		width:100%;
-	background:#000;
-	z-index:1;
-	border-bottom:solid 1px white;
-	height:60px;
-   color:text white;
-
-}
-.nav ul{
-	list-style:none;
-
-}
-.menumain > li{
-	position: relative;
-	display:inline-block;
-	margin-left:10px;
-	padding:15px 20px;
-	color: rgba(255, 255, 255, 0.7);
-	font-family:Helvetica, Arial;
-	text-decoration:none;
-	font-size:30px;
-	margin-bottom:20px;
-	position:relative;
-	bottom:30px;
-}
-
-
-
-.menumain li a{
-	display: inline-block;
-	padding:10px 15px;
-	color: #00afef;
-	font-family:Helvetica, Arial;
-	text-decoration:none;
-	font-size:20px;
-	margin-top:20px;
-	float:right;
-	bottom:30px;
-
-}
-.menumain li a:hover{
-	color:#00afef;
-	transition:all 0.3s;
-
-
-}
-.submenu{
-	position:absolute;
-	background:#404040;
-	visibility:hidden;
-	opacity:0;
-	transition: opacity 1s;
-	padding:10px 10px;
-	 margin-top:75px;
-	font-family:Helvetica, Arial;
-	text-decoration:none;
-	font-size:20px;
-	border:solid 1px white;
-}
-.submenu li a{
-	display:block;
-	padding:5px;
-	color:#00afef;
-	font-family: Helvetica, Arial;
-	text-decoration:none;
-
-}
-.nav li:hover .submenu{
-	visibility: visible;
-	opacity:1;
-}
-
-/*slider*/
-
-#div1{
-	margin:0;
-	padding:0;
-	width:100%;
-	height:570px;
-
-	margin-top:60px;
-
-}
-
-	.slider{
-		top:0;
-		width:100%;
-        border-bottom:solid 2px white;
-		overflow: hidden;
+.logo{
+		position: relative;
+		width: 100px;
+		display:inline-block;
 		margin-left:10px;
-		margin-right:-200px;
-		position:relative;
-
-	}
-	.slider ul{
-		padding:0px;
-		display:flex;
-		width:400%;
-		animation: cambio 20s infinite alternate;
-		animation-timing-function:ease-in;
-
-	}
-	.slider li{
-		list-style:none;
-		width:100%;
-	}
-	.slider img{
-
-		width:100%;
-		margin:auto;
-
-
-	}
-
-
-	@keyframes cambio{
-		0% {margin-left: 0;}
-		20%{margin-left: 0;}
-
-		25%{margin-left: -100%;}
-		45%{margin-left: -100%;}
-
-		50%{margin-left: -200%;}
-		70%{margin-left: -200%;}
-
-	    75%{margin-left: -300%;}
-		100%{margin-left: -300%;}
-
-
-	}
-
-	/*Logo*/
-
-	.logo{
-		width:100px;
-		margin-bottom:10px;
- }
+		padding:15px 20px;
+		bottom:30px;
+}
+ .nav{
+     top:0;
+     position:absolute;
+     width:100%;
+     background:#000;
+     z-index:1;
+     border-bottom:solid 1px white;
+     height:60px;
+     color:text white;
+}
+ .nav ul{
+     list-style:none;
+}
+ .menumain li{
+     position: relative;
+     display:inline-block;
+     margin-left:10px;
+     padding:15px 20px;
+     color: rgba(255, 255, 255, 0.7);
+     font-family:Helvetica, Arial;
+     text-decoration:none;
+     font-size:30px;
+     position:relative;
+     bottom:30px;
+}
+ .menumain li a{
+     display: inline-block;
+     padding:10px 15px;
+     color: #00afef;
+     font-family:Helvetica, Arial;
+     text-decoration:none;
+     font-size:20px;
+     margin-top:20px;
+     float:right;
+     bottom:30px;
+}
+ .menumain li a:hover{
+     color:#00afef;
+     transition:all 0.3s;
+}
+ .submenu{
+     position:absolute;
+     background:#404040;
+     visibility:hidden;
+     opacity:0;
+     transition: opacity 1s;
+     padding:10px 10px;
+     margin-top:75px;
+     font-family:Helvetica, Arial;
+     text-decoration:none;
+     font-size:20px;
+     border:solid 1px white;
+}
+ .submenu li a{
+     display:block;
+     padding:5px;
+     color:#00afef;
+     font-family: Helvetica, Arial;
+     text-decoration:none;
+}
+ .nav li:hover .submenu{
+     visibility: visible;
+     opacity:1;
+}
  .account{
- 		padding:15px 20px;
-	    color: rgba(255, 255, 255, 0.7);
-	font-family:Helvetica, Arial;
-	text-decoration:none;
-	font-size:30px;
-	float:right;
-	position:relative;
-	bottom:30px;
- }
+		padding:15px 20px;
+		color: rgba(255, 255, 255, 0.7);
+		font-family:Helvetica, Arial;
+		text-decoration:none;
+		font-size:30px;
+		float:right;
+		position:relative;
+		bottom:30px;
+}
+/*slider*/
+ #div1{
+     margin:0;
+     padding:0;
+     width:100%;
+     height:570px;
+     margin-top:60px;
+}
+ .slider{
+     top:0;
+     width:100%;
+     border-bottom:solid 2px white;
+     overflow: hidden;
+     margin-left:10px;
+     margin-right:-200px;
+     position:relative;
+}
+ .slider ul{
+     padding:0px;
+     display:flex;
+     width:400%;
+     animation: cambio 20s infinite alternate;
+     animation-timing-function:ease-in;
+}
+ .slider li{
+     list-style:none;
+     width:100%;
+}
+ .slider img{
+     width:100%;
+     margin:auto;
+}
+ @keyframes cambio{
+     0% {
+        margin-left: 0;
+    }
+     20%{
+        margin-left: 0;
+    }
+     25%{
+        margin-left: -100%;
+    }
+     45%{
+        margin-left: -100%;
+    }
+     50%{
+        margin-left: -200%;
+    }
+     70%{
+        margin-left: -200%;
+    }
+     75%{
+        margin-left: -300%;
+    }
+     100%{
+        margin-left: -300%;
+    }
+}
+/*Logo*/
 
-#palabra{
- position:relative;
- top:20px;
- color:#00afef;
- display: block;
- text-align: center;
- margin: 10px;
- padding: 10px;
- }
-
+ #palabra{
+     position:relative;
+     color:#00afef;
+     display: block;
+     text-align: center;
+     margin: 10px;
+     padding: 20px;
+}
  #palabra:hover{
-	 color:#BA0101;
-	 transition:1.5s;
- }
-
-#contentDiv {
-	width: 100%;
-	overflow:hidden;
-	text-align: center;
-	margin:auto;
-	background:red;
+     color:#BA0101;
+     transition:1.5s;
 }
-.Leagueoflegends{
-	display:inline-table;
-
-border:10px solid #ccc;
-
-padding:15px;
-
-height:100px;
-
-width:100px;
-
-margin:3px;
-	 /* display:inline-table;
-margin-top:40px;
-width:250px;
-height:300px;
-color:brown;
-background-image:url(http://news.cdn.leagueoflegends.com/public/images/misc/GameBox.jpg);
-background-size:cover;
-background-repeat:no-repeat;
-border:solid 2px white; */
+ #contentDiv {
+     width: 100%;
+     overflow:hidden;
+     text-align: center;
+     margin:auto;
+		 margin-top: 10px;
+		 margin-bottom: 10px;
+		 padding: 10px;
 }
-.Paladins{
-	display:inline-table;
-
-border:10px solid #ccc;
-
-padding:15px;
-
-height:100px;
-
-width:100px;
-
-margin:3px;
-	 /* display:inline-table;
-position:relative;
-left:270px;
-bottom:320px;
-	margin-top:20px;
-width:250px;
-height:300px;
-text-align:center;
-color:brown;
-background-image:url(https://static-cdn.jtvnw.net/ttv-boxart/Paladins.jpg);
-background-size:cover;
-background-repeat:no-repeat;
-border:solid 2px white; */
+ .Leagueoflegends{
+     display:inline-table;
+     border:solid 2px white;
+     padding:15px;
+     height:300px;
+     width:250px;
+     margin:3px;
+		 background-image:url(http://news.cdn.leagueoflegends.com/public/images/misc/GameBox.jpg);
+		 background-size:cover;
+		 background-repeat:no-repeat;
 }
-.Fifa{
-	display:inline-table;
-
-border:10px solid #ccc;
-
-padding:15px;
-
-height:100px;
-
-width:100px;
-
-margin:3px;
-	 /* display:inline-table;
-position:relative;
-left:542px;
-bottom:640px;
-margin-top:20px;
-width:250px;
-height:300px;
-text-align:center;
-color:brown;
-background-image:url(https://s1.gaming-cdn.com/images/products/2064/271x377/2064.jpg);
-background-size:cover;
-background-repeat:no-repeat;
-border:solid 2px white; */
-}
-.Gears{
-	display:inline-table;
-
-border:10px solid #ccc;
-
-padding:15px;
-
-height:100px;
-
-width:100px;
-
-margin:3px;
-	 /* display:inline-table;
-position:relative;
-left:818px;
-bottom:960px;
-margin-top:20px;
-width:250px;
-height:300px;
-text-align:center;
-color:brown;
-background-image:url(https://cdn3.areajugones.es/wp-content/uploads/2016/04/Gears-of-War-4.jpg);
-background-size:cover;
-background-repeat:no-repeat;
-border:solid 2px white; */
-}
-.Fornite{
-	display:inline-table;
-
-border:10px solid #ccc;
-
-padding:15px;
-
-height:100px;
-
-width:100px;
-
-margin:3px;
-	 /* display:inline-table;
-position:relative;
-left:1098px;
-bottom:1280px;
-margin-top:20px;
-width:250px;
-height:300px;
-text-align:center;
-color:brown;
-background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1OqID4UdZeW8kILZNCIEJDqmdj-xU1C6JSVrnKsiCTp4rGFxTjA);
-background-size:cover;
-background-repeat:no-repeat;
-border:solid 2px white; */
+ .Paladins{
+	 display:inline-table;
+	 border:solid 2px white;
+	 padding:15px;
+	 height:300px;
+	 width:250px;
+	 margin:3px;
+	 background-image:url(https://static-cdn.jtvnw.net/ttv-boxart/Paladins.jpg);
+	 background-size:cover;
+	 background-repeat:no-repeat;
 
 }
-.container {
-	height: 0;
-	overflow: hidden;
-	padding-bottom: 56.25%;
-	padding-top: 30px;
-	position: relative;
+ .Fifa{
+	 display:inline-table;
+	 border:solid 2px white;
+	 padding:15px;
+	 height:300px;
+	 width:250px;
+	 margin:3px;
+	 background-image:url(https://s1.gaming-cdn.com/images/products/2064/271x377/2064.jpg);
+	 background-size:cover;
+	 background-repeat:no-repeat;
 }
-.container video {
-	height: 100%;
-	left: 0;
-	position: absolute;
-	top: 0;
-	width: 100%;
+ .Gears{
+	 display:inline-table;
+	border:solid 2px white;
+	padding:15px;
+	height:300px;
+	width:250px;
+	margin:3px;
+	background-image:url(https://cdn3.areajugones.es/wp-content/uploads/2016/04/Gears-of-War-4.jpg);
+	background-size:cover;
+	background-repeat:no-repeat;
 }
-footer{
-		text-align:center;
-    width: 100%;
-    background: #202020;
-    color: white;
-   	top:-1200px;
+ .Fornite{
+	 display:inline-table;
+	border:solid 2px white;
+	padding:15px;
+	height:300px;
+	width:250px;
+	margin:3px;
+	background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1OqID4UdZeW8kILZNCIEJDqmdj-xU1C6JSVrnKsiCTp4rGFxTjA);
+	background-size:cover;
+	background-repeat:no-repeat;
 }
-
-.container-footer-all{
-    width: 100%;
-    max-width: 1200px;
-    margin: auto;
-    padding: 40px;
+ .container {
+     height: 0;
+     overflow: hidden;
+     padding-bottom: 56.25%;
+     padding-top: 30px;
+     position: relative;
 }
-
-.container-body{
-    display: flex;
-    justify-content: space-between;
-
+ .container video {
+     height: 100%;
+     left: 0;
+     position: absolute;
+     top: 0;
+     width: 100%;
 }
-
-
-.colum1{
-    max-width: 400px;
-
+ footer{
+     text-align:center;
+     width: 100%;
+     background: #202020;
+     color: white;
+     top:-1200px;
 }
-
-.colum1 h1{
-    font-size: 22px;
+ .container-footer-all{
+     width: 100%;
+     max-width: 1200px;
+     margin: auto;
+     padding: 40px;
 }
-
-.row{
-    margin-top: 20px;
-    display: flex;
+ .container-body{
+     display: flex;
+     justify-content: space-between;
 }
-
-.row img{
-    width: 36px;
-    height: 36px;
+ .colum1{
+     max-width: 400px;
 }
-
-.row label{
-    margin-top: 10px;
-    margin-left: 20px;
-    color: #C7C7C7;
+ .colum1 h1{
+     font-size: 22px;
 }
-
-.colum2{
-    max-width: 400px;
+ .row{
+     margin-top: 20px;
+     display: flex;
 }
-
-.colum2 h1{
-    font-size: 22px;
+ .row img{
+     width: 36px;
+     height: 36px;
 }
-
-.row2{
-    margin-top: 20px;
-    display: flex;
+ .row label{
+     margin-top: 10px;
+     margin-left: 20px;
+     color: #C7C7C7;
 }
-
-.row2 img{
-    width: 36px;
-    height: 36px;
+ .colum2{
+     max-width: 400px;
 }
-
-.row2 label{
-    margin-top: 10px;
-    margin-left: 20px;
-    max-width: 140px;
+ .colum2 h1{
+     font-size: 22px;
 }
-
-.container-footer{
-    width: 100%;
-    background: #101010;
+ .row2{
+     margin-top: 20px;
+     display: flex;
 }
-
-.footer{
-    max-width: 1200px;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
+ .row2 img{
+     width: 36px;
+     height: 36px;
 }
-
-.copyright{
-    color: #C7C7C7;
+ .row2 label{
+     margin-top: 10px;
+     margin-left: 20px;
+     max-width: 140px;
 }
-
-.copyright a{
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
+ .container-footer{
+     width: 100%;
+     background: #101010;
 }
-
-.information a{
-    text-decoration: none;
-    color: #C7C7C7;
+ .footer{
+     max-width: 1200px;
+     margin: auto;
+     display: flex;
+     justify-content: space-between;
+     padding: 20px;
 }
-
-
-@media screen and (max-width: 1100px){
-
-    .container-body{
-        flex-wrap: wrap;
+ .copyright{
+     color: #C7C7C7;
+}
+ .copyright a{
+     text-decoration: none;
+     color: white;
+     font-weight: bold;
+}
+ .information a{
+     text-decoration: none;
+     color: #C7C7C7;
+}
+ @media screen and (max-width: 1100px){
+     .container-body{
+         flex-wrap: wrap;
     }
-.colum1, .colum2{
-        margin-top: 40px;
+     .colum1, .colum2{
+         margin-top: 40px;
     }
 }
-
-
-
-
-
-
 /*#Horarios{
-	position:relative;
-	bottom:1250px;
-	color:#00afef;
+     position:relative;
+     bottom:1250px;
+     color:#00afef;
 }
-.Tablas{
-	position:relative;
-	bottom:1230px;
-	color:white;
+ .Tablas{
+     position:relative;
+     bottom:1230px;
+     color:white;
 }
-#Horarios:hover{
-	color:#BA0101;
+ #Horarios:hover{
+     color:#BA0101;
 }
-
-td, tr{
-	height:35%;
-	border-radius:7px;
-	padding:3%;
-	color:#00afef;
+ td, tr{
+     height:35%;
+     border-radius:7px;
+     padding:3%;
+     color:#00afef;
 }
-table{
-	border-radius:12px;
-
+ table{
+     border-radius:12px;
 }
-.Diastabla{
-
-	background-color: #404040;
-
+ .Diastabla{
+     background-color: #404040;
 }
-.Horariostabla{
-	background-color: #404040;
-
-}*/
-
-
-.Nosotros{
-	padding:15px 20px;
-	    color: rgba(255, 255, 255, 0.7);
-	font-family:Helvetica, Arial;
-	text-decoration:none;
-	font-size:30px;
-	margin-bottom:20px;
-	position:relative;
-	bottom:29px;
-
+ .Horariostabla{
+     background-color: #404040;
 }
-.video{
-
-	width:1349px;
-	position:relative;
-	top:-100px;
-
-
+*/
+ .Nosotros{
+     padding:15px 20px;
+     color: rgba(255, 255, 255, 0.7);
+     font-family:Helvetica, Arial;
+     text-decoration:none;
+     font-size:30px;
+     margin-bottom:20px;
+     position:relative;
+     bottom:29px;
+}
+ .video{
+     width:1349px;
+     position:relative;
+     top:-100px;
 }
