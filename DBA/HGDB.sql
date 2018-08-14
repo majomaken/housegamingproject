@@ -6,15 +6,13 @@ create DATABASE HGDB;
 create table Avatar(
      AvatarId int auto_increment unique,
      AvatarName Varchar(16),
-     /*Para llamar una imgen se puede insertar por sql pero el tipo de dato es
-     LONGBLOB*/
-     AvatarSrc varchar(128),
+     AvatarSrc longblob,
      AvatarType Varchar(16)
 );
 /*tabla de usuarios en general*/
 /*existen 3 tipos de moderador, coach y users*/
 create table `user`(
-     UsHGTAG int auto_increment,
+     UsHGTAG int auto_increment unique,
      UsFirstname varchar(10) NOT NUll,
      UsSecondname varchar(10) NOT NUll,
      UsLastname varchar(20) NOT NUll,
@@ -30,8 +28,8 @@ create table `user`(
      UsCoins Int,
      UsAvatar int,
      constraint US_register unique (UsHGTAG,UsEmail,UsNickname),
-     PRIMARY KEY (UsHGTAG),
-     FOREIGN KEY (UsAvatar) REFERENCES Avatar(AvatarId)
+     primary key (UsHGTAG),
+     FOREIGN KEY (UsAvatar) REFERENCES Avatar(AvatarId) ON DELETE CASCADE ON UPDATE CASCADE
 );
 /*tabla de juegos*/
 create table game(
@@ -59,7 +57,7 @@ create table course(
      CoursePrice int(6) NOT NUll,
      GameId int,
      primary key (CourseId),
-     FOREIGN KEY (GameId) REFERENCES game(GameId)
+     FOREIGN KEY (GameId) REFERENCES game(GameId) ON DELETE CASCADE ON UPDATE CASCADE
 );
 /*tabla de matriculas o registros a los cursos*/
 create table Enrolment(
@@ -70,9 +68,9 @@ create table Enrolment(
      Hgcoach int,
      CourseId int,
      primary key (EnrolId),
-     FOREIGN KEY (Hgcoach) REFERENCES `user`(UsHGTAG),
-     FOREIGN KEY (UsHGTAG) REFERENCES `user`(UsHGTAG),
-     FOREIGN KEY (CourseId) REFERENCES course(CourseId)
+     FOREIGN KEY (Hgcoach) REFERENCES `user`(UsHGTAG) ON DELETE CASCADE ON UPDATE CASCADE,
+     FOREIGN KEY (UsHGTAG) REFERENCES `user`(UsHGTAG) ON DELETE CASCADE ON UPDATE CASCADE,
+     FOREIGN KEY (CourseId) REFERENCES course(CourseId) ON DELETE CASCADE ON UPDATE CASCADE
 );
 /*tabla para las medallas que se obtienen al pasar los cursos*/
 create table certificate(
@@ -83,10 +81,10 @@ create table certificate(
      CourseId int,
      CertiMedal int,
      primary key (CertiId),
-     FOREIGN KEY (CertiMaster) REFERENCES `user`(UsHGTAG),
-     FOREIGN KEY (UsHGTAG) REFERENCES `user`(UsHGTAG),
-     FOREIGN KEY (CourseId) REFERENCES course(CourseId),
-     FOREIGN KEY (CertiMedal) REFERENCES Avatar(AvatarId)
+     FOREIGN KEY (CertiMaster) REFERENCES `user`(UsHGTAG)  ON DELETE CASCADE ON UPDATE CASCADE,
+     FOREIGN KEY (UsHGTAG) REFERENCES `user`(UsHGTAG) ON DELETE CASCADE ON UPDATE CASCADE,
+     FOREIGN KEY (CourseId) REFERENCES course(CourseId) ON DELETE CASCADE ON UPDATE CASCADE,
+     FOREIGN KEY (CertiMedal) REFERENCES Avatar(AvatarId) ON DELETE CASCADE ON UPDATE CASCADE
 );
 /*tabla de sessiones que se generan al usar las pc's*/
 create table session(
@@ -96,8 +94,8 @@ create table session(
      UsHGTAG int,
      PcId int,
      primary key (SessionId),
-     FOREIGN KEY (UsHGTAG) REFERENCES `user`(UsHGTAG),
-     FOREIGN KEY (PcId) REFERENCES Pc(PcId)
+     FOREIGN KEY (UsHGTAG) REFERENCES `user`(UsHGTAG) ON DELETE CASCADE ON UPDATE CASCADE,
+     FOREIGN KEY (PcId) REFERENCES Pc(PcId) ON DELETE CASCADE ON UPDATE CASCADE
 );
 /*tabla de las recargas de saldo realizadas por los usuarios*/
 /* el campo RecAmmount solo puede ser positivo*/
@@ -109,7 +107,7 @@ create table recharge(
      RecBy int,
      RecCoins int,
      primary key (RecNumero),
-     FOREIGN KEY (UsHGTAG) REFERENCES `user`(UsHGTAG)
+     FOREIGN KEY (UsHGTAG) REFERENCES `user`(UsHGTAG) ON DELETE CASCADE ON UPDATE CASCADE
 );
 /*tabla de equipos*/
 create table equip(
@@ -122,12 +120,12 @@ create table equip(
      EquipMenber5 int unique,
      EquipMenber6 int unique,
      primary key (EquipId),
-     FOREIGN KEY (EquipCreator) REFERENCES `user`(UsHGTAG),
-     FOREIGN KEY (EquipMenber2) REFERENCES `user`(UsHGTAG),
-     FOREIGN KEY (EquipMenber3) REFERENCES `user`(UsHGTAG),
-     FOREIGN KEY (EquipMenber4) REFERENCES `user`(UsHGTAG),
-     FOREIGN KEY (EquipMenber5) REFERENCES `user`(UsHGTAG),
-     FOREIGN KEY (EquipMenber6) REFERENCES `user`(UsHGTAG)
+     FOREIGN KEY (EquipCreator) REFERENCES `user`(UsHGTAG) ON DELETE CASCADE ON UPDATE CASCADE,
+     FOREIGN KEY (EquipMenber2) REFERENCES `user`(UsHGTAG) ON DELETE CASCADE ON UPDATE CASCADE,
+     FOREIGN KEY (EquipMenber3) REFERENCES `user`(UsHGTAG) ON DELETE CASCADE ON UPDATE CASCADE,
+     FOREIGN KEY (EquipMenber4) REFERENCES `user`(UsHGTAG) ON DELETE CASCADE ON UPDATE CASCADE,
+     FOREIGN KEY (EquipMenber5) REFERENCES `user`(UsHGTAG) ON DELETE CASCADE ON UPDATE CASCADE,
+     FOREIGN KEY (EquipMenber6) REFERENCES `user`(UsHGTAG) ON DELETE CASCADE ON UPDATE CASCADE
 );
 /*tabla de invitaciones a los equipos*/
 /*validar que en el InviMsg no se envien scripts*/
@@ -139,8 +137,8 @@ create table invitations(
      InviStatus varchar(12),
      InviReply varchar(12),
      primary key (InvitNum),
-     FOREIGN KEY (InviSend) REFERENCES `user`(UsHGTAG),
-     FOREIGN KEY (InviReceive) REFERENCES `user`(UsHGTAG)
+     FOREIGN KEY (InviSend) REFERENCES `user`(UsHGTAG) ON DELETE CASCADE ON UPDATE CASCADE,
+     FOREIGN KEY (InviReceive) REFERENCES `user`(UsHGTAG) ON DELETE CASCADE ON UPDATE CASCADE
 );
 /*tabla donde se guarda la relacion y el nick de cada usuario con los respectivos juegos*/
 create table GameReg(
@@ -152,8 +150,8 @@ create table GameReg(
      GameRange Varchar(32),
      GameSince date,
      primary key (GameRegId),
-     FOREIGN KEY (GameId) REFERENCES game(GameId),
-     FOREIGN KEY (UsHGTAG) REFERENCES `user`(UsHGTAG)
+     FOREIGN KEY (GameId) REFERENCES game(GameId) ON DELETE CASCADE ON UPDATE CASCADE,
+     FOREIGN KEY (UsHGTAG) REFERENCES `user`(UsHGTAG) ON DELETE CASCADE ON UPDATE CASCADE
 );
 /*create table promotions(
      PromoId Int auto_increment unique,
