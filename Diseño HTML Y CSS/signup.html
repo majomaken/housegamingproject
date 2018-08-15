@@ -12,24 +12,26 @@
     <body>
 
           <header>
-            <a href=""><img class="logo" src="images/logologin.png"></a>
+            <a href="index.html"><img class="logo" src="images/logologin.png"></a>
             <h1>Crear una cuenta</h1>
           </header>
 
           <div class="options-register">
-            <button class="btfb" type="button" name="facebook">
+            <button type="button" name="facebook">
                 <i class="icon fab fa-facebook-f"></i><span>acebook</span>
             </button>
-            <button  class="btg" type="button" name="google">
+            <button type="button" name="google">
                   <i class="icon fab fa-google"></i><span>oogle</span>
             </button>
           </div>
           <div class="creation-container grid-parent">
-            <form action="" class="form-register">
+            <form action="" class="form-register" method="post">
               <div class="container-inputs">
               <fieldset>
-                <select class="set-all-sel" name="" >
+                <select class="set-all-sel" name="city" >
                     <option value="mosquera">Mosquera</option>
+                    <option value="madrid">Madrid</option>
+                    <option value="funza">Funza</option>
                 </select>
                 <input class="set-side" type="text" name="name" placeholder="Nombre">
                 <input class="set-side"  type="text" name="lastname" placeholder="Apellido">
@@ -40,15 +42,15 @@
               </fieldset>
 
               <fieldset >
-                <input class="set-all" type="email" placeholder="Correo electrónico">
-                <input class="set-all" type="password" name="" placeholder="Contraseña">
+                <input class="set-all" type="email" name="email" placeholder="Correo electrónico">
+                <input class="set-all" type="password" name="password" placeholder="Contraseña">
               </fieldset>
 
               <fieldset>
                 <input  class="set-all" type="phone" name="phone" placeholder="Teléfono">
               </fieldset>
               <fieldset>
-                <select class="set-sideb" name="Tipo de documento">
+                <select class="set-sideb" name="doctype">
                     <option value="CC">CC</option>
                     <option value="TI">TI</option>
                 </select>
