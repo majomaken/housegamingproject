@@ -24,7 +24,7 @@ header a{
 h1 {
   margin: 10px;
   color: #00afef;
-  font-size: 40px;
+  font-size: 30px;
   text-align: center;
 }
 fieldset {
@@ -39,10 +39,20 @@ fieldset {
 }
 .options-register button {
   background-color: #00afef;
-  color: white;
+  color: #fff;
   width: 49%;
   max-width: 250%;
   margin-bottom: 10px;
+  background-color: #00afef;
+  text-decoration: none;
+  height: 35px;
+  border: 1px solid #0d639f;
+  transition: 1s;
+  cursor: pointer;
+}
+.options-register button:hover {
+  background-color: #39b9e999;
+  color: #fff;
 }
 .icon {
   font-size: 20px;
@@ -74,6 +84,12 @@ input {
   width: 100%;
   max-width: 464px;
 }
+.set-all-sel {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 16px;
+}
 .set-side {
   width: 42%;
   max-width: 250px;
@@ -83,20 +99,70 @@ input {
 }
 .terms {
   color: #00afef;
+
 }
- a {
-   text-decoration: none;
- }
-.Cuenta {
-  background-color: #00afef;
-  color: white;
+.terms a {
+  text-decoration: none;
 }
-.Gratis {
-  color: #FFF;
-  background-color: #00afef;
+.container-actionbtn {
+  display: block;
+  text-align: center;
+  padding: 5px;
 }
-.login {
+.free-account {
+  overflow: hidden;
   background-color: #00afef;
   text-decoration: none;
-  color: #FFF;
+  color: #91e4ff;
+  height: 35px;
+  display: block;
+  width: 100%;
+  margin-top: 15px;
+  border: 1px solid #0d639f;
+  transition: 1s;
+  cursor: pointer;
+}
+.free-account:hover {
+  background-color: #39b9e9;
+  color: #fff;
+}
+.free-login {
+  text-decoration: none;
+  height: 35px;
+  display: block;
+  color: white;
+  width: 100%;
+  margin-top: 15px;
+  border-color: #0e86ca;
+  box-shadow: 0 0 rgba(0,0,0,0);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 3px 0;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  padding: 6px 20px;
+  padding-right: 20px;
+  padding-left: 20px;
+  font-size: 15px;
+  line-height: 20px;
+  height: 34px;
+  border: 1px solid #0d639f;
+  background-color: rgba(0,0,0,0.4);
+  color: #91e4ff;
+  border-color: #0e86ca;
+  box-shadow: 0 0 rgba(0,0,0,0);
+  transition: 1s;
+  cursor: pointer;
+}
+.free-login:hover {
+  background-color: rgba(0, 0, 0, 0.55);
+  border: 1px solid #0d639f99;
+}
+.free-login a{
+  text-decoration: none;
+  color: #00afef;
+}
+.free-login a:hover {
+  color: #fff;
 }

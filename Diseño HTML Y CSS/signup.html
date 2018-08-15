@@ -28,12 +28,14 @@
             <form action="" class="form-register">
               <div class="container-inputs">
               <fieldset>
+                <select class="set-all-sel" name="" >
+                    <option value="mosquera">Mosquera</option>
+                </select>
                 <input class="set-side" type="text" name="name" placeholder="Nombre">
                 <input class="set-side"  type="text" name="lastname" placeholder="Apellido">
               </fieldset>
 
               <fieldset>
-                <input class="set-all" type="text" name="city" placeholder="Ciudad">
                 <input class="set-all" type="date" name="datebirth" placeholder="Fecha de Nacimiento">
               </fieldset>
 
@@ -54,9 +56,12 @@
               </fieldset>
 
                 </div>
-                <label class="terms" >I agree to the <a href="#">Terms of Use</a> and I have read and acknowledge the <a class="Privacidad" href="#">Politica de privacidad</a></label>
-                <input class="Gratis" type="submit" name="create_account" value="Create a free account">
-                <button class="login" type="button" name="login"><a href="login.html">¿Ya tienes una cuenta?</a></button>
+                <div class="container-actionbtn">
+                <input type="checkbox" name="terms" value="">
+                <label class="terms">I agree to the <a href="#">Terms of Use</a> and I have read and acknowledge the <a class="Privacidad" href="#">Politica de privacidad</a></label>
+                <input class="free-account" type="submit" name="create_account" value="Create a free account">
+                <button class="free-login" type="button" name="login"><a href="login.html">¿Ya tienes una cuenta?</a></button>
+              </div>
               </form>
               </div>
                 <!-- Aquie usted decide el estilo como lo quiere si usa el boton o la etiqueta <a> para colocarle
