@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
 }
-
 body {
   background-image: url(https://i.pinimg.com/originals/1d/e8/5a/1de85a5cc10ac1f20c0d858921e64f7e.jpg);
   background-size: cover;
@@ -11,14 +10,28 @@ body {
 .logo {
   width: 150px;
   height: 120px;
-  position: relative;
+  margin: auto;
 }
-
+header{
+  padding: 20px 0;
+  margin-bottom: center;
+  width: 100%;
+  text-align: center;
+}
+header a{
+  text-decoration: none;
+  color: #333;
+}
 h1 {
+  margin: 10px;
   color: #00afef;
-  margin-top: 10px;
   font-size: 40px;
   text-align: center;
+}
+fieldset {
+  margin: 0;
+  border: 0;
+  padding: 0;
 }
 .options-register {
   width: 100%;
@@ -28,128 +41,63 @@ h1 {
 .options-register button {
   background-color: #00afef;
   color: white;
-  width: 48%;
+  width: 49%;
+  max-width: 250%;
+  margin-bottom: 10px;
 }
 .icon {
   font-size: 20px;
 }
-fieldset {
-  margin: 0;
-  border: 0;
+.creation-container {
+  max-width: 500px;
+  margin: 20px auto;
+  text-align: center;
+}
+.grid-parent {
+    padding-left: 0;
 }
 .form-register {
-  width: 95%;
+  width: 100%;
   max-width: 500px;
   margin: auto;
-  padding: 20px;
-  text-align: center;
-  font-weight: 100;
-  font-size: 30px;
 }
 .container-input {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-between
 }
 input {
   margin-bottom: 10px;
   padding: 10px;
-  font-size: 15px;
+  font-size: 16px;
 }
-.filedset-side {
-  width: 48%;
-}
-.filedset-all {
+.set-all {
   width: 100%;
+  max-width: 464px;
 }
-
-
-.Logog {
-  width: 20px;
-  height: 20px;
-  margin-right: 100px;
-  margin-top: 3px;
+.set-side {
+  width: 42%;
+  max-width: 250px;
 }
-
-.Terminos {
+.set-sideb {
+  width: 45%;
+}
+.terms {
   color: #00afef;
-  position: relative;
-  top: 110px;
-  right: 530px;
 }
-
-.Privacidad {
-  position: relative;
-  left: 800px;
-  top: -28px;
-}
-
+ a {
+   text-decoration: none;
+ }
 .Cuenta {
   background-color: #00afef;
   color: white;
-  width: 448px;
-  height: 35px
-	margin-top:100px;
-  position: relative;
-  top: 160px;
-  right: 452px;
-  padding: 5px;
 }
-
 .Gratis {
-  width: 448px;
-  height: 30px;
   color: #FFF;
   background-color: #00afef;
-  position: relative;
-  margin-left: -182px;
-  top: 120px;
 }
-
-
-
-
-.btfb2 {
+.login {
   background-color: #00afef;
-  color: white;
-  width: 150px;
-  height: 30px;
-  position: relative;
-  top: 115px;
-  right: 425px;
-}
-
-.btg2 {
-  background-color: #00afef;
-  color: white;
-  width: 150px;
-  height: 30px;
-  position: relative;
-  top: 81px;
-  left: 155px;
-}
-
-
-
-
-
-
-.Login {
-  position: relative;
-  top: 55px;
-  left: 150px;
-  font-size: 20px;
-}
-
-a {
   text-decoration: none;
-  color: #00afef;
-}
-
-.HG {
   color: #FFF;
-}
-
-ul {
-  font-style: none;
 }

@@ -12,7 +12,7 @@
     <body>
 
           <header>
-            <img class="logo" src="images/logohg.png">
+            <a href=""><img class="logo" src="images/logohg.png"></a>
             <h1>Crear una cuenta</h1>
           </header>
 
@@ -24,43 +24,41 @@
                   <i class="icon fab fa-google"></i><span>oogle</span>
             </button>
           </div>
-            <!-- Este or va con una linea como en la pagina de blizzard que indica que
-                puede elegir una de las dos opciones si login con f o g o entrar de la forma normal -->
-
-
+          <div class="creation-container grid-parent">
             <form action="" class="form-register">
               <div class="container-inputs">
-              <fieldset >
-                <input class="filedset-side" type="text" name="name" placeholder="Nombre">
-                <input class="filedset-side"  type="text" name="lastname" placeholder="Apellido">
+              <fieldset>
+                <input class="set-side" type="text" name="name" placeholder="Nombre">
+                <input class="set-side"  type="text" name="lastname" placeholder="Apellido">
+              </fieldset>
+
+              <fieldset>
+                <input class="set-all" type="text" name="city" placeholder="Ciudad">
+                <input class="set-all" type="date" name="datebirth" placeholder="Fecha de Nacimiento">
               </fieldset>
 
               <fieldset >
-                <input class="filedset-all" type="text" name="city" placeholder="Ciudad">
-                <input class="filedset-all" type="date" name="FECHA DE NACIMIENTO">
+                <input class="set-all" type="email" placeholder="Correo electrónico">
+                <input class="set-all" type="password" name="" placeholder="Contraseña">
               </fieldset>
 
-              <fieldset >
-                <input class="filedset-all" type="email" placeholder="Correo electrónico">
-                <input class="filedset-all" type="password" name="" placeholder="Contraseña">
-              </fieldset>
-
-              <fieldset class="filedset-all">
-                <input  type="phone" name="phone" placeholder="Teléfono">
+              <fieldset>
+                <input  class="set-all" type="phone" name="phone" placeholder="Teléfono">
               </fieldset>
               <fieldset>
-                <select class="filedset-side" name="Tipo de documento">
+                <select class="set-sideb" name="Tipo de documento">
                     <option value="CC">CC</option>
                     <option value="TI">TI</option>
                 </select>
-                <input class="filedset-side" type="text" name="document" placeholder="Documento">
+                <input class="set-sideb" type="text" name="document" placeholder="Documento">
               </fieldset>
 
                 </div>
-                <label class="Terminos" >I agree to the <a href="#">Terms of Use</a> and I have read and acknowledge the <a class="Privacidad" href="#">Politica de privacidad</a></label>
+                <label class="terms" >I agree to the <a href="#">Terms of Use</a> and I have read and acknowledge the <a class="Privacidad" href="#">Politica de privacidad</a></label>
                 <input class="Gratis" type="submit" name="create_account" value="Create a free account">
-                <button class="Cuenta" type="button" name="login"><a class="HG" href="login.html">¿Ya tienes una cuenta?</a></button>
-                </form>
+                <button class="login" type="button" name="login"><a href="login.html">¿Ya tienes una cuenta?</a></button>
+              </form>
+              </div>
                 <!-- Aquie usted decide el estilo como lo quiere si usa el boton o la etiqueta <a> para colocarle
                     la accion de ir al login -->
 
