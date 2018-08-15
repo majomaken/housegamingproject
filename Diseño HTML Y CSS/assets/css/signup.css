@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-image: url(https://i.pinimg.com/originals/1d/e8/5a/1de85a5cc10ac1f20c0d858921e64f7e.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.logo {
+  margin: auto;
+}
+header{
+  padding: 20px 0;
+  margin-bottom: center;
+  width: 100%;
+  text-align: center;
+}
+header a{
+  text-decoration: none;
+  color: #333;
+}
+h1 {
+  margin: 10px;
+  color: #00afef;
+  font-size: 30px;
+  text-align: center;
+}
+fieldset {
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+input {
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 16px;
+}
+a {
+  text-decoration: none;
+}
+.options-register {
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+}
+.options-register button {
+  background-color: #00afef;
+  color: #fff;
+  width: 49%;
+  max-width: 250%;
+  margin-bottom: 10px;
+  background-color: #00afef;
+  text-decoration: none;
+  height: 35px;
+  border: 1px solid #0d639f;
+  transition: 1s;
+  cursor: pointer;
+}
+.options-register button:hover {
+  background-color: #39b9e999;
+  color: #fff;
+}
+.icon {
+  font-size: 20px;
+}
+.creation-container {
+  max-width: 500px;
+  margin: 20px auto;
+  text-align: center;
+}
+.grid-parent {
+    padding-left: 0;
+}
+.form-register {
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+}
+.container-input {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between
+}
+
+.set-all {
+  width: 100%;
+  max-width: 464px;
+}
+.set-all-sel {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 16px;
+}
+.set-side {
+  width: 42%;
+  max-width: 250px;
+}
+.set-sideb {
+  width: 45%;
+}
+.terms {
+  color: #00afef;
+
+}
+
+.container-actionbtn {
+  display: block;
+  text-align: center;
+  padding: 5px;
+}
+.free-account {
+  overflow: hidden;
+  background-color: #00afef;
+  text-decoration: none;
+  color: #91e4ff;
+  height: 35px;
+  display: block;
+  width: 100%;
+  margin-top: 15px;
+  border: 1px solid #0d639f;
+  transition: 1s;
+  cursor: pointer;
+}
+.free-account:hover {
+  background-color: #39b9e9;
+  color: #fff;
+}
+.free-login {
+  text-decoration: none;
+  height: 35px;
+  display: block;
+  color: white;
+  width: 100%;
+  margin-top: 15px;
+  border-color: #0e86ca;
+  box-shadow: 0 0 rgba(0,0,0,0);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 3px 0;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  padding: 6px 20px;
+  padding-right: 20px;
+  padding-left: 20px;
+  font-size: 15px;
+  line-height: 20px;
+  height: 34px;
+  border: 1px solid #0d639f;
+  background-color: rgba(0,0,0,0.4);
+  border-color: #0e86ca;
+  box-shadow: 0 0 rgba(0,0,0,0);
+  transition: 1s;
+  cursor: pointer;
+  text-decoration: none;
+  color: #00afef;
+}
+.free-login:hover {
+  background-color: rgba(0, 0, 0, 0.55);
+  border: 1px solid #0d639f99;
+}
+.free-login a:hover {
+  color: #fff;
+}

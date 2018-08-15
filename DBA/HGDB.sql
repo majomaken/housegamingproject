@@ -11,10 +11,12 @@ create table Avatar(
 );
 /*tabla de usuarios en general*/
 /*existen 3 tipos de moderador, coach y users*/
+/*Ya quite los not null de segundo nombre y hay que agregar un campo de
+terminos y condiciones boolean para registrar que la persona los acepto*/
 create table `user`(
      UsHGTAG int auto_increment unique,
      UsFirstname varchar(10) NOT NUll,
-     UsSecondname varchar(10) NOT NUll,
+     UsSecondname varchar(10) ,
      UsLastname varchar(20) NOT NUll,
      UsNickname varchar(20) NOT NUll,
      UsBirthday date NOT NUll,
@@ -30,6 +32,7 @@ create table `user`(
      constraint US_register unique (UsHGTAG,UsEmail,UsNickname),
      primary key (UsHGTAG),
      FOREIGN KEY (UsAvatar) REFERENCES Avatar(AvatarId) ON DELETE CASCADE ON UPDATE CASCADE
+
 );
 /*tabla de juegos*/
 create table game(

@@ -1,8 +1,8 @@
-*{
-     margin:0px;
-     padding:0px;
+* {
+     margin:0;
+     padding:0;
      box-sizing: border-box;
-     font-family: sans-serif;
+     font-family: Helvetica,Arial,sans-serif;
 }
  body{
      background-color:#000;
@@ -23,7 +23,7 @@
      z-index:1;
      border-bottom:solid 1px white;
      height:60px;
-     color:text white;
+     color: white;
 }
  .nav ul{
      list-style:none;
@@ -170,76 +170,38 @@
 		 margin-bottom: 10px;
 		 padding: 10px;
 }
- .Leagueoflegends{
-     display:inline-table;
-     border:solid 2px white;
-     padding:15px;
-     height:300px;
-     width:250px;
-     margin:3px;
-		 background-image:url(http://news.cdn.leagueoflegends.com/public/images/misc/GameBox.jpg);
-		 background-size:cover;
-		 background-repeat:no-repeat;
+#contentDiv div {
+	display:inline-table;
+	height:400px;
+	width:300px;
+	padding: 3px;
 }
- .Paladins{
-	 display:inline-table;
-	 border:solid 2px white;
-	 padding:15px;
-	 height:300px;
-	 width:250px;
-	 margin:3px;
-	 background-image:url(https://static-cdn.jtvnw.net/ttv-boxart/Paladins.jpg);
-	 background-size:cover;
-	 background-repeat:no-repeat;
+ #contentDiv div img{
+	 height:400px;
+	 width:300px;
+	 transition-duration: 1s;
+ }
+ #contentDiv div img:hover {
+		transform : scale(1.1);
+		z-index: 1;
+ }
 
-}
- .Fifa{
-	 display:inline-table;
-	 border:solid 2px white;
-	 padding:15px;
-	 height:300px;
-	 width:250px;
-	 margin:3px;
-	 background-image:url(https://s1.gaming-cdn.com/images/products/2064/271x377/2064.jpg);
-	 background-size:cover;
-	 background-repeat:no-repeat;
-}
- .Gears{
-	 display:inline-table;
-	border:solid 2px white;
-	padding:15px;
-	height:300px;
-	width:250px;
-	margin:3px;
-	background-image:url(https://cdn3.areajugones.es/wp-content/uploads/2016/04/Gears-of-War-4.jpg);
-	background-size:cover;
-	background-repeat:no-repeat;
-}
- .Fornite{
-	 display:inline-table;
-	border:solid 2px white;
-	padding:15px;
-	height:300px;
-	width:250px;
-	margin:3px;
-	background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1OqID4UdZeW8kILZNCIEJDqmdj-xU1C6JSVrnKsiCTp4rGFxTjA);
-	background-size:cover;
-	background-repeat:no-repeat;
-}
- .container {
+ .container-video {
      height: 0;
      overflow: hidden;
      padding-bottom: 56.25%;
      padding-top: 30px;
      position: relative;
 }
- .container video {
+ .container-video video {
      height: 100%;
      left: 0;
      position: absolute;
      top: 0;
      width: 100%;
+		 transition: 3s;
 }
+
  footer{
      text-align:center;
      width: 100%;
@@ -274,7 +236,7 @@
  .row label{
      margin-top: 10px;
      margin-left: 20px;
-     color: #C7C7C7;
+     color: #c7c7c7;
 }
  .colum2{
      max-width: 400px;
@@ -364,9 +326,4 @@
      margin-bottom:20px;
      position:relative;
      bottom:29px;
-}
- .video{
-     width:1349px;
-     position:relative;
-     top:-100px;
 }
