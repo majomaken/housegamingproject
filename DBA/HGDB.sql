@@ -13,7 +13,7 @@ create table Avatar(
 /*existen 3 tipos de moderador, coach y users*/
 /*en el UsConditions va la aceptacion de las politicas*/
 create table `user`(
-     UsHGTAG int auto_increment unique,
+     UsHGTAG int auto_increment,
      UsFirstname varchar(10) NOT NUll,
      UsSecondname varchar(10),
      UsLastname varchar(20) NOT NUll,

@@ -42,7 +42,7 @@
 }
  .menumain li a{
      display: inline-block;
-     padding:10px 15px;
+     padding:10px;
      color: #00afef;
      font-family:Helvetica, Arial;
      text-decoration:none;
@@ -50,45 +50,99 @@
      margin-top:20px;
      float:right;
      bottom:30px;
+     text-align: center;
 }
  .menumain li a:hover{
-     color:#00afef;
+     color:#fff;
      transition:all 0.3s;
 }
- .submenu{
+.submenu{
      position:absolute;
      background:#404040;
      visibility:hidden;
      opacity:0;
      transition: opacity 1s;
-     padding:10px 10px;
      margin-top:75px;
      font-family:Helvetica, Arial;
      text-decoration:none;
      font-size:20px;
      border:solid 1px white;
 }
+
  .submenu li a{
      display:block;
-     padding:5px;
      color:#00afef;
      font-family: Helvetica, Arial;
      text-decoration:none;
 }
- .nav li:hover .submenu{
+ .nav li:hover .submenu {
      visibility: visible;
      opacity:1;
 }
  .account{
-		padding:15px 20px;
+    text-align: center;
 		color: rgba(255, 255, 255, 0.7);
 		font-family:Helvetica, Arial;
 		text-decoration:none;
 		font-size:30px;
 		float:right;
 		position:relative;
-		bottom:30px;
+		bottom: 30px;
+    min-width: 700px;
+    display: inline-block;
 }
+.submenu-account{
+     position: absolute;
+     background:#404040;
+     visibility:hidden;
+     opacity:0;
+     right: 0;
+     transition: opacity 1s;
+     margin-top: 75px;
+     font-family: Helvetica, Arial;
+     text-decoration: none;
+     font-size: 20px;
+     border:solid 1px white;
+     width: auto;
+     text-align: center;
+}
+.login-hg {
+  text-align: center;
+  top: 35px;
+  position: relative;
+  cursor: pointer;
+	background-color: #00afef;
+	text-decoration: none;
+	color: #91e4ff;
+	height: 40px;
+	width: 100%;
+  min-width: 300px;
+	border: 1px solid #0d639f;
+	font-size: 20px;
+  z-index: 1;
+}
+  .submenu-account li {
+    display: block;
+    margin: 0;
+  }
+ .submenu-account li a{
+    color: black;
+    color:#00afef;
+    font-family: Helvetica, Arial;
+    text-decoration:none;
+}
+
+
+#kevin {
+  padding: 0;
+  float: none;
+  text-align:center;
+}
+ .nav li:hover .submenu-account {
+     visibility: visible;
+     opacity:1;
+}
+
 /*slider*/
  #div1{
      margin:0;
