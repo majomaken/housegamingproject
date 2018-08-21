@@ -658,6 +658,7 @@ insert into Enrolment (EnrolId, EnrolPay, EnrolAproval, UsHGTAG, Hgcoach, Course
 (27, 'NO', 'NO', 432, 4, 10),
 (28, 'SI', 'SI', 329, 4, 6),
 (29, 'SI', 'NO', 276, 1, 16);
+/*Falta un dato que es el de AvatarId*/
 insert into certificate (CertiId, CertiDate, CertiMaster, UsHGTAG, CourseId, CertiMedal) values
 (1, 43263, 2, 345, 11),
 (2, 43263, 4, 336, 11),
@@ -783,6 +784,7 @@ insert into session (SessionId, SessionIni, SessionFin, UsHGTAG, PcId) values
 (106, 14, 16, 274, 18),
 (107, 16, 18, 264, 18),
 (108, 18, 20, 37, 18),
+/*Apartir de aqui el codigo es invalido no se porque*/
 (109, 8, 10,5, 92, 19),
 (110, 10,5, 13, 295, 19),
 (111, 13, 15,5, 302, 19),
