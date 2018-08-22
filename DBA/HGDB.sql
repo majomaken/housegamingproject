@@ -14,10 +14,10 @@ create table Avatar(
 /*en el UsConditions va la aceptacion de las politicas*/
 create table `user`(
      UsHGTAG int auto_increment,
-     UsFirstname varchar(10) NOT NUll,
-     UsSecondname varchar(10),
-     UsLastname varchar(20) NOT NUll,
-     UsNickname varchar(20) unique,
+     UsFirstname varchar(30) NOT NUll,
+     UsSecondname varchar(30),
+     UsLastname varchar(30) NOT NUll,
+     UsNickname varchar(30) unique,
      UsBirthday date NOT NUll,
      UsCity varchar(40),
      UsEmail varchar(40) NOT NUll unique,
