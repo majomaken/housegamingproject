@@ -19,7 +19,7 @@ create table `user`(
      UsLastname varchar(20) NOT NUll,
      UsNickname varchar(20) unique,
      UsBirthday date NOT NUll,
-     UsCity varchar(16),
+     UsCity varchar(40),
      UsEmail varchar(40) NOT NUll unique,
      UsPassword varchar(16) NOT NUll,
      UsDocType varchar(16) NOT NUll,
