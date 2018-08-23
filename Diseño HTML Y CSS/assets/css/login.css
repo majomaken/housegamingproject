@@ -7,6 +7,15 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 }
+video {
+  position: fixed;
+  min-width: 100%;
+  min-height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: -1;
+}
 .logo {
 	margin: auto;
 	margin-top: 55px;
