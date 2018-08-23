@@ -6,7 +6,7 @@ create DATABASE HGDB;
 create table Avatar(
      AvatarId int auto_increment unique,
      AvatarName Varchar(16),
-     AvatarSrc longblob,
+     AvatarSrc Varchar(256),
      AvatarType Varchar(16)
 );
 /*tabla de usuarios en general*/
