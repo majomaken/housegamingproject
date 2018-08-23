@@ -1,0 +1,363 @@
+*{
+	margin:0;
+	padding:0;
+}
+body{
+ background-color: rgba(0,0,0,0.8);
+	background-image:url(http://intercamblog.com/wp-content/uploads/internet-marketing-2.jpg);
+	background-size:cover;
+	background-repeat:no-repeat;
+	
+	 
+	}
+
+.nav{
+
+    top:0;
+	position:absolute;
+	width:100%;
+	background:#000;
+	z-index:1;
+	border-bottom:solid 1px white;
+	height:60px;
+   color:text white;
+
+}
+.nav ul{
+	list-style:none;
+
+}
+.menumain > li{
+	position: relative;
+	display:inline-block;
+	margin-left:10px;
+}
+
+
+
+.menumain > li > a{
+	display: inline-block;
+	padding:10px 15px;
+    color: #00afef;
+	font-family:Helvetica, Arial;
+	text-decoration:none;
+	font-size:20px;
+	margin-top:20px;
+	float:right;
+	bottom:30px;
+
+}
+.menumain li a:hover{
+	color:#00afef;
+	transition:all 0.3s;
+
+
+}
+.submenu{
+	position:absolute;
+	background:#404040;
+	visibility:hidden;
+	opacity:0;
+	transition: opacity 1s;
+	padding:10px 10px;
+	 margin-top:75px;
+	font-family:Helvetica, Arial;
+	text-decoration:none;
+	font-size:20px;
+	border:solid 1px white;
+}
+.submenu li a{
+	display:block;
+	padding:5px;
+	color:#00afef;
+	font-family: Helvetica, Arial;
+	text-decoration:none;
+
+}
+.nav li:hover .submenu{
+	visibility: visible;
+	opacity:1;
+}
+.logo{
+		width:60px;
+		height:50px;
+		margin-bottom:10px;
+ }
+ .Inicio{
+ 		padding:15px 20px;
+	    color: rgba(255, 255, 255, 0.7);
+	font-family:Helvetica, Arial;
+	text-decoration:none;
+	font-size:30px;
+	float:right;
+	position:relative;
+	bottom:30px;
+
+
+
+
+ }
+ .Logout{
+ 	padding:15px 20px;
+	    color: rgba(255, 255, 255, 0.7);
+	font-family:Helvetica, Arial;
+	text-decoration:none;
+	font-size:30px;
+	margin-bottom:20px;
+	float:right;
+	position:relative;
+	bottom:30px;
+
+ }
+ .Consultas{
+ 	padding:15px 20px;
+	    color: rgba(255, 255, 255, 0.7);
+	font-family:Helvetica, Arial;
+	text-decoration:none;
+	font-size:30px;
+	margin-bottom:20px;
+	position:relative;
+	bottom:30px;
+
+ }
+ .Locales{
+ 	padding:15px 20px;
+	    color: rgba(255, 255, 255, 0.7);
+	font-family:Helvetica, Arial;
+	text-decoration:none;
+	font-size:30px;
+	margin-bottom:20px;
+	position:relative;
+	bottom:30px;
+ }
+.Competitivo{
+	padding:15px 20px;
+	    color: rgba(255, 255, 255, 0.7);
+	font-family:Helvetica, Arial;
+	text-decoration:none;
+	font-size:30px;
+	margin-bottom:20px;
+	position:relative;
+	bottom:30px;
+}
+.Logo{
+	padding:15px 20px;
+	color: rgba(255, 255, 255, 0.7);
+	font-family:Helvetica, Arial;
+	text-decoration:none;
+	font-size:30px;
+	margin-bottom:20px;
+	position:relative;
+	bottom:50px;
+}
+
+.Nosotros{
+	padding:15px 20px;
+	color: rgba(255, 255, 255, 0.7);
+	font-family:Helvetica, Arial;
+	text-decoration:none;
+	font-size:30px;
+	margin-bottom:20px;
+	position:relative;
+	bottom:29px;
+
+}
+.Acerca{
+	color:#00afef;
+	position:relative;
+	bottom:1040px;
+	left:450px;
+	padding:20px;
+	font-size:40px;
+}
+.Informacion{
+	color:#FFF;
+	position:relative;
+	bottom:1030px;
+	left:320px;
+	font-size:25px;
+	width:700px;
+}
+.Mision{
+		color:#00afef;
+	position:relative;
+	bottom:890px;
+	left:240px;
+	padding:20px;
+	font-size:40px;
+}
+
+.Rmision{
+		color:#FFF;
+	position:relative;
+	bottom:880px;
+	left:125px;
+	width:450px;
+	font-size:25px;
+}
+.Vision{
+	color:#00afef;
+	position:relative;
+	bottom:1160px;
+	left:970px;
+	padding:20px;
+	font-size:40px;
+
+
+}
+.Rvision{
+	color:#FFF;
+	position:relative;
+	bottom:1150px;
+	left:800px;
+	font-size:25px;
+	width:490px;
+
+}
+.contenedoruno{
+	width:1000px;
+	height:300px;
+	background-color:rgba(92, 88, 88,0.5);
+	position:relative;
+	left:165px;
+	top:60px;
+}
+.contenedordos{
+	width:600px;
+	height:400px;
+	background-color:rgba(92, 88, 88,0.5);
+	position:relative;
+	top:90px;
+	left:10px;
+}
+.contenedortres{
+	width:600px;
+	height:400px;
+	background-color:rgba(92, 88, 88,0.5);
+	position:relative;
+	bottom:310px;
+	left:740px;
+
+}
+
+*{
+    margin: 0px;
+  
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+footer{
+	text-align:center;
+	
+    width: 100%;
+    background: #202020;
+    color: white;   
+   
+   position:absolute;
+    
+    
+}
+
+.container-footer-all{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px;
+}
+
+.container-body{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+.colum1{
+    max-width: 400px;
+    
+}
+
+.colum1 h1{
+    font-size: 22px;
+}
+
+.row{
+    margin-top: 20px;
+    display: flex;
+}
+
+.row img{
+    width: 36px;
+    height: 36px;
+}
+
+.row label{
+    margin-top: 10px;
+    margin-left: 20px;
+    color: #C7C7C7;
+}
+
+.colum2{
+    max-width: 400px;
+}
+
+.colum2 h1{
+    font-size: 22px;
+}
+
+.row2{
+    margin-top: 20px;
+    display: flex;
+}
+
+.row2 img{
+    width: 36px;
+    height: 36px;
+}
+
+.row2 label{
+    margin-top: 10px;
+    margin-left: 20px;
+    max-width: 140px;
+}
+
+.container-footer{
+    width: 100%;  
+    background: #101010;
+}
+
+.footer{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;  
+    padding: 20px;
+}
+
+.copyright{
+    color: #C7C7C7;
+}
+
+.copyright a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.information a{
+    text-decoration: none;
+    color: #C7C7C7;
+}
+
+
+@media screen and (max-width: 1100px){
+    
+    .container-body{
+        flex-wrap: wrap;
+    }
+.colum1,
+    .colum2{
+        margin-top: 40px;
+    }
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Api</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="assets/css/apilol.css">
+</head>
+<body id="lol">
+	<form class="" action="normal.php" method="get">
+		<div id="kas">
+			<h1>Seleccion su región</h1>
+			<select id="l" name="Region">
+				<option>Seleccione...</option>
+				<option>RU</option>
+				<option>KR</option>
+				<option>BR1</option>
+				<option>OC1</option>
+				<option>JP1</option>
+				<option>NA1</option>
+				<option>EUN1</option>
+				<option>EUW1</option>
+				<option>TR1</option>
+				<option>LA1</option>
+				<option>LA2</option>
+			</select>
+			<h1 for="informacion">Digite su nick<br><h2>(Sin espacios)</h2></h1>
+			<input id="l" type="text" name="informacion" placeholder="Digite su nick">
+			<button id="z" type="submit" name="button">Enviar</button>
+		</div>
+	</form>
+</body>
+</html>
