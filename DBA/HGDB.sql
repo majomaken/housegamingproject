@@ -90,8 +90,8 @@ create table certificate(
 /*tabla de sessiones que se generan al usar las pc's*/
 create table session(
      SessionId int auto_increment unique,
-     SessionIni datetime,
-     SessionFin datetime,
+     SessionIni time,
+     SessionFin time,
      UsHGTAG int,
      PcId int,
      primary key (SessionId),
@@ -113,7 +113,7 @@ create table recharge(
 /*tabla de equipos*/
 create table equip(
      EquipId Int auto_increment unique,
-     EquipName Varchar(12) unique NOT NUll,
+     EquipName Varchar(64) unique NOT NUll,
      EquipCreator int unique NOT NUll,
      EquipMenber2 int unique,
      EquipMenber3 int unique,
@@ -136,7 +136,7 @@ create table invitations(
      InviSend int,
      InviReceive int,
      InviStatus varchar(12),
-     InviReply varchar(12),
+     InviReply varchar(256),
      primary key (InvitNum),
      FOREIGN KEY (InviSend) REFERENCES `user`(UsHGTAG) ON DELETE CASCADE ON UPDATE CASCADE,
      FOREIGN KEY (InviReceive) REFERENCES `user`(UsHGTAG) ON DELETE CASCADE ON UPDATE CASCADE
