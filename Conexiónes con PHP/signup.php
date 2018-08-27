@@ -22,13 +22,13 @@ include("conexion.php");
     if (empty($Nombre || $Apellido || $Email|| $Password || $Phone || $Document)) {
       echo "<script>
         alert('Llene todos los campos  ');</script>";
-      
+
       die();
-      
+
     }else{
       if (!filter_var($Email,FILTER_VALIDATE_EMAIL)) {
         echo "<script>alert('Correo electronico Incorrecto'); </script>";
-        
+
         exit;
       }else{
         if (!$FechaNac <>0) {
@@ -76,7 +76,7 @@ include("conexion.php");
           </div>
           <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'])?>" class="form-register" method="post">
           <div class="creation-container grid-parent">
-            
+
               <div class="container-inputs">
               <fieldset>
                 <select class="set-all-sel" name="city" >
@@ -117,7 +117,7 @@ include("conexion.php");
               </div>
               </form>
               </div>
-              
+
                 <!-- Aquie usted decide el estilo como lo quiere si usa el boton o la etiqueta <a> para colocarle
                     la accion de ir al login -->
 
@@ -127,5 +127,3 @@ include("conexion.php");
         </footer>
     </body>
 </html>
-
-

@@ -1,4 +1,31 @@
+<?php
 
+  include("conexion.php");
+
+
+  session_start();
+
+  if (isset($_POST['login_hg'])) {
+    if (!empty($_POST['email'] && !empty($_POST['password']))) {
+        $Email=$_POST['email'];
+        $Password=$_POST['password'];
+    }
+    $result=mysqli_query($Conectar, "SELECT UsEmail, UsPassword From user where UsEmail= '$Email' and UsPassword= '$Password'");
+
+    $filas=mysqli_num_rows($result);
+
+    if (!$filas==0) {
+      $_SESSION['userr'];
+
+      header("Location:index.php");
+    }else{
+      echo "<script>alert('Error en la autentificacion');</script>";
+
+    }
+
+
+  }
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -11,21 +38,18 @@
         <title>Login</title>
     </head>
     <body>
-      <video>
-        <source src="assets/video/background.mp4" autoplay loop type="video/mp4">
-      </video>
       <header>
         <h1 class="logo"><img  src="images/logologin.png" alt=""></h1>
       </header>
         <div class="login">
             <form action="#" method="post">
-                <input class="login-id-password" type="email" placeholder="Email">
-                <input class="login-id-password" type="" name="" placeholder="Password">
+                <input class="login-id-password" name="email" type="email" placeholder="Email">
+                <input class="login-id-password" type="password" name="password" placeholder="Password">
                 <input class="login-hg" type="submit" name="login_hg" value="Let's Go!">
             </form>
             <div class="thirdparty-line">
-              <span>OR LOG IN WITH</span>
-            </div>
+<span>OR LOG IN WITH</span>
+</div>
             <div class="options-login">
               <button type="button" name="facebook">
                   <i class="icon fab fa-facebook-f"></i><span>acebook</span>
@@ -37,7 +61,7 @@
 
                 <ul id="help-links">
                     <li>
-                        <a href="signup.html">Crea una cuenta de HG gratis</a>
+                        <a href="signup.php">Crea una cuenta de HG gratis</a>
                     </li>
 
                     <li>
