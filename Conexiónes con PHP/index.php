@@ -21,7 +21,7 @@
                     </ul>
                 <li><a href="">LOCALES</a></li>
                 <li><a href="">COMPETITIVO</a></li>
-                <li><a href="Nosotros/Nosotros.html">ABOUT US</a></li>
+                <li><a href="Nosotros/aboutus.html">ABOUT US</a></li>
                 <li class="account">
                     <a href="">Mi Cuenta</a>
                     <ul class="submenu-account">
