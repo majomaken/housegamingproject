@@ -25,14 +25,14 @@
 
     <?php require 'partials/header.php' ?>
 
-    <?php if(!empty($user)): ?>
-      <?php header('Location: tierlist.php');?>
-    <?php else: ?>
-      <h1>Welcome to League</h1>
+      <?php if(!empty($user)): ?>
+        <?php header('Location: tierlist.php');?>
+      <?php else: ?>
+        <h1>Welcome to League</h1>
 
-      <a href="login.php">Login</a> or
-      <a href="signup.php">SignUp</a>
-    <?php endif; ?>
+        <a href="login.php">Login</a> or
+        <a href="signup.php">SignUp</a>
+      <?php endif; ?>
 
 
   </body>

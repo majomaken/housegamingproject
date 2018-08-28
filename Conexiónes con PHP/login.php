@@ -1,30 +1,29 @@
 <?php
 
-  include("conexion.php");
-
-
   session_start();
 
-  if (isset($_POST['login_hg'])) {
-    if (!empty($_POST['email'] && !empty($_POST['password']))) {
+
+  if (isset($_SESSION['userr'])) {
+    header('Location: /test3');
+  }
+
+  require 'conexion.php';
+
+    if (!empty($_POST['email']) && !empty($_POST['password'])) {
         $Email=$_POST['email'];
         $Password=$_POST['password'];
-    }
-    $result=mysqli_query($Conectar, "SELECT UsEmail, UsPassword From user where UsEmail= '$Email' and UsPassword= '$Password'");
+    $result=mysqli_query($Conectar, "SELECT UsHGTAG, UsEmail, UsPassword From user where UsEmail= '$Email' and UsPassword= '$Password'");
 
     $filas=mysqli_num_rows($result);
-
+    $message = '';
     if (!$filas==0) {
-      $_SESSION['userr'];
-
-      header("Location:index.php");
-    }else{
-      echo "<script>alert('Error en la autentificacion');</script>";
-
+      $_SESSION['userr'] = $filas['UsHGTAG'];
+      header("Location: index.php");
+    } else{
+        $message = 'Sorry, Those credentials do not match';
     }
-
-
   }
+
 ?>
 
 <!DOCTYPE html>
@@ -41,8 +40,11 @@
       <header>
         <h1 class="logo"><img  src="images/logologin.png" alt=""></h1>
       </header>
+      <?php if (!empty($message)) : ?>
+        <p><?= $message ?> </p>
+      <?php endif; ?>
         <div class="login">
-            <form action="#" method="post">
+            <form action="login.php" method="post">
                 <input class="login-id-password" name="email" type="email" placeholder="Email">
                 <input class="login-id-password" type="password" name="password" placeholder="Password">
                 <input class="login-hg" type="submit" name="login_hg" value="Let's Go!">
@@ -69,5 +71,6 @@
                     </li>
                 </ul>
         </div>
+        <a><?=  $_SESSION['userr']; ?></a>
     </body>
 </html>

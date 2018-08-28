@@ -52,17 +52,16 @@ include("conexion.php");
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <script type="text/javascript" src="assets/js/all.js"></script>-->
-
+        <script type="text/javascript" src="assets/js/all.js"></script>
         <title>Sign Up</title>
         <link rel="stylesheet" type="text/css" href="assets/css/signup.css">
     </head>
     <body>
 
           <header>
-            <a href="index.html"><img class="logo" src="images/logologin.png"></a>
+            <a href="index.php"><img class="logo" src="images/logologin.png"></a>
             <h1>Crear una cuenta</h1>
           </header>
 
@@ -100,14 +99,6 @@ include("conexion.php");
               <fieldset>
                 <input  class="set-all" type="" name="phone" placeholder="Teléfono" value="<?php if(isset($Phone)) echo"$Phone"?>">
               </fieldset>
-              <fieldset>
-                <select class="set-sideb" name="doctype" value="<?php if(isset($Doctype)) echo"$Doctype"?>">
-                    <option value="CC">CC</option>
-                    <option value="TI">TI</option>
-                </select>
-                <input class="set-sideb" type="text" name="document" placeholder="Documento" value="<?php if(isset($Document)) echo"$Document"?>">
-              </fieldset>
-
                 </div>
                 <div class="container-actionbtn">
                 <input type="checkbox" name="terms" value="">
