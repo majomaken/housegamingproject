@@ -55,30 +55,30 @@
                 <div class="Colum2">
                     <h1>Redes sociales</h1>
                     <div class="row">
-                        <img src="C:\Users\Home\Downloads\Footer-HTML5-CSS3-master\icon\facebook.png">
+                        <img src="./images/icons/facebook.png">
                         <label>Siguenos en Facebook</label>
                     </div>
                     <div class="row">
-                        <img src="C:\Users\Home\Downloads\Footer-HTML5-CSS3-master\icon\google-plus.png">
+                        <img src="images/icons/google-plus.png">
                         <label>Siguenos en Google plus</label>
                     </div>
                     <div class="row">
-                        <img src="C:\Users\Home\Downloads\Footer-HTML5-CSS3-master\icon\twitter.png">
+                        <img src="images/icons/twitter.png">
                         <label>Siguenos en Twitter</label>
                     </div>
                 </div>
                 <div class="Colum2">
                     <h1>Informacion de contacto</h1>
                     <div class="row2">
-                        <img src="C:\Users\Home\Downloads\Footer-HTML5-CSS3-master\icon\house.png">
+                        <img src="images/icons/house.png">
                         <label>Estamos ubicados en Mosquera, Cundinamarca</label>
                     </div>
                     <div class="row2">
-                        <img src="C:\Users\Home\Downloads\Footer-HTML5-CSS3-master\icon\smartphone.png">
+                        <img src="images/icons/smartphone.png">
                         <label>+57 3208765489</label>
                     </div>
                     <div class="row2">
-                        <img src="C:\Users\Home\Downloads\Footer-HTML5-CSS3-master\icon\contact.png">
+                        <img src="images/icons/contact.png">
                         <label>housegamingcol@gmail.com</label>
                     </div>
                 </div>

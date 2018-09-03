@@ -11,7 +11,7 @@
                 </li>
             </ul>
         <li><a href="">LOCALES</a></li>
-        <li><a href="">COMPETITIVO</a></li>
+        <li><a href="esports.php">COMPETITIVO</a></li>
         <li><a href="Nosotros/aboutus.html">ABOUT US</a></li>
         <li class="account">
             <a href="">Mi Cuenta</a>
