@@ -1,9 +1,9 @@
 #lol{
-	background-image: url(images/images_api/inicio/y.jpg);
+	background-image: url(../images/images_api/inicio/y.jpg);
 	background-size: cover;
 }
 #lo{
-	background-image: url(images/images_api/inicio/y.jpg);
+	background-image: url(../images/images_api/inicio/y.jpg);
 	background-size: cover;
 }
 #l{
@@ -36,7 +36,7 @@ h2{
 	text-align: center;
 }
 #kas{
-	background-image:url(images/images_api/inicio/k.jpg);
+	background-image:url(../assets/images_api/inicio/k.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	margin-top: 100px;
@@ -92,4 +92,13 @@ h2{
 	width:400px;
 	text-align: center;
 	color: #071B18;
+}
+#duo img {
+	width: 80%;
+}
+#flex img {
+	width: 80%;
+}
+#vs img {
+	width: 80%;
 }

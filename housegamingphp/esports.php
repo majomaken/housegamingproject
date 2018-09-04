@@ -23,7 +23,7 @@
     <div class="left-panel">
         <ul>
             <div class="imgd">
-              <img class="imgd" src="Avatar/coconut.png" alt="">
+              <img class="imgd" src="Avatar/coconut.png" alt="whatswrong">
             </div>
             <label class="Nombre"><h2><?php echo "Welcome ". $_SESSION['userr']; echo '<img src="'.$_SESSION['Imagen'].'" width="40" heigth="40"><br/>';?></label></h2>
             <li><a href="esports.php">Noticias</li></a>
