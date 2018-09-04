@@ -8,10 +8,9 @@
 </head>
 <body>
 	<?php require 'partials/header.php' ?>
-	<div class="container-video">
        <video src="assets/video/headercom.mp4" class="video" autoplay loop>
         </video>
-			</div>
+
   <div class="Contenedortx">
       </div>
       <p class="Rcont">Juega en los torneos de nuestros locales</p>
