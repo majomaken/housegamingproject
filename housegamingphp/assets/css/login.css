@@ -1,0 +1,131 @@
+* {
+	margin:0;
+	padding:0;
+}
+
+body{
+	background-image: url('../images/Fondo1.jpg');
+	background-size:cover;
+	background-attachment:fixed;
+}
+#particles-js {
+    width:100%;
+    height:100%;
+    position:fixed;
+    background:rgba(0,0,0,.7);
+}
+.logo {
+	position:relative;
+	margin: auto;
+	margin-top:0px;
+	margin-bottom: 40px;
+}
+header{
+
+  margin-bottom: center;
+  width: 100%;
+  text-align: center;
+}
+header a{
+
+  text-decoration: none;
+  color: #333;
+}
+a {
+	text-decoration: none;
+}
+
+.login {
+	position:relative;
+	width: 500px;
+	margin: auto;
+	text-align: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	justify-content: center;
+}
+.login-id-password {
+	position:relative;
+	width: 92%;
+	margin-bottom: 15px;
+	padding: 8px;
+	font-size: 16px;
+}
+.login-hg {
+	position:relative;
+	padding: 10px;
+	overflow: hidden;
+	background-color: #00afef;
+	text-decoration: none;
+	color: #91e4ff;
+	height: 40px;
+	display: block;
+	width: 100%;
+	margin-top: 15px;
+	border: 1px solid #0d639f;
+	transition: 2s;
+	cursor: pointer;
+	font-size: 20px;
+}
+.login-hg:hover {
+	transition: 1s;
+  background-color: #39b9e9;
+  color: #fff;
+}
+.thirdparty-line {
+	position:relative;
+	text-align: center;
+	display: block;
+	margin: auto;
+	padding: 20px;
+	color: #0c82a8cc;
+}
+.options-login {
+	position:relative;
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+}
+.options-login button {
+  background-color: #00afef;
+  color: #fff;
+  width: 49%;
+  max-width: 250%;
+  margin-bottom: 10px;
+  background-color: #00afef;
+  text-decoration: none;
+  height: 35px;
+  border: 1px solid #0d639f;
+  transition: 1s;
+  cursor: pointer;
+}
+.options-login button:hover {
+  background-color: #39b9e999;
+  color: #fff;
+}
+.icon {
+	position:relative;
+  font-size: 20px;
+}
+#help-links {
+	position:relative;
+	text-align: center;
+	list-style-type: none;
+	margin: 10px 0;
+	padding: 20px;
+	margin: auto;
+	line-height: 25px;
+}
+li {
+	padding: 20px;
+}
+a {
+	color: #00afef;
+	transition: color .2s;
+	font-size: 22px;
+	margin-bottom: 20px;
+}
+a:hover {
+	color: #fff;
+}

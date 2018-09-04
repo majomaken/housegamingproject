@@ -1,7 +1,7 @@
 
 Drop DATABASE HGDB;
 create DATABASE HGDB;
-
+USE HGDB;
 /*tabla de imagenes donde se relacionan los registros de Avatar con su fuente*/
 create table Avatar(
      AvatarId int auto_increment unique,
