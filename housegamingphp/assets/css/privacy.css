@@ -1,0 +1,20 @@
+div {
+  font-family:helvetica, arial;
+  background-size:cover;
+  background-attachment:fixed;
+  background:rgba(6, 3, 3, 0.48);
+}
+.logoh {
+  width: 200px;
+  margin: auto;
+}
+.container-main {
+  text-align: center;
+  position: relative;
+  color: white;
+}
+.container-uses {
+  padding: 25px;
+  position: relative;
+  font-size: 20px;
+}

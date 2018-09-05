@@ -10,11 +10,11 @@
         <link rel="stylesheet" type="text/css" href="assets/css/signup.css">
     </head>
     <body>
-          <video src="assets/video/background.mp4" autoplay loop></video>
           <header>
             <a href="index.html"><img class="logo" src="images/logologin.png"></a>
             <h1>Crear una cuenta</h1>
           </header>
+          <?php require 'partials/header.php'; ?>
 
           <section style="color:#dfc7c7;">
           <h1>Protección de datos:</h1>
