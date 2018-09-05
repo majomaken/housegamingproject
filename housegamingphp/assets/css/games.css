@@ -1,0 +1,15 @@
+.container-games {
+    position: relative;
+    text-align: center;
+}
+ .games{
+     position:relative;
+     height:400px;
+     width:300px;
+}
+
+ .games:hover{
+     transform : scale(1.1);
+     z-index: 1;
+     transition-duration: 1s;
+}

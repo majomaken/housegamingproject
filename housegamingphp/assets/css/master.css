@@ -412,10 +412,11 @@ body{
     color:#FFF;
 }
 
+.container-games {
 
+}
     .lol{
     position:absolute;
-    top:112%;
     left:2%;
     height:400px;
     width:300px;
@@ -433,7 +434,6 @@ body{
 }
 .paladins{
      position:absolute;
-    top:112%;
     left:27%;
     height:400px;
     width:300px;
@@ -446,7 +446,6 @@ body{
 }
 .dota{
     position:absolute;
-    top:112%;
     left:51%;
     height:400px;
     width:300px;
@@ -458,7 +457,6 @@ body{
 }
 .fifa{
     position:absolute;
-    top:112%;
     right:2%;
     height:400px;
     width:300px;

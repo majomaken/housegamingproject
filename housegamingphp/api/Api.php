@@ -5,12 +5,13 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="../assets/css/api.css">
 </head>
-<body id="lo">
+<body>
+
 	<div id="cas">
 		<?php
 
 			error_reporting(0);
-			$key="RGAPI-93b29b52-14aa-4071-98ab-68a2e810fbec";
+			$key="RGAPI-1924b9d3-d79d-47c6-8959-51d85db6228f";
 
 			/*Mediante el siguiente if se obtiene la informacion basica del nick gracias a la variable isset que permite determinar si una variable esta definida*/
 
@@ -39,7 +40,8 @@
 		?>
 	</div>
 
-	<div id="duo">
+	<div class="container-league">
+	<div class="container-leaguePoints">
 		<?php
 
 			/*A continuacion tomamos el id que obtuvimos en paso anterior para así poder mostrale al usuario sus datos en las liga*/
@@ -103,7 +105,7 @@
 		?>
 	</div>
 
-	<div id="flex">
+	<div class="container-leaguePoints">
 		<?php
 
 			if (isset($datos2[1]["queueType"])) {
@@ -154,7 +156,7 @@
 		?>
 	</div>
 
-	<div id="vs">
+	<div class="container-leaguePoints">
 		<?php
 			echo "Datos sobre RANKED 3 vs 3: "."<br>"."<br>";
 
@@ -197,5 +199,6 @@
 			}
 		?>
 	</div>
+</div>
 </body>
 </html>

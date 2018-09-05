@@ -20,7 +20,11 @@
     $Imag=mysqli_fetch_array($Icono);
     $Foto=$Imag['AvatarSrc'];
     $_SESSION['Imagen']=$Foto;
-
+    //Muestra en el Indexx.php el Avatar
+    $id=mysqli_query($Conectar,"SELECT UsHGTAG From user WHERE UsEmail='$Email'");
+    $result=mysqli_fetch_array($id);
+    $idr=$result['UsHGTAG'];
+    $_SESSION['id']=$idr;
     //Verifica la Sesion
     $result=mysqli_query($Conectar, "SELECT UsEmail, UsPassword From user where UsEmail= '$Email' and UsPassword= '$Password'");
     $filas=mysqli_num_rows($result);

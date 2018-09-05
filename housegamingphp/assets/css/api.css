@@ -2,10 +2,13 @@
 	background-image: url(../images/images_api/inicio/y.jpg);
 	background-size: cover;
 }
-#lo{
+body{
+	padding: 0;
+	margin: 0;
 	background-image: url(../images/images_api/inicio/y.jpg);
 	background-size: cover;
 }
+
 #l{
 	background-color: #0656ff57;
 	margin-left: 200px;
@@ -44,6 +47,7 @@ h2{
 	height:500px;
 	width:700px;
 }
+
 #cas{
 	background-color:rgba(140,140,140,0.5);
 	border: 2px solid #00947B;
@@ -55,50 +59,27 @@ h2{
 	text-align: center;
 	color: #071B18;
 }
-#duo{
+.container-league {
+	margin: auto;
+	position: relative;
+	text-align: center;
+	display: flex;
+}
+.container-leaguePoints{
+	position: relative;
 	background-color:rgba(140,140,140,0.5);
 	border: 2px solid #00947B;
 	font-family: Arial;
 	font-size: 20px;
-	margin: left;
+	margin: 0 auto;
 	margin-top: 49px;
 	height:380px;
 	width:400px;
-	text-align: center;
 	color: #071B18;
+	float: left;
 }
-#flex{
-	background-color:rgba(140,140,140,0.5);
-	border: 2px solid #00947B;
-	font-family: Arial;
-	font-size: 20px;
-	margin: left;
-	margin-left: 465px;
-	margin-top: -385px;
-	height:380px;
-	width:400px;
-	text-align: center;
-	color: #071B18;
-}
-#vs{
-	background-color:rgba(140,140,140,0.5);
-	border: 2px solid #00947B;
-	font-family: Arial;
-	font-size: 20px;
-	margin:left;
-	margin-left: 930px;
-	margin-top: -385px;
-	height:380px;
-	width:400px;
-	text-align: center;
-	color: #071B18;
-}
-#duo img {
-	width: 80%;
-}
-#flex img {
-	width: 80%;
-}
-#vs img {
-	width: 80%;
+
+
+.container-leaguePoints img {
+	min-width: 100px;
 }

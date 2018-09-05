@@ -3,8 +3,26 @@
     session_start();
     error_reporting(0);
 
-    if (!isset($_SESSION['userr'])) {
+    if (!isset($_SESSION['userr']))
+    {
         echo '<script> window.location="index.php"; </script>';
+    }
+
+    if (isset($_SESSION['id']))
+    {
+      $id = $_SESSION['id'];
+      $query = "SELECT * FROM user WHERE UsHGTAG='$id'";
+      $sql = mysqli_query($Conectar, $query);
+      $result = mysqli_fetch_array($sql);
+      $nick = $result['UsNickname'];
+      $email = $result['UsEmail'];
+      $password = $result['UsPassword'];
+      $phone = $result['UsPhone'];
+    }
+//REALIZAR EL UPDATE
+    if (isset($_POST['update']))
+    {
+
     }
 ?>
 <!DOCTYPE html>
@@ -35,18 +53,18 @@
  	<img src="assets/images/Menu.png" class="menu">
  <fieldset>
  	<label class="Nm">Cambiar nick</label>
- 	<input type="text" name="Varibale_nick" class="inNm" placeholder="Nuevo nombre">
+ 	<input type="text" name="nick" class="inNm" placeholder="Nuevo nick" value="<?php echo $nick; ?>">
  	</label>
  	<label class="Np">Cambiar contraseña</label>
- 	<input type="password" name="Varible_password" class="inPs" placeholder="Nueva contraseña">
+ 	<input type="password" name="Varible_password" class="inPs" placeholder="Nueva contraseña" value="<?php echo $password; ?>">
  	<label class="Tl">Cambiar teléfono</label>
- 	<input type="number" name="Varibale_telefono" class="inTl" placeholder="Teléfono">
+ 	<input type="number" name="Varibale_phone" class="inTl" placeholder="Teléfono" value="<?php echo $phone; ?>">
  </fieldset>
  <fieldset>
  	<label class="Ne">Cambiar equipo</label>
- 	<input type="text" name="Varible_equipo" class="inNe" placeholder="Equipo">
+ 	<input type="text" name="Varible_equipo" class="inNe" placeholder="Equipo" value="">
  </fieldset>
- <button type="button" class="Boton">
+ <button type="submit" class="Boton" name="update">
  	<span>¡Vamos!</span>
 </button>
  </div>

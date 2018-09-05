@@ -7,7 +7,7 @@
             <a href="">Consultas</a>
             <ul class="submenu">
                 <li><a href="api/Inicio.php">Jugadores</a></li>
-                <li><a href="">Juegos</a></li>
+                <li><a href="games.php">Juegos</a></li>
                 </li>
             </ul>
         <li><a href="">Locales</a></li>
