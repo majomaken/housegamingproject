@@ -122,21 +122,14 @@ body{
      opacity:1;
 }
  .account{
-   		color: rgba(255, 255, 255, 0.7);
-		font-family:Helvetica, Arial;
-		text-decoration:none;
-		font-size:30px;
-		float:right;
-		position:relative;
-        top:-128px;
-       min-width: 700px;
-    display: inline-block;
+   float: right;
+
 }
 .submenu-account{
-     position: absolute;
+     position: fixed;
      right:0%;
      width:10%;
-     background:#404040;
+     background:#090b0c99;
      visibility:hidden;
      opacity:0;
     transition: opacity 1s;
