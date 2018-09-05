@@ -1,5 +1,4 @@
 <!-- Este archivo normalmente es .php pero despues lo cambiamos -->
-<div id="particles-js"></div>
  <header>
     <nav class="nav">
         <ul class="menumain">
@@ -21,7 +20,7 @@
                     <button class="login-hg" onclick="window.location.href='login.php';">Login</button>
                 </li>
                 <li>
-                    <a id="kevin" href="signup.php">Crear un a cuenta gratis</a>
+                    <a id="kevin" href="signup.php">Crear una cuenta gratis</a>
                 </li>
                 </li>
             </ul>

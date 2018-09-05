@@ -1,8 +1,7 @@
 * {
     padding:0;
     margin:0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
+
     box-sizing: border-box;
 }
 
@@ -14,10 +13,10 @@ body{
 }
 
 #particles-js {
+    position:fixed;
     width:100%;
     height:100%;
-    position:fixed;
-    background:rgba(0,0,0,.7);
+   background:rgba(0,0,0,.7);
 
 }
 .video{
@@ -122,14 +121,13 @@ body{
      opacity:1;
 }
  .account{
-   float: right;
-
+    float: right;
 }
 .submenu-account{
-     position: fixed;
+     position: absolute;
      right:0%;
      width:10%;
-     background:#090b0c99;
+     background:#11090999;
      visibility:hidden;
      opacity:0;
     transition: opacity 1s;
@@ -255,33 +253,10 @@ body{
  #palabra:hover{
      color:#FFF;
      transition:1.5s;
+
 }
- #contentDiv {
-    position:relative;
-    bottom:90px;
-     width: 100%;
-     overflow:hidden;
-     text-align: center;
-     margin:auto;
-		 margin-top: 10px;
-		 margin-bottom: 10px;
-		 padding: 10px;
-}
-#contentDiv div {
-	display:inline-table;
-	height:400px;
-	width:300px;
-	padding: 3px;
-}
- #contentDiv div img{
-	 height:400px;
-	 width:300px;
-	 transition-duration: 1s;
- }
- #contentDiv div img:hover {
-		transform : scale(1.1);
-		z-index: 1;
- }
+
+
 
  .container-video {
      height: 0;
@@ -298,13 +273,31 @@ body{
      width: 100%;
 		 transition: 3s;
 }
+.footer2{
+    position:absolute;
+   top:142%;
+    width:100%;
+    text-align:center;
+    background: #202020;
+     color: white;
 
+}
 
+ .footer3{
+    position:absolute;
+   top:135%;
+    width:100%;
+    text-align:center;
+    background: #202020;
+     color: white;
+
+}
  footer{
     position:absolute;
-     text-align:center;
-     width: 100%;
-     background: #202020;
+   top:250%;
+    width:100%;
+    text-align:center;
+    background: #202020;
      color: white;
 
 }
@@ -360,13 +353,7 @@ body{
      width: 100%;
      background: #101010;
 }
- .footer{
-     max-width: 1200px;
-     margin: auto;
-     display: flex;
-     justify-content: space-between;
-     padding: 20px;
-}
+
  .copyright{
      color: #C7C7C7;
 }
@@ -402,34 +389,151 @@ body{
     width:90%;
     height:50%;
     position:absolute;
-    top:80%;
+    top:85%;
     left:5%;
     background:rgba(0,0,0,0.7);
     border:2px solid #FFF;
 }
 
-.Footer2{
-    position:absolute;
-    top:140%;
-}
+
 .Rcont{
     position:absolute;
-    top:85%;
+    top:90%;
     left:29%;
     font-size:32px;
     color:#00afef;
 }
 .Rtcont{
     position:absolute;
-    top:92%;
+    top:98%;
     left:10%;
     width:80%;
     font-size:30px;
     color:#FFF;
 }
-.Opcion{
+
+
+    .lol{
     position:absolute;
-    top:115%;
-    left:45%;
-    font-size:30px;
+    top:112%;
+    left:2%;
+    height:400px;
+    width:300px;
+
+}
+.lol div{
+     transition-duration: 1s;
+}
+
+.lol:hover{
+        transform : scale(1.1);
+        z-index: 1;
+        transition-duration: 1s;
+
+}
+.paladins{
+     position:absolute;
+    top:112%;
+    left:27%;
+    height:400px;
+    width:300px;
+
+}
+.paladins:hover{
+    transition:1s;
+    transform : scale(1.1);
+        z-index: 1;
+}
+.dota{
+    position:absolute;
+    top:112%;
+    left:51%;
+    height:400px;
+    width:300px;
+}
+.dota:hover{
+     transition:1s;
+    transform : scale(1.1);
+        z-index: 1;
+}
+.fifa{
+    position:absolute;
+    top:112%;
+    right:2%;
+    height:400px;
+    width:300px;
+
+}
+.fifa:hover{
+
+    transform : scale(1.1);
+    z-index: 1;
+    transition-duration: 1s;
+}
+.fornite{
+     position:absolute;
+    top:182%;
+    left:2%;
+    height:400px;
+    width:300px;
+}
+.fornite:hover{
+     transition:1s;
+    transform : scale(1.1);
+        z-index: 1;
+}
+.overwatch{
+     position:absolute;
+   top:182%;
+    left:27%;
+    height:400px;
+    width:300px;
+}
+.overwatch:hover{
+     transition:1s;
+    transform : scale(1.1);
+        z-index: 1;
+}
+.starcraft{
+    position:absolute;
+    top:182%;
+    left:51%;
+    height:400px;
+    width:300px;
+}
+.starcraft:hover{
+    transition:1s;
+    transform : scale(1.1);
+        z-index: 1;
+
+}
+.hearthstone{
+    position:absolute;
+    top:182%;
+    right:2%;
+    height:400px;
+    width:300px;
+}
+.hearthstone:hover{
+transition:1s;
+    transform : scale(1.1);
+        z-index: 1;
+
+}
+.enlace{
+     position:absolute;
+     height:10%;
+     width:17%;
+     left:44%;
+     top:71%;
+     background:rgba(0, 173, 239,0.3);
+     color:#FFF;
+     border:1px solid #00afef;
+     font-size:20px;
+}
+.enlace:hover{
+    border: 2px solid #FFF;
+    transition-duration:1s;
+     transform : scale(1.1);
+        z-index: 1;
 }
