@@ -5,16 +5,18 @@
     $Ciudad=$_POST['city'];
     $Nombre=$_POST['name'];
     $Apellido=$_POST['lastname'];
+    $nick = $_POST['nickname'];
     $FechaNac=$_POST['datebirth'];
     $Email=$_POST['email'];
     $Password=$_POST['password'];
+    $Passwordconf= $_POST['passwordconf'];
     $Phone=$_POST['phone'];
     $DocType=$_POST['doctype'];
     $Document=$_POST['document'];
+    $Terms = $_POST['terms'];
     $Avatar=1;
 
-      $Insert="INSERT into user(UsFirstname, UsLastname, UsBirthday, UsCity, UsEmail, UsPassword, UsPhone, UsDocType, UsDocument, UsAvatar)values ('$Nombre','$Apellido','$FechaNac','$Ciudad','$Email','$Password','$Phone','$DocType','$Document','$Avatar')";
-    if (empty($Nombre || $Apellido || $Email|| $Password || $Phone || $Document)) {
+    if (empty($Nombre || $Apellido || $nick || $Email|| $Password || $Phone || $Document)) {
       echo "<script> alert('Llene todos los campos ');window.location='signup.php'</script>";
       exit;
     }else{
@@ -28,12 +30,21 @@
         }
       }
     }
-
-    $IN=mysqli_query($Conectar,$Insert);
-
-    if ($IN) {
-      echo "<script> alert('Registrado exitosamente'); window.location='login.php'</script>";
+    if ($Password !== $Passwordconf) {
+      echo "<script> alert('Las contraseñas no coinciden! '); window.location='signup.php'</script>";
+      exit;
     }
+    if (isset($Terms)) {
+      $Terms = 1;
+      $Insert="INSERT into user(UsFirstname, UsLastname, UsNickname, UsBirthday, UsCity, UsEmail, UsPassword, UsPhone, UsDocType, UsDocument, UsAvatar, UsConditions) VALUES ('$Nombre','$Apellido', '$nick','$FechaNac','$Ciudad','$Email','$Password','$Phone','$DocType','$Document','$Avatar', '$Terms')";
+      $IN=mysqli_query($Conectar,$Insert);
+      if ($IN) {
+        echo "<script> alert('Registrado exitosamente'); window.location='login.php'</script>";
+      }
+    } else {
+      echo "<script> alert('Debe aceptar los terminos y condiciones'); window.location='signup.php'</script>";
+    }
+
   }
 ?>
 <!DOCTYPE html>
@@ -73,7 +84,8 @@
                     <option value="funza">Funza</option>
                 </select>
                 <input class="set-side" type="text" name="name" placeholder="Nombre" value="<?php if(isset($Nombre)) echo"$Nombre"?>"/>
-                <input class="set-side"  type="text" name="lastname" placeholder="Apellido" value="<?php if(isset($Apellido)) echo"$Apellido"?>"/>
+                <input class="set-side" type="text" name="lastname" placeholder="Apellido" value="<?php if(isset($Apellido)) echo"$Apellido"?>"/>
+                <input class="set-all" type="text" name="nickname" placeholder="Nick" value="<?php if(isset($nick)) echo"$nick"?>">
               </fieldset>
 
               <fieldset>
@@ -100,7 +112,7 @@
                 </div>
                 <div class="container-actionbtn">
                 <input type="checkbox" name="terms" value="">
-                <label class="terms">I agree to the <a href="#">Terms of Use</a> and I have read and acknowledge the <a class="Privacidad" href="#">Politica de privacidad</a></label>
+                <label class="terms">I agree to the <a href="#">Terms of Use</a> and I have read and acknowledge the <a class="Privacidad" href="privacy.php">Politica de privacidad</a></label>
                 <input class="free-account" type="submit" name="create_account" value="Create a free account">
                 <a href="login.php"><button class="free-login" type="button" name="login">¿Ya tienes una cuenta?</button></a>
               </div>
