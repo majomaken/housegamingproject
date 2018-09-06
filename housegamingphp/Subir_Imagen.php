@@ -1,7 +1,7 @@
 <?php
 	require 'conexion.php';
 	session_start();
-	
+
 	if (isset($_POST['Enviar'])) {
 	$Name=$_REQUEST["Name"];
 	$Foto=$_FILES["Avatar"]["name"];
@@ -28,11 +28,11 @@
 	<?php
 	//Muestra todas los Avatars guardados
 	$Select=mysqli_query($Conectar,"SELECT AvatarSrc,AvatarName From avatar");
-	while($Res=mysqli_fetch_array($Select)){  
+	while($Res=mysqli_fetch_array($Select)){
 		echo $Res["AvatarName"]."<br/>";
 		echo '<img src="'.$Res['AvatarSrc'].'" width="40" heigth="40"><br/>';
 	}
-	
+
 
 ?>
 </body>

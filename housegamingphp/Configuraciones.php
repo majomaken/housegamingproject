@@ -20,9 +20,20 @@
       $phone = $result['UsPhone'];
     }
 //REALIZAR EL UPDATE
+
     if (isset($_POST['update']))
     {
+      $nk=$_POST['nick'];
+      $apodo=mysqli_query($Conectar,"UPDATE user SET UsNickname='$nk' where UsHGTAG='$id'");
 
+      $pass=$_POST['Varible_password'];
+      $contraseña=mysqli_query($Conectar,"UPDATE user SET UsPassword='$pass' where UsHGTAG='$id'");
+
+      $ph=$_POST['Varibale_phone'];
+      $tel=mysqli_query($Conectar,"UPDATE user SET UsPhone='$ph' where UsHGTAG='$id'");
+
+      $team=$_POST['Varible_equipo'];
+      $equip=mysqli_query($Conectar,"UPDATE equip SET EquipName='$team' where UsHGTAG='$id'");
     }
 ?>
 <!DOCTYPE html>
@@ -36,18 +47,8 @@
 	<title>Configuraciones</title>
 </head>
 <body>
-	<div class="left-panel">
-		<ul>
-	<div class="imgd">
-    <img class="imgd" src="Avatar/coconut.png" alt="">
-	</div>
-	<label class="Nombre"><h2><?php echo "Welcome ". $_SESSION['userr']; echo '<img src="'.$_SESSION['Imagen'].'" width="40" heigth="40"><br/>';?></label></h2>
-			<li><a href="esports.php">Noticias</li></a>
-			<li><a href="">Equipo</li></a>
-			<li><a href="">Invitaciones</li></a>
-			<li><a href="">Configuraciones</li></a>
-		</ul>
-	</div>
+  <?php require 'partials/menu.php' ?>
+  <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'])?> "method="POST">
  <div class="contenido">
  	<div id="trnegra"></div>
  	<img src="assets/images/Menu.png" class="menu">
@@ -68,6 +69,7 @@
  	<span>¡Vamos!</span>
 </button>
  </div>
+</form>
  <a href="CerrarSesion.php">
       <button type="button" class="Logout">
         <span>Cerrar sesión</span>

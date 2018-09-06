@@ -19,19 +19,7 @@
 </head>
 
 <body>
-
-    <div class="left-panel">
-        <ul>
-            <div class="imgd">
-              <img class="imgd" src="Avatar/coconut.png" alt="whatswrong">
-            </div>
-            <label class="Nombre"><h2><?php echo "Welcome ". $_SESSION['userr']; echo '<img src="'.$_SESSION['Imagen'].'" width="40" heigth="40"><br/>';?></label></h2>
-            <li><a href="esports.php">Noticias</li></a>
-                <li><a href="">Equipo</li></a>
-                    <li><a href="">Invitaciones</li></a>
-                        <li><a href="Configuraciones.php">Configuraciones</li></a>
-        </ul>
-    </div>
+  <?php require 'partials/menu.php' ?>
     <div class="contenido">
         <div id="trnegra"></div>
         <img src="assets/images/Menu.png" class="menu">
