@@ -20,10 +20,6 @@ if (isset($_POST['cteam'])) {
       //Query HGTAG from EquipCreator
     $query     = "SELECT EquipCreator FROM Equip WHERE EquipCreator='$id';";
     $sql       = mysqli_query($Conectar, $query);
-      //Query EquipName from EquipCreator
-    $equipname = "SELECT EquipName FROM equip WHERE EquipCreator='$id';";
-    $sqls      = mysqli_query($Conectar, $equipname);
-    $sqls      = mysqli_fetch_array($sqls);
       //Query all fileds from Equip by HGTAG from EquipCreator
     $menbers   = "SELECT * FROM equip WHERE EquipCreator='$id';";
     $menbersv   = mysqli_query($Conectar, $menbers);
@@ -47,6 +43,15 @@ if (isset($_POST['cteam'])) {
     //Fetch HGTAG Menber6
   $menber6q  = "SELECT UsHGTAG FROM user WHERE UsNickname='$menber6';";
   $menber6ex = mysqli_query($Conectar, $menber6q);
+  if (empty($sql['EquipCreator'])) {
+    $sql = mysqli_query($Conectar, $insert);
+    if ($sql == true) {
+      echo "Tu equipo a sido creado";
+
+    } else {
+      echo "Ya tienes el equipo " . $sqls['EquipName'];
+    }
+  }
   $menber6ex  = mysqli_fetch_array($menber6ex);
 
     $idmenber2  = $menber2ex['UsHGTAG'];
@@ -56,19 +61,14 @@ if (isset($_POST['cteam'])) {
     $idmenber6  = $menber6ex['UsHGTAG'];
 
     //Execute Insert Create Team
-    if (empty($sql['EquipCreator'])) {
-        $sql = mysqli_query($Conectar, $insert);
-        if ($sql == true) {
-            echo "Tu equipo a sido creado";
-
-        } else {
-            echo "Ya tienes el equipo " . $sqls['EquipName'];
-        }
-    }
     //Validate Field Player2
     if (!empty($menber2)) {
         //Validate if Menber2 is on team
-        if ($menbersv['EquipMenber2'] == null) {
+        if ($menbersv['EquipMenber2'] == null ) {
+          //Query EquipName from EquipCreator
+          $equipname = "SELECT EquipName FROM equip WHERE EquipCreator='$id';";
+          $sqls      = mysqli_query($Conectar, $equipname);
+          $sqls      = mysqli_fetch_array($sqls);
           $invimsg = "¿Quieres hacer parte de ".$sqls['EquipName']."?";
           $sendinvi  = "INSERT INTO invitations (InviMsg, InviSend, InviReceive) VALUES ('$invimsg', '$id', '$idmenber2')";
           $sql = mysqli_query($Conectar, $sendinvi);
@@ -106,19 +106,30 @@ if (isset($_POST['cteam'])) {
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="assets/css/stylep.css">
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="icon" type="image/jpg" href="../assets/images/iconhg.png">
     <title>Equipo</title>
 </head>
     <body>
       <?php require 'partials/menu.php' ?>
-        <form method="post" action="Equip.php">
-            <input type="text" name="teamname" placeholder="Nombre de Equipo">
-            <input type="text" name="player2" placeholder="Jugador1">
-            <input type="text" name="player3" placeholder="Jugador2">
-            <input type="text" name="player4" placeholder="Jugador3">
-            <input type="text" name="player5" placeholder="Jugador4">
-            <input type="text" name="player6" placeholder="Jugador5">
-        <input type="submit" name="cteam" value="Crear Equipo">
-      </form>
+      <div class="contenido">
+        <div id="trnegra">
+          <form method="post" action="Equip.php">
+              <img src="assets/images/Menu.png" class="menu">
+                <input type="text" name="teamname" placeholder="Nombre de Equipo">
+                <input type="text" name="player2" placeholder="Jugador1">
+                <input type="text" name="player3" placeholder="Jugador2">
+                <input type="text" name="player4" placeholder="Jugador3">
+                <input type="text" name="player5" placeholder="Jugador4">
+                <input type="text" name="player6" placeholder="Jugador5">
+            <input type="submit" name="cteam" value="Crear Equipo">
+          </form>
+        </div>
+      </div>
+      <script src="http://code.jquery.com/jquery-latest.js"></script>
+      <script type="text/javascript" src="assets/js/abrir.js"></script>
     </body>
 </html>
 <!-- <form class="" action="Equip.php" method="post">

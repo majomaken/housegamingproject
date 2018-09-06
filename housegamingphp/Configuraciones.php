@@ -48,9 +48,9 @@
 </head>
 <body>
   <?php require 'partials/menu.php' ?>
+  <div class="contenido">
+    <div id="trnegra"></div>
   <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'])?> "method="POST">
- <div class="contenido">
- 	<div id="trnegra"></div>
  	<img src="assets/images/Menu.png" class="menu">
  <fieldset>
  	<label class="Nm">Cambiar nick</label>
@@ -78,6 +78,6 @@
 
 </button>
  <script src="http://code.jquery.com/jquery-latest.js"></script>
-     <script type="text/javascript" src="assets/js/abrir.js"></script>
+ <script type="text/javascript" src="assets/js/abrir.js"></script>
 </body>
 </html>
