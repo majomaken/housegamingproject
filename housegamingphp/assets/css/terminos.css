@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-image: url(https://i.pinimg.com/originals/1d/e8/5a/1de85a5cc10ac1f20c0d858921e64f7e.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.logo {
+  margin: auto;
+}
+section{
+     margin: 3%;
+}
+a{
+     color: cyan;
+}
+.numberlist{
+     margin-left: 5%;
+     margin-right: 5%;
+     font-size:20px;
+     font-family: sans-serif;
+}
+.romanlist{
+     margin-left: 4%;
+     margin-right: 4%;
+     font-size:15px;
+}
+.alphalist{
+     margin-left: 5%;
+     margin-right: 5%;
+     font-size:15px;
+}
+video {
+     position: fixed;
+     min-width: 100%;
+     min-height: 100%;
+     top: 50%;
+     left: 50%;
+     transform: translateX(-50%) translateY(-50%);
+     z-index: -1;
+}
+header{
+  padding: 20px 0;
+  margin-bottom: center;
+  width: 100%;
+  text-align: center;
+}
+header a{
+  text-decoration: none;
+  color: #333;
+}
+h1 {
+  margin: 10px;
+  color: #00afef;
+  font-size: 30px;
+  text-align: center;
+}
+.volversection{
+     margin-bottom: 60px;
+       text-align: center;
+}
+.volverbutton{
+     float: center;
+     color: #00afef
+}
+.volverbutton:hover {
+color: #3a7999;
+box-shadow: inset 0 0 0 3px #3a7999;
+border-color: lightgray;
+border-style:dashed;
+border-width: 2px;
+}
