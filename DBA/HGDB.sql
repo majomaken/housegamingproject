@@ -22,6 +22,8 @@ create table `user`(
      UsCity varchar(40),
      UsEmail varchar(40) NOT NUll unique,
      UsPassword varchar(16) NOT NUll,
+     UsDocType varchar(16) NOT NUll,
+     UsDocument varchar(16) NOT NUll,
      UsPhone varchar(16),
      UsType varchar(8),
      UsCoins Int,
@@ -109,9 +111,11 @@ create table recharge(
      FOREIGN KEY (UsHGTAG) REFERENCES `user`(UsHGTAG) ON DELETE CASCADE ON UPDATE CASCADE
 );
 /*tabla de equipos*/
+/*EquipAvatar se refiere al logo del Team*/
 create table equip(
      EquipId Int auto_increment unique,
      EquipName Varchar(64) unique NOT NUll,
+     EquipAvatar int,
      EquipCreator int unique NOT NUll,
      EquipMenber2 int unique,
      EquipMenber3 int unique,
@@ -124,7 +128,8 @@ create table equip(
      FOREIGN KEY (EquipMenber3) REFERENCES `user`(UsHGTAG) ON DELETE CASCADE ON UPDATE CASCADE,
      FOREIGN KEY (EquipMenber4) REFERENCES `user`(UsHGTAG) ON DELETE CASCADE ON UPDATE CASCADE,
      FOREIGN KEY (EquipMenber5) REFERENCES `user`(UsHGTAG) ON DELETE CASCADE ON UPDATE CASCADE,
-     FOREIGN KEY (EquipMenber6) REFERENCES `user`(UsHGTAG) ON DELETE CASCADE ON UPDATE CASCADE
+     FOREIGN KEY (EquipMenber6) REFERENCES `user`(UsHGTAG) ON DELETE CASCADE ON UPDATE CASCADE,
+     FOREIGN KEY (EquipAvatar) REFERENCES Avatar(AvatarId) ON DELETE CASCADE ON UPDATE CASCADE
 );
 /*tabla de invitaciones a los equipos*/
 /*validar que en el InviMsg no se envien scripts*/
@@ -156,3 +161,4 @@ create table GameReg(
      PromoId Int auto_increment unique,
      PromoName varchar(32),
 );*/
+select AvatarId from avatar where AvatarId=(select UsAvatar from `user` where UsHGTAG= [EquipCreator] )
