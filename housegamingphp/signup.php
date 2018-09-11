@@ -11,12 +11,10 @@
     $Password=$_POST['password'];
     $Passwordconf= $_POST['passwordconf'];
     $Phone=$_POST['phone'];
-    $DocType=$_POST['doctype'];
-    $Document=$_POST['document'];
     $Terms = $_POST['terms'];
     $Avatar=1;
 
-    if (empty($Nombre || $Apellido || $nick || $Email|| $Password || $Phone || $Document)) {
+    if (empty($Nombre || $Apellido || $nick || $Email|| $Password || $Phone)) {
       echo "<script> alert('Llene todos los campos ');window.location='signup.php'</script>";
       exit;
     }else{
@@ -36,7 +34,7 @@
     }
     if (isset($Terms)) {
       $Terms = 1;
-      $Insert="INSERT into user(UsFirstname, UsLastname, UsNickname, UsBirthday, UsCity, UsEmail, UsPassword, UsPhone, UsDocType, UsDocument, UsAvatar, UsConditions) VALUES ('$Nombre','$Apellido', '$nick','$FechaNac','$Ciudad','$Email','$Password','$Phone','$DocType','$Document','$Avatar', '$Terms')";
+      $Insert="INSERT into user(UsFirstname, UsLastname, UsNickname, UsBirthday, UsCity, UsEmail, UsPassword, UsPhone, UsAvatar, UsConditions) VALUES ('$Nombre','$Apellido', '$nick','$FechaNac','$Ciudad','$Email','$Password','$Phone','$Avatar', '$Terms')";
       $IN=mysqli_query($Conectar,$Insert);
       if ($IN) {
         echo "<script> alert('Registrado exitosamente'); window.location='login.php'</script>";
@@ -101,14 +99,6 @@
               <fieldset>
                 <input  class="set-all" type="phone" name="phone" placeholder="Teléfono" value="<?php if(isset($Phone)) echo"$Phone"?>"/>
               </fieldset>
-              <fieldset>
-                <select class="set-sideb" name="doctype">
-                    <option value="CC">CC</option>
-                    <option value="TI">TI</option>
-                </select>
-                <input class="set-sideb" type="text" name="document" placeholder="Documento">
-              </fieldset>
-
                 </div>
                 <div class="container-actionbtn">
                 <input type="checkbox" name="terms" value="">
