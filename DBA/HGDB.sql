@@ -22,8 +22,6 @@ create table `user`(
      UsCity varchar(40),
      UsEmail varchar(40) NOT NUll unique,
      UsPassword varchar(16) NOT NUll,
-     UsDocType varchar(16) NOT NUll,
-     UsDocument varchar(16) NOT NUll,
      UsPhone varchar(16),
      UsType varchar(8),
      UsCoins Int,
