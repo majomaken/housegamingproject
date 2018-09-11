@@ -27,7 +27,7 @@
   }
   if (isset($_POST['accept'])) {
     //Consulta de nombre de equipo
-      $equipname = "SELECT EquipName FROM equip WHERE EquipCreator='$inviUsid';";
+      $equipname = "SELECT EquipName FROM equip WHERE EquipCreator='$inviUsid'";
       $sqls      = mysqli_query($Conectar, $equipname);
       $sqls      = mysqli_fetch_array($sqls);
     //Inserción de jugador2 al equipo si la respuesta es exitosa

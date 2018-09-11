@@ -1,4 +1,3 @@
-<!-- Este archivo normalmente es .php pero despues lo cambiamos -->
 <footer>
     <div id=div3 class="container-body">
         <div class="colum1">
@@ -49,7 +48,7 @@
             © 2018 Todos los derechos reservados | HouseGaming
         </div>
         <div class="Information">
-            <a href="">Información compañia</a> | <a href="privacy.php">Privacidad y politica </a>|<a href=""> Terminos y condiciones</a>
+            <a href="">Información compañia</a> | <a href="privacy.php">Privacidad y politica </a>|<a href="terminos.php"> Terminos y condiciones</a>
         </div>
     </div>
 </footer>
