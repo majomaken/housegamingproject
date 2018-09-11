@@ -13,19 +13,25 @@
       $inviUsid = $inviUs['InviSend'];
 
       if ($inviUs['InviReceive'] == $id) {
+        //Consulta del nombre de equipo
           $ownersql = "SELECT UsNickname FROM user INNER JOIN invitations ON user.UsHGTAG=invitations.invisend WHERE user.UsHGTAG='$inviUsid';";
           $ownerteam = mysqli_query($Conectar, $ownersql);
           $ownerteam = mysqli_fetch_array($ownerteam);
-
+        //Inserta el estado de la invitacón como pendiente.
+          $invistatus = "UPDATE invitations SET InviStatus='PENDING' WHERE InviSend='$inviUsid';";
+          $invipen = mysqli_query($Conectar, $invistatus);
+        //Envia el mensaje de que se tiene una invitación
           echo "Tienes una invitacón de ".$ownerteam['UsNickname'];
           echo $inviMsg;
       }
   }
   if (isset($_POST['accept'])) {
+    //Consulta de nombre de equipo
       $equipname = "SELECT EquipName FROM equip WHERE EquipCreator='$inviUsid';";
       $sqls      = mysqli_query($Conectar, $equipname);
       $sqls      = mysqli_fetch_array($sqls);
-      $acept = "UPDATE equip SET EquipMenber2='$id', InviStatus='ACEPTED', InviReply='Me uno a tu team!' WHERE EquipCreator='$inviUsid'";
+    //Inserción de jugador2 al equipo si la respuesta es exitosa
+      $acept = "UPDATE equip SET EquipMenber2='$id' WHERE EquipCreator='$inviUsid'";
       $Insert = mysqli_query($Conectar, $acept);
       if ($Insert == true) {
           echo "Bienvenido a ".$sqls['EquipName'];
@@ -33,7 +39,7 @@
           echo "Error";
       }
   } else if (isset($_POST['rejected'])) {
-            $reject = "UPDATE invitations SET InviStatus='REJECTED' WHERE InviSend='$inviUsid' ";
+            $reject = "UPDATE invitations SET InviStatus='REJECTED' WHERE InviSend='$inviUsid';";
             $Insert=mysqli_query($Conectar,$reject);
             echo 'Que sad men!';
   }
@@ -55,8 +61,8 @@
         <form method="post" action="invitations.php">
             <img src="assets/images/Menu.png" class="menu">
             <?php if(!empty($inviMsg)): ?>
-            <input type="submit" name="accept" value="Aceptar">
-            <button type="submit" name="rejected">Rechazar</button>
+            <input  class="botons" type="submit" name="accept" value="Aceptar">
+            <button class="botons" type="submit" name="rejected">Rechazar</button>
             <?php else : ?>
             <p style="color: white;">No tienes invitaciónes</p>
             <?php endif; ?>

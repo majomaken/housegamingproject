@@ -1,3 +1,4 @@
+USE HGDB;
 insert into Avatar (AvatarId, AvatarName, AvatarType) values
 (1, 'Dog', 'animal icon'),
 (2, 'Cat', 'animal icon'),
