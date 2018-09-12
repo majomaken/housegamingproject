@@ -1,3 +1,4 @@
+<!-- Este archivo normalmente es .php pero despues lo cambiamos -->
 <footer>
     <div id=div3 class="container-body">
         <div class="colum1">

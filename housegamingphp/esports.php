@@ -11,17 +11,18 @@
 <html>
 
 <head>
+  <script src="http://localhost:35729/livereload.js"></script>
+
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="assets/css/stylep.css">
     <title>Tú perfil</title>
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
     <link rel="icon" type="image/jpg" href="../images/iconhg.png">
 </head>
-
-<body>
+<body class="body1">
   <?php require 'partials/menu.php' ?>
-    <div class="contenido">
-        <div id="trnegra"></div>
+    <div class="contenido1">
+        <div id="trnegra1"></div>
         <img src="assets/images/Menu.png" class="menu">
         <label class="Nt">Noticias recientes</label>
         <div class="n1">

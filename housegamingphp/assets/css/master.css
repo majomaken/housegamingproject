@@ -19,6 +19,21 @@ body{
    background:rgba(0,0,0,.7);
 
 }
+.imgd{
+    position:relative;
+    top:30px;
+    left:0px;
+    margin:auto;
+    bottom:110px;
+    width:100px;
+    height:100px;
+    background-size:cover;
+
+}
+.imgd:hover{
+    transform:rotate(-360deg);
+    transition:1.5s;
+}
 .video{
     position:absolute;
     width:100%;

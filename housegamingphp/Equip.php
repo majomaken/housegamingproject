@@ -153,27 +153,34 @@ if (isset($_POST['cteam'])) {
 <html>
 <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="assets/css/equip.css">
     <link rel="stylesheet" href="assets/css/stylep.css">
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
     <link rel="icon" type="image/jpg" href="../assets/images/iconhg.png">
     <title>Equipo</title>
 </head>
-    <body>
+    <body class="body3">
       <?php require 'partials/menu.php' ?>
-      <div class="contenido">
+      <div class="contenido abrir">
         <div id="trnegra">
+          <label class="crear">CREA TU EQUIPO AHORA</label>
           <form method="post" action="Equip.php">
               <img src="assets/images/Menu.png" class="menu">
-                <input type="text" name="teamname" placeholder="Nombre de Equipo">
-                <input type="text" name="player2" placeholder="Jugador1">
-                <input type="text" name="player3" placeholder="Jugador2">
-                <input type="text" name="player4" placeholder="Jugador3">
-                <input type="text" name="player5" placeholder="Jugador4">
-                <input type="text" name="player6" placeholder="Jugador5">
-            <input type="submit" name="cteam" value="Crear Equipo">
+                <input type="text" name="teamname" placeholder="Nombre de Equipo" class="teamname">
+                <input type="text" name="player2" placeholder="Jugador1" class="player1">
+                <input type="text" name="player3" placeholder="Jugador2" class="player2">
+                <input type="text" name="player4" placeholder="Jugador3" class="player3">
+                <input type="text" name="player5" placeholder="Jugador4" class="player4">
+                <input type="text" name="player6" placeholder="Jugador5" class="player5">
+            <input type="submit" name="cteam" value="Crear Equipo" class="cteam">
           </form>
         </div>
       </div>
+      <a href="CerrarSesion.php">
+        <button type="button" class="Logout">
+          <span>Cerrar sesión</span>
+        </button>
+    </a>
       <script src="http://code.jquery.com/jquery-latest.js"></script>
       <script type="text/javascript" src="assets/js/abrir.js"></script>
     </body>

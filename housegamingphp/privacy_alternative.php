@@ -6,18 +6,18 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <script type="text/javascript" src="assets/js/all.js"></script>
 
-        <title>Política de Privacidad</title>
-        <link rel="stylesheet" type="text/css" href="assets/css/privacy_alternative.css">
+        <title>Sign Up</title>
+        <link rel="stylesheet" type="text/css" href="assets/css/signup.css">
     </head>
     <body>
-         <video src="assets/video/background.mp4" autoplay loop></video>
           <header>
-            <a href="index.html"><img class="logo" src="assets/images/logologin.png"></a>
-
+            <a href="index.html"><img class="logo" src="images/logologin.png"></a>
+            <h1>Crear una cuenta</h1>
           </header>
+          <?php require 'partials/header.php'; ?>
 
           <section style="color:#dfc7c7;">
-          <h1>Política de privacidad de datos:</h1>
+          <h1>Protección de datos:</h1>
           	<ol type="1">
           		<li>
           			<p>¿Para qué sirve esta Política de Privacidad? Para que puedas consultar de forma rápida y concisa cómo utilizamos los <i>Datos Personales</i> que tenemos sobre ti. En <b style="color:#ffffff;">HOUSE GAMING</b> estamos comprometidos con prestarte un servicio óptimo, para que disfrutes en nuestros establecimientos del tiempo de ocio del que dispones. Además, también nos preocupa la privacidad de tu información personal. Queremos que conozcas y tengas siempre el control sobre tus <i>Datos Personales</i>. Para ello, ponemos a tu disposición esta Política de Privacidad (la "Política de Privacidad"), en la que puedes consultar en detalle, pero de forma fácil y transparente, las características del uso que realizamos sobre tus <i>Datos Personales</i> para poder prestarte el mejor servicio posible. Puedes acceder a esta Política de Privacidad en cualquier momento, ya que se encuentra a tu disposición en el apartado “Privacidad” de la web <b style="color:#ffffff;">HOUSE GAMING</b> https://www.housegaming.com.co y de la aplicación móvil <b style="color:#ffffff;">HOUSE GAMING</b>. En el Sitio Web, el apartado "Privacidad" se encuentra en la parte inferior. Cuando utilicemos el término "Plataforma", nos estaremos referimos tanto a la web <b style="color:#ffffff;">HOUSE GAMING</b>. </p>
@@ -169,13 +169,6 @@
           			<br>
           	</ol>
           </section>
-          <section class="volversection">
-               <h1><a class="volverbutton" href="signup.html">Crear una cuenta</a></h1>
-               <br>
-               <h3><a class="volverbutton" href="index.html">volver a la pagina principal</a></h3>
-
-          </section>
-
         <footer>
             <!--Esto se puede llamar atravez de un footer con php
                 <?php require 'partials/footer.php' ?> <- este es el codigo ejemplo-->

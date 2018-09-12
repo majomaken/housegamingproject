@@ -46,9 +46,9 @@
 	<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
 	<title>Configuraciones</title>
 </head>
-<body>
+<body class="body3">
   <?php require 'partials/menu.php' ?>
-  <div class="contenido">
+  <div class="contenido abrir">
     <div id="trnegra"></div>
   <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'])?> "method="POST">
  	<img src="assets/images/Menu.png" class="menu">
@@ -75,8 +75,6 @@
         <span>Cerrar sesión</span>
       </button>
   </a>
-
-</button>
  <script src="http://code.jquery.com/jquery-latest.js"></script>
  <script type="text/javascript" src="assets/js/abrir.js"></script>
 </body>
