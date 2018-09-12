@@ -29,6 +29,8 @@
       $Insert = mysqli_query($Conectar, $acept);
       if ($Insert == true) {
           echo "Bienvenido a ".$sqls['EquipName'];
+          header ("Location: equipo.php");
+
       } else {
           echo "Error";
       }

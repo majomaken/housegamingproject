@@ -55,92 +55,94 @@ if (isset($_POST['cteam'])) {
     if (empty($sql['EquipCreator'])) {
       $sql = mysqli_query($Conectar, $insert);
       if ($sql == true) {
+        //Nombre de equipo
+        $equipname = "SELECT EquipName FROM equip WHERE EquipCreator='$id';";
+        $sqls      = mysqli_query($Conectar, $equipname);
+        $sqls      = mysqli_fetch_array($sqls);
+        //Validate Field Player2
+        if (!empty($menber2)) {
+            //Validate if Menber2 is on team
+            if ($menbersv['EquipMenber2'] == null ) {
+              //Query EquipName from EquipCreator
+              $invimsg = "¿Quieres hacer parte de ".$sqls['EquipName']."?";
+              $sendinvi  = "INSERT INTO invitations (InviMsg, InviSend, InviReceive) VALUES ('$invimsg', '$id', '$idmenber2')";
+              $sql = mysqli_query($Conectar, $sendinvi);
+              //Confirm Insert Query
+              if ($sql == true) {
+                echo 'Invitación enviada';
+              }
+            } else if ($menbersv['EquipMenber2'] !== null) {
+                echo $menber2." ya tiene un equipo.";
+            }
+        }
+        //Validate Field Player3
+        if (!empty($menber3)) {
+            //Validate if Menber3 is on team
+            if ($menbersv['EquipMenber3'] == null) {
+              $invimsg = "¿Quieres hacer parte de ".$sqls['EquipName']."?";
+              $sendinvi  = "INSERT INTO invitations (InviMsg, InviSend, InviReceive) VALUES ('$invimsg', '$id', '$idmenber3')";
+              $sql = mysqli_query($Conectar, $sendinvi);
+              //Confirm Insert Query
+              if ($sql == true) {
+                echo 'Invitación enviada';
+              }
+            } else if ($menbersv['EquipMenber3'] !== null) {
+                echo $menber3." ya tiene un equipo.";
+            }
+        }
+        //Validate Field Player4
+        if (!empty($menber4)) {
+            //Validate if Menber4 is on team
+            if ($menbersv['EquipMenber4'] == null) {
+              $invimsg = "¿Quieres hacer parte de ".$sqls['EquipName']."?";
+              $sendinvi  = "INSERT INTO invitations (InviMsg, InviSend, InviReceive) VALUES ('$invimsg', '$id', '$idmenber4')";
+              $sql = mysqli_query($Conectar, $sendinvi);
+              //Confirm Insert Query
+              if ($sql == true) {
+                echo 'Invitación enviada';
+              }
+            } else if ($menbersv['EquipMenber4'] !== null) {
+                echo $menber4." ya tiene un equipo.";
+            }
+        }
+        //Validate Field Player5
+        if (!empty($menber5)) {
+            //Validate if Menber5 is on team
+            if ($menbersv['EquipMenber5'] == null) {
+              $invimsg = "¿Quieres hacer parte de ".$sqls['EquipName']."?";
+              $sendinvi  = "INSERT INTO invitations (InviMsg, InviSend, InviReceive) VALUES ('$invimsg', '$id', '$idmenber5')";
+              $sql = mysqli_query($Conectar, $sendinvi);
+              //Confirm Insert Query
+              if ($sql == true) {
+                echo 'Invitación enviada';
+              }
+            } else if ($menbersv['EquipMenber5'] !== null) {
+                echo $menber5." ya tiene un equipo.";
+            }
+        }
+        //Validate Field Player6
+        if (!empty($menber6)) {
+            //Validate if Menber6 is on team
+            if ($menbersv['EquipMenber6'] == null) {
+              $invimsg = "¿Quieres hacer parte de ".$sqls['EquipName']."?";
+              $sendinvi  = "INSERT INTO invitations (InviMsg, InviSend, InviReceive) VALUES ('$invimsg', '$id', '$idmenber6')";
+              $sql = mysqli_query($Conectar, $sendinvi);
+              //Confirm Insert Query
+              if ($sql == true) {
+                echo 'Invitación enviada';
+              }
+            } else if ($menbersv['EquipMenber6'] !== null) {
+                echo $menber6." ya tiene un equipo.";
+            }
+        }
         echo "Tu equipo a sido creado";
+        header ("Location: equipo.php");
 
       } else {
         echo "Ya tienes el equipo " . $sqls['EquipName'];
       }
     }
-    //Nombre de equipo
-    $equipname = "SELECT EquipName FROM equip WHERE EquipCreator='$id';";
-    $sqls      = mysqli_query($Conectar, $equipname);
-    $sqls      = mysqli_fetch_array($sqls);
-    //Validate Field Player2
-    if (!empty($menber2)) {
-        //Validate if Menber2 is on team
-        if ($menbersv['EquipMenber2'] == null ) {
-          //Query EquipName from EquipCreator
-          $invimsg = "¿Quieres hacer parte de ".$sqls['EquipName']."?";
-          $sendinvi  = "INSERT INTO invitations (InviMsg, InviSend, InviReceive) VALUES ('$invimsg', '$id', '$idmenber2')";
-          $sql = mysqli_query($Conectar, $sendinvi);
-          //Confirm Insert Query
-          if ($sql == true) {
-            echo 'Invitación enviada';
-          }
-        } else if ($menbersv['EquipMenber2'] !== null) {
-            echo $menber2." ya tiene un equipo.";
-        }
-    }
-    //Validate Field Player3
-    if (!empty($menber3)) {
-        //Validate if Menber3 is on team
-        if ($menbersv['EquipMenber3'] == null) {
-          $invimsg = "¿Quieres hacer parte de ".$sqls['EquipName']."?";
-          $sendinvi  = "INSERT INTO invitations (InviMsg, InviSend, InviReceive) VALUES ('$invimsg', '$id', '$idmenber3')";
-          $sql = mysqli_query($Conectar, $sendinvi);
-          //Confirm Insert Query
-          if ($sql == true) {
-            echo 'Invitación enviada';
-          }
-        } else if ($menbersv['EquipMenber3'] !== null) {
-            echo $menber3." ya tiene un equipo.";
-        }
-    }
-    //Validate Field Player4
-    if (!empty($menber4)) {
-        //Validate if Menber4 is on team
-        if ($menbersv['EquipMenber4'] == null) {
-          $invimsg = "¿Quieres hacer parte de ".$sqls['EquipName']."?";
-          $sendinvi  = "INSERT INTO invitations (InviMsg, InviSend, InviReceive) VALUES ('$invimsg', '$id', '$idmenber4')";
-          $sql = mysqli_query($Conectar, $sendinvi);
-          //Confirm Insert Query
-          if ($sql == true) {
-            echo 'Invitación enviada';
-          }
-        } else if ($menbersv['EquipMenber4'] !== null) {
-            echo $menber4." ya tiene un equipo.";
-        }
-    }
-    //Validate Field Player5
-    if (!empty($menber5)) {
-        //Validate if Menber5 is on team
-        if ($menbersv['EquipMenber5'] == null) {
-          $invimsg = "¿Quieres hacer parte de ".$sqls['EquipName']."?";
-          $sendinvi  = "INSERT INTO invitations (InviMsg, InviSend, InviReceive) VALUES ('$invimsg', '$id', '$idmenber5')";
-          $sql = mysqli_query($Conectar, $sendinvi);
-          //Confirm Insert Query
-          if ($sql == true) {
-            echo 'Invitación enviada';
-          }
-        } else if ($menbersv['EquipMenber5'] !== null) {
-            echo $menber5." ya tiene un equipo.";
-        }
-    }
-    //Validate Field Player6
-    if (!empty($menber6)) {
-        //Validate if Menber6 is on team
-        if ($menbersv['EquipMenber6'] == null) {
-          $invimsg = "¿Quieres hacer parte de ".$sqls['EquipName']."?";
-          $sendinvi  = "INSERT INTO invitations (InviMsg, InviSend, InviReceive) VALUES ('$invimsg', '$id', '$idmenber6')";
-          $sql = mysqli_query($Conectar, $sendinvi);
-          //Confirm Insert Query
-          if ($sql == true) {
-            echo 'Invitación enviada';
-          }
-        } else if ($menbersv['EquipMenber6'] !== null) {
-            echo $menber6." ya tiene un equipo.";
-        }
-    }
+
 
     // if (isset($_POST['cteam'])) {
     //     $insert = "INSERT INTO ";
