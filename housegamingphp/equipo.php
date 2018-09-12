@@ -6,6 +6,21 @@ error_reporting(0);
 if (!isset($_SESSION['userr'])) {
     echo '<script> window.location="index.php"; </script>';
 }
+$id        = $_SESSION['id'];
+$query   = "SELECT * FROM equip WHERE EquipCreator='$id' OR EquipMenber2='$id' OR EquipMenber3='$id' OR EquipMenber4='$id' OR EquipMenber5='$id' OR EquipMenber6='$id'";
+$menbers = mysqli_query($Conectar, $query);
+$menbers = mysqli_fetch_array($menbers);
+if (!empty($menbers)) {
+$mlead = $menbers['EquipCreator'];
+$m2 = $menbers['EquipMenber2'];
+$m3 = $menbers['EquipMenber3'];
+$m4 = $menbers['EquipMenber4'];
+$m5 = $menbers['EquipMenber5'];
+$m5 = $menbers['EquipMenber6'];
+$teamnicks = "SELECT `user`.UsNickname FROM `user` INNER JOIN equip ON UsHGTAG=EquipCreator OR UsHGTAG=EquipMenber2 OR UsHGTAG=EquipMenber3 OR UsHGTAG=EquipMenber4 OR UsHGTAG=EquipMenber5 OR UsHGTAG=EquipMenber6 WHERE EquipCreator='$id' OR EquipMenber2='$id' OR EquipMenber3='$id' OR EquipMenber4='$id' OR EquipMenber5='$id' OR EquipMenber6='$id';";
+$teamnicksex = mysqli_query($Conectar, $teamnicks);
+$teamnicksex = mysqli_fetch_array($teamnicksex);
+}
  ?>
  <!DOCTYPE html>
  <html>
@@ -30,7 +45,7 @@ if (!isset($_SESSION['userr'])) {
      <?php require 'partials/menu.php' ?>
      <div class="contenido">
        <div class="conteam">
-  <label name="Varibale_nombreequipo" class="team">TeamHG</label>
+  <label name="Varibale_nombreequipo" class="team"><?php echo $menbers['EquipName']; ?></label>
 </div>
          <img src="assets/images/Menu.png" class="menu">
          <div class="banner">
@@ -40,13 +55,11 @@ if (!isset($_SESSION['userr'])) {
        </div>
           <div class="equipos">
           <ul>
-            <li class="integrantes">Integrantes de (equipo)</li>
-          <li>Miguel (Líder)</li>
-          <li>Kevin</li>
-          <li>Luis</li>
-          <li>Yojan</li>
-          <li>Andres</li>
-          <li>Santiago</li>
+            <?php if (!empty($menbers)): ?>
+            <li class="integrantes">Integrantes de (<?php echo $menbers['EquipName']; ?>)</li>
+              <li><?php echo $teamnicksex['UsNickname'] ?> (Líder)</li>
+
+            <?php endif; ?>
         </ul>
 </div>
 <div class="blanco">

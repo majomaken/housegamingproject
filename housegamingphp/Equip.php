@@ -4,6 +4,11 @@ session_start();
 if (!isset($_SESSION['userr'])) {
     echo '<script> window.location="index.php"; </script>';
 }
+//Query HGTAG from EquipCreator
+$id        = $_SESSION['id'];
+$query     = "SELECT * FROM equip WHERE EquipCreator='$id' OR EquipMenber2='$id' OR EquipMenber3='$id' OR EquipMenber4='$id' OR EquipMenber5='$id' OR EquipMenber6='$id';";
+$sql       = mysqli_query($Conectar, $query);
+$sql       = mysqli_fetch_array($sql);
 if (isset($_POST['cteam'])) {
     //Info Variables
     $teamname  = $_POST['teamname'];
@@ -13,13 +18,9 @@ if (isset($_POST['cteam'])) {
     $menber4   = $_POST['player4'];
     $menber5   = $_POST['player5'];
     $menber6   = $_POST['player6'];
-    $id        = $_SESSION['id'];
     //Querys
       //Insert EquipName and EquipCreator from HGTAG
     $insert    = "INSERT INTO equip (EquipName, EquipCreator) VALUES ('$teamname', '$owner');";
-      //Query HGTAG from EquipCreator
-    $query     = "SELECT EquipCreator FROM Equip WHERE EquipCreator='$id';";
-    $sql       = mysqli_query($Conectar, $query);
       //Query all fileds from Equip by HGTAG from EquipCreator
     $menbers   = "SELECT * FROM equip WHERE EquipCreator='$id';";
     $menbersv   = mysqli_query($Conectar, $menbers);
@@ -59,17 +60,26 @@ if (isset($_POST['cteam'])) {
         $equipname = "SELECT EquipName FROM equip WHERE EquipCreator='$id';";
         $sqls      = mysqli_query($Conectar, $equipname);
         $sqls      = mysqli_fetch_array($sqls);
+        //Validación para que no se envie mas de una consulta
+        $validateinvie = "SELECT InviStatus FROM invitations WHERE InviReceive = '$id';";
+        $validateinvieExe = mysqli_query($Conectar, $validateinvie);
+        $validateinvieExe = mysqli_fetch_array($validateinvieExe);
         //Validate Field Player2
         if (!empty($menber2)) {
             //Validate if Menber2 is on team
             if ($menbersv['EquipMenber2'] == null ) {
-              //Query EquipName from EquipCreator
-              $invimsg = "¿Quieres hacer parte de ".$sqls['EquipName']."?";
-              $sendinvi  = "INSERT INTO invitations (InviMsg, InviSend, InviReceive) VALUES ('$invimsg', '$id', '$idmenber2')";
-              $sql = mysqli_query($Conectar, $sendinvi);
-              //Confirm Insert Query
-              if ($sql == true) {
-                echo 'Invitación enviada';
+                //Validación para que no se envie mas de una consulta
+                if ($validateinvieExe['InviStatus'] !== null || $validateinvieExe['InviStatus'] !=='PENDING' || $validateinvieExe['InviStatus'] !=='ACEPTED') {
+                    //Query EquipName from EquipCreator
+                    $invimsg = "¿Quieres hacer parte de ".$sqls['EquipName']."?";
+                    $sendinvi  = "INSERT INTO invitations (InviMsg, InviSend, InviReceive,InviStatus) VALUES ('$invimsg', '$id', '$idmenber2','PENDING')";
+                    $sql = mysqli_query($Conectar, $sendinvi);
+                    //Confirm Insert Query
+                    if ($sql == true) {
+                      echo 'Invitación enviada';
+                    } else {
+                            echo 'Este jugador ya tiene un equipo';
+                    }
               }
             } else if ($menbersv['EquipMenber2'] !== null) {
                 echo $menber2." ya tiene un equipo.";
@@ -139,16 +149,12 @@ if (isset($_POST['cteam'])) {
         header ("Location: equipo.php");
 
       } else {
-        echo "Ya tienes el equipo " . $sqls['EquipName'];
+        $equipname = "SELECT EquipName FROM equip WHERE EquipCreator='$id';";
+        $sqls      = mysqli_query($Conectar, $equipname);
+        $sqls      = mysqli_fetch_array($sqls);
+        echo "Ya tienes el equipo ".$sqls['EquipName'];
       }
     }
-
-
-    // if (isset($_POST['cteam'])) {
-    //     $insert = "INSERT INTO ";
-
-    //     $Insert=mysqli_query($Conectar,"INSERT INTO  equip (EquipName, EquipCreator, EquipMenber2, EquipMenber3, EquipMenber4, EquipMenber5, EquipMenber6) VALUES ($teamname, $owner, $member1, $member2, $member3, $member4, $member5)");
-    // }
 }
 ?>
 <!DOCTYPE html>
@@ -165,6 +171,9 @@ if (isset($_POST['cteam'])) {
       <?php require 'partials/menu.php' ?>
       <div class="contenido abrir">
         <div id="trnegra">
+          <?php if($sql['EquipCreator'] == $id || $sql['EquipMenber2'] == $id  || $sql['EquipMenber3'] == $id || $sql['EquipMenber4'] == $id || $sql['EquipMenber5'] == $id || $sql['EquipMenber6'] == $id): ?>
+            <?php header("Location: equipo.php"); ?>
+          <?php else: ?>
           <label class="crear">CREA TU EQUIPO AHORA</label>
           <form method="post" action="Equip.php">
               <img src="assets/images/Menu.png" class="menu">
@@ -176,6 +185,7 @@ if (isset($_POST['cteam'])) {
                 <input type="text" name="player6" placeholder="Jugador5" class="player5">
             <input type="submit" name="cteam" value="Crear Equipo" class="cteam">
           </form>
+        <?php endif; ?>
         </div>
       </div>
       <a href="CerrarSesion.php">

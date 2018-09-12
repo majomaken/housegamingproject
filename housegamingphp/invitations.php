@@ -4,6 +4,7 @@
   if (!isset($_SESSION['userr'])) {
       echo '<script> window.location="index.php"; </script>';
   }
+  $msm = '';
   if (isset($_SESSION['userr'])) {
       $id = $_SESSION['id'];
       $inviquery = "SELECT * FROM invitations WHERE InviReceive='$id';";
@@ -23,19 +24,23 @@
       $equipname = "SELECT EquipName FROM equip WHERE EquipCreator='$inviUsid';";
       $sqls      = mysqli_query($Conectar, $equipname);
       $sqls      = mysqli_fetch_array($sqls);
-      $acept = "UPDATE equip SET EquipMenber2='$id' WHERE EquipCreator='$inviUsid'";
-      $Insert = mysqli_query($Conectar, $acept);
-      if ($Insert == true) {
-          echo "Bienvenido a ".$sqls['EquipName'];
-          header ("Location: equipo.php");
-
+      //Validacion de pertenecia a un equipo
+      $pertenecia = "SELECT * FROM equip WHERE EquipCreator='$id' OR EquipMenber2='$id' OR EquipMenber3='$id' OR EquipMenber4='$id' OR EquipMenber5='$id' OR EquipMenber6='$id'";
+      $resultp = mysqli_query($Conectar, $pertenecia);
+      $resultp = mysqli_fetch_array($resultp);
+      if ($resultp > 0) {
+        $msm = "Ya tienes un equipo";
       } else {
-          echo "Error";
+        $acept = "UPDATE equip SET EquipMenber2='$id' WHERE EquipCreator='$inviUsid'";
+        $Insert = mysqli_query($Conectar, $acept);
+        $acepts = "UPDATE invitations SET InviStatus='ACEPTED', InviReply='Me uno a tu team my nigga!!' WHERE InviReceive='$id'";
+        mysqli_query($Conectar, $acepts);
+        $msm = "Bienvenido a ".$sqls['EquipName'];
       }
   } else if (isset($_POST['rejected'])) {
             $reject = "UPDATE invitations SET InviStatus='REJECTED' WHERE InviSend='$inviUsid' ";
             $Insert=mysqli_query($Conectar,$reject);
-            echo 'Que sad men!';
+            $msm = 'Que sad men!';
   }
 
 ?>
@@ -58,16 +63,19 @@
       <div id="trnegra">
         <form method="post" action="invitations.php">
             <img src="assets/images/Menu.png" class="menu">
-            <?php if($inviStatus == 'PENDING' || $inviStatus == null): ?>
+            <?php if (!empty($inviMsg)): ?>
+            <?php if ($inviStatus == 'PENDING' || $inviStatus == null): ?>
               <p>
               <?php echo "Tienes una invitacón de ".$ownerteam['UsNickname']; ?>
               <?php  echo "$inviMsg"; ?>
             </p>
+            <p><?php echo $msm; ?></p>
             <input  class="aceptar" type="submit" name="accept" value="Aceptar">
             <button class="rechazar" type="submit" name="rejected">Rechazar</button>
-          <?php else : ?>
-            <p class="texto" style="color: white;">No tienes invitaciónes</p>
           <?php endif; ?>
+        <?php else : ?>
+          <p class="texto" style="color: white;">No tienes invitaciónes</p>
+        <?php endif; ?>
 
         </form>
       </div>
