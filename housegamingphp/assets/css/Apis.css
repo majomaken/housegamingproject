@@ -1,0 +1,118 @@
+#lol{
+	background-image: url(../images/images_api/inicio/y.jpg);
+	background-size: cover;
+}
+#warcraft{
+	background-image: url(../images/images_api/inicio/wow.jpg);
+	background-size: 1700px;
+	background-repeat: no-repeat;
+}
+body{
+	padding: 0;
+	margin: 0;
+	background-image: url(../images/images_api/inicio/y.jpg);
+	background-size: cover;
+}
+
+#l{
+	background-color: #0656ff57;
+	margin-left: 200px;
+	margin-top: 10px;
+	color:black;
+	height:30px;
+	width: 300px;
+}
+#warc{
+	background-color: #002afb6e;
+	margin-left: 200px;
+	margin-top: 10px;
+	color: white;
+	height:30px;
+	width: 300px;
+}
+#z{
+	background-color: #000000;
+	color:white;
+	height:30px;
+	margin-left: 270px;
+	margin-top: 50px;
+	width: 150px;
+}
+h1{
+	margin-top: 10px;
+	color:white;
+	border: 60px 50px;
+	border-radius: 2px solid black;
+	text-align: center;
+}
+h2{
+	margin-top: -18px;
+	color:white;
+	border-radius: 2px solid black;
+	text-align: center;
+}
+#kas{
+	background-image:url(../assets/images_api/inicio/k.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin-top: 100px;
+	margin:auto;
+	height:500px;
+	width:700px;
+}
+
+#cas{
+	background-color:rgba(140,140,140,0.5);
+	border: 2px solid #00947B;
+	font-family: Arial;
+	font-size: 20px;
+	margin:auto;
+	height:150px;
+	width:500px;
+	text-align: center;
+	color: #071B18;
+}
+#war{
+	background-color:rgba(140,140,140,0.5);
+	border: 2px solid #00947B;
+	font-family: Arial;
+	font-size: 20px; 
+	margin:auto;
+	margin-top: 180px;
+	height:240px;
+	width:500px;
+	text-align: center;
+	color: #4dffe4;
+}
+#kas{
+	background-image:url(../assets/images_api/inicio/k.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin-top: 100px;
+	margin:auto;
+	height:500px;
+	width:700px;
+}
+.container-league {
+	margin: auto;
+	position: relative;
+	text-align: center;
+	display: flex;
+}
+.container-leaguePoints{
+	position: relative;
+	background-color:rgba(140,140,140,0.5);
+	border: 2px solid #00947B;
+	font-family: Arial;
+	font-size: 20px;
+	margin: 0 auto;
+	margin-top: 49px;
+	height:380px;
+	width:400px;
+	color: #071B18;
+	float: left;
+}
+
+.container-leaguePoints img {
+	min-width: 100px;
+}

@@ -11,7 +11,7 @@
 		<?php
 
 			error_reporting(0);
-			$key="RGAPI-1924b9d3-d79d-47c6-8959-51d85db6228f";
+			$key="RGAPI-4b014456-cba9-4876-b36b-538453471483";
 
 			/*Mediante el siguiente if se obtiene la informacion basica del nick gracias a la variable isset que permite determinar si una variable esta definida*/
 
