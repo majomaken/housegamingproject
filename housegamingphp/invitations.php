@@ -25,7 +25,7 @@
       $equipname = "SELECT EquipName FROM equip WHERE EquipCreator='$inviUsid';";
       $sqls      = mysqli_query($Conectar, $equipname);
       $sqls      = mysqli_fetch_array($sqls);
-      $acept = "UPDATE equip SET EquipMenber2='$id', InviStatus='ACEPTED', InviReply='Me uno a tu team!' WHERE EquipCreator='$inviUsid'";
+      $acept = "UPDATE equip SET EquipMenber2='$id' WHERE EquipCreator='$inviUsid'";
       $Insert = mysqli_query($Conectar, $acept);
       if ($Insert == true) {
           echo "Bienvenido a ".$sqls['EquipName'];
