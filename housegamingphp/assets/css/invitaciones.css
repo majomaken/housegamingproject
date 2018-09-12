@@ -1,3 +1,7 @@
+p {
+	text-align: center;
+	color: white;
+}
 .contenido {
 		position:absolute;
 		background-image:url('../images/esports/Fondo4.png');
@@ -19,7 +23,7 @@
   width:10%;
   height:5%;
   top:13%;
-  left:60%;
+  left:40%;
   color:#FFF;
   border:1px solid #00afef;
   background:rgba(4, 50, 86, 0.6);
@@ -29,7 +33,7 @@
 .rechazar{
   position:absolute;
   top:13%;
-  left:72%;
+  left:50%;
   width:10%;
   height:5%;
   background:rgba(255, 0, 0, 0.5);

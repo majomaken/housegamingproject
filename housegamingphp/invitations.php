@@ -10,15 +10,13 @@
       $inviUs = mysqli_query($Conectar, $inviquery);
       $inviUs = mysqli_fetch_array($inviUs);
       $inviMsg= $inviUs['InviMsg'];
+      $inviStatus = $inviUs['InviStatus'];
       $inviUsid = $inviUs['InviSend'];
 
       if ($inviUs['InviReceive'] == $id) {
           $ownersql = "SELECT UsNickname FROM user INNER JOIN invitations ON user.UsHGTAG=invitations.invisend WHERE user.UsHGTAG='$inviUsid';";
           $ownerteam = mysqli_query($Conectar, $ownersql);
           $ownerteam = mysqli_fetch_array($ownerteam);
-
-          echo "Tienes una invitacón de ".$ownerteam['UsNickname'];
-          echo $inviMsg;
       }
   }
   if (isset($_POST['accept'])) {
@@ -60,7 +58,11 @@
       <div id="trnegra">
         <form method="post" action="invitations.php">
             <img src="assets/images/Menu.png" class="menu">
-            <?php if(!empty($inviMsg)): ?>
+            <?php if($inviStatus == 'PENDING' || $inviStatus == null): ?>
+              <p>
+              <?php echo "Tienes una invitacón de ".$ownerteam['UsNickname']; ?>
+              <?php  echo "$inviMsg"; ?>
+            </p>
             <input  class="aceptar" type="submit" name="accept" value="Aceptar">
             <button class="rechazar" type="submit" name="rejected">Rechazar</button>
           <?php else : ?>
