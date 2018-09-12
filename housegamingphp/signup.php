@@ -1,18 +1,19 @@
 <?php
-  include('conexion.php');
+  require ('conexion.php');
   if (isset($_POST['create_account'])) {
 
-    $Ciudad=$_POST['city'];
     $Nombre=$_POST['name'];
     $Apellido=$_POST['lastname'];
     $nick = $_POST['nickname'];
+    $Ciudad=$_POST['city'];
     $FechaNac=$_POST['datebirth'];
     $Email=$_POST['email'];
     $Password=$_POST['password'];
-    $Passwordconf= $_POST['passwordconf'];
     $Phone=$_POST['phone'];
-    $Terms = $_POST['terms'];
+    $Passwordconf= $_POST['passwordconf'];
+    $UsType ='USER';
     $Avatar=1;
+    $Terms = $_POST['terms'];
 
     if (empty($Nombre || $Apellido || $nick || $Email|| $Password || $Phone)) {
       echo "<script> alert('Llene todos los campos ');window.location='signup.php'</script>";
@@ -34,7 +35,7 @@
     }
     if (isset($Terms)) {
       $Terms = 1;
-      $Insert="INSERT into user(UsFirstname, UsLastname, UsNickname, UsBirthday, UsCity, UsEmail, UsPassword, UsPhone, UsAvatar, UsConditions) VALUES ('$Nombre','$Apellido', '$nick','$FechaNac','$Ciudad','$Email','$Password','$Phone','$Avatar', '$Terms')";
+      $Insert="INSERT INTO user (UsFirstname, UsLastname, UsNickname, UsBirthday, UsCity, UsEmail, UsPassword, UsPhone, UsType, UsAvatar, UsConditions) VALUES ('$Nombre','$Apellido', '$nick','$FechaNac','$Ciudad','$Email','$Password','$Phone', '$UsType', '$Avatar', '$Terms')";
       $IN=mysqli_query($Conectar,$Insert);
       if ($IN) {
         echo "<script> alert('Registrado exitosamente'); window.location='login.php'</script>";
