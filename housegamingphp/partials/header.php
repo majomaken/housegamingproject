@@ -6,7 +6,7 @@
         <li>
             <a href="">Consultas</a>
             <ul class="submenu">
-                <li><a href="api/Lol.php">Jugadores</a></li>
+                <li><a href="api/games.php">Jugadores</a></li>
                 <li><a href="games.php">Juegos</a></li>
                 </li>
             </ul>
