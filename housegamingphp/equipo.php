@@ -63,16 +63,16 @@ $team = mysqli_query($Conectar, $teamnicks);
             <li><?php echo $ownexecutes['UsNickname']; ?> <i class="fas fa-crown"></i> </li>
             <?php if ($id == $mlead): ?>
 
-            <?php while ($teamnicksex = mysqli_fetch_array($team)) : ?>
-              <li> <?= $teamnicksex['UsNickname']; ?><a href="#"><i class="far fa-dizzy"></i> </a> </li>
-            <?php endwhile; ?>
-              <li> <a href="#"> <i class="fas fa-plus-circle"></i> </a></li>
+                <?php while ($teamnicksex = mysqli_fetch_array($team)) : ?>
+                  <li> <?= $teamnicksex['UsNickname']; ?><a href="#"><i class="far fa-dizzy"></i> </a> </li>
+                <?php endwhile; ?>
+                  <li> <a href="#"> <i class="fas fa-plus-circle"></i> </a></li>
             <?php else: ?>
                 <li><?php echo $ownexecutes['UsNickname']; ?> (Lider)</li>
-
-              <?php while ($teamnicksex = mysqli_fetch_array($team)) : ?>
-                <li> <?= $teamnicksex['UsNickname']; ?> </li>
-              <?php endwhile; ?>
+                <?php while ($teamnicksex = mysqli_fetch_array($team)) : ?>
+                    <li> <?= $teamnicksex['UsNickname']; ?> </li>
+                <?php endwhile; ?>
+                
             <?php endif; ?>
         </ul>
 </div>
