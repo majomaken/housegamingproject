@@ -90,7 +90,7 @@ if (isset($_POST['cteam'])) {
             //Validate if Menber3 is on team
             if ($menbersv['EquipMenber3'] == null) {
               $invimsg = "¿Quieres hacer parte de ".$sqls['EquipName']."?";
-              $sendinvi  = "INSERT INTO invitations (InviMsg, InviSend, InviReceive) VALUES ('$invimsg', '$id', '$idmenber3')";
+              $sendinvi  = "INSERT INTO invitations (InviMsg, InviSend, InviReceive,InviStatus) VALUES ('$invimsg', '$id', '$idmenber3','PENDING')";
               $sql = mysqli_query($Conectar, $sendinvi);
               //Confirm Insert Query
               if ($sql == true) {
@@ -105,7 +105,7 @@ if (isset($_POST['cteam'])) {
             //Validate if Menber4 is on team
             if ($menbersv['EquipMenber4'] == null) {
               $invimsg = "¿Quieres hacer parte de ".$sqls['EquipName']."?";
-              $sendinvi  = "INSERT INTO invitations (InviMsg, InviSend, InviReceive) VALUES ('$invimsg', '$id', '$idmenber4')";
+              $sendinvi  = "INSERT INTO invitations (InviMsg, InviSend, InviReceive,InviStatus) VALUES ('$invimsg', '$id', '$idmenber4','PENDING')";
               $sql = mysqli_query($Conectar, $sendinvi);
               //Confirm Insert Query
               if ($sql == true) {
@@ -120,7 +120,7 @@ if (isset($_POST['cteam'])) {
             //Validate if Menber5 is on team
             if ($menbersv['EquipMenber5'] == null) {
               $invimsg = "¿Quieres hacer parte de ".$sqls['EquipName']."?";
-              $sendinvi  = "INSERT INTO invitations (InviMsg, InviSend, InviReceive) VALUES ('$invimsg', '$id', '$idmenber5')";
+              $sendinvi  = "INSERT INTO invitations (InviMsg, InviSend, InviReceive,InviStatus) VALUES ('$invimsg', '$id', '$idmenber5','PENDING')";
               $sql = mysqli_query($Conectar, $sendinvi);
               //Confirm Insert Query
               if ($sql == true) {

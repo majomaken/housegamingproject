@@ -7,12 +7,13 @@
   $msm = '';
   if (isset($_SESSION['userr'])) {
       $id = $_SESSION['id'];
-      $inviquery = "SELECT * FROM invitations WHERE InviReceive='$id';";
+      $inviquery = "SELECT * FROM invitations WHERE InviReceive='$id' AND InviStatus='PENDING';";
       $inviUs = mysqli_query($Conectar, $inviquery);
       $inviUs = mysqli_fetch_array($inviUs);
       $inviMsg= $inviUs['InviMsg'];
       $inviStatus = $inviUs['InviStatus'];
       $inviUsid = $inviUs['InviSend'];
+      $inviUsidR = $inviUs['InviReceive'];
 
       if ($inviUs['InviReceive'] == $id) {
           $ownersql = "SELECT UsNickname FROM user INNER JOIN invitations ON user.UsHGTAG=invitations.invisend WHERE user.UsHGTAG='$inviUsid';";
@@ -38,9 +39,10 @@
         $msm = "Bienvenido a ".$sqls['EquipName'];
       }
   } else if (isset($_POST['rejected'])) {
-            $reject = "UPDATE invitations SET InviStatus='REJECTED' WHERE InviSend='$inviUsid' ";
+            $reject = "UPDATE invitations SET InviStatus='REJECTED' WHERE InviReceive='$inviUsidR' ";
             $Insert=mysqli_query($Conectar,$reject);
             $msm = 'Que sad men!';
+            header("Location: invitations.php");
   }
 
 ?>
@@ -63,19 +65,18 @@
       <div id="trnegra">
         <form method="post" action="invitations.php">
             <img src="assets/images/Menu.png" class="menu">
-            <?php if (!empty($inviMsg)): ?>
-            <?php if ($inviStatus == 'PENDING' || $inviStatus == null): ?>
+            <?php if ($inviStatus == 'PENDING'): ?>
               <p>
               <?php echo "Tienes una invitacón de ".$ownerteam['UsNickname']; ?>
               <?php  echo "$inviMsg"; ?>
             </p>
             <p><?php echo $msm; ?></p>
             <input  class="aceptar" type="submit" name="accept" value="Aceptar">
-            <button class="rechazar" type="submit" name="rejected">Rechazar</button>
-          <?php endif; ?>
-        <?php else : ?>
+            <input class="rechazar" type="submit" name="rejected" value="Rechazar">
+          
+          <?php else : ?>
           <p class="texto" style="color: white;">No tienes invitaciónes</p>
-        <?php endif; ?>
+          <?php endif; ?>
 
         </form>
       </div>
