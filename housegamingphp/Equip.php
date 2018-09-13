@@ -209,18 +209,17 @@ if (isset($_POST['cteam'])) {
         <div id="trnegra">
           <?php if($sql['EquipCreator'] == $id || $sql['EquipMenber2'] == $id  || $sql['EquipMenber3'] == $id || $sql['EquipMenber4'] == $id || $sql['EquipMenber5'] == $id || $sql['EquipMenber6'] == $id): ?>
             <?php header("Location: equipo.php"); ?>
-
-            <label class="crear">CREA TU EQUIPO AHORA</label>
-            <form method="post" action="Equip.php">
-                <img src="assets/images/Menu.png" class="menu">
-                  <input type="text" name="teamname" placeholder="Nombre de Equipo" class="teamname">
-                  <input type="text" name="player2" placeholder="Jugador1" class="player1">
-                  <input type="text" name="player3" placeholder="Jugador2" class="player2">
-                  <input type="text" name="player4" placeholder="Jugador3" class="player3">
-                  <input type="text" name="player5" placeholder="Jugador4" class="player4">
-                  <input type="text" name="player6" placeholder="Jugador5" class="player5">
-              <input type="submit" name="cteam" value="Crear Equipo" class="cteam">
             <?php else: ?>
+              <label class="crear">CREA TU EQUIPO AHORA</label>
+              <form method="post" action="Equip.php">
+                  <img src="assets/images/Menu.png" class="menu">
+                    <input type="text" name="teamname" placeholder="Nombre de Equipo" class="teamname">
+                    <input type="text" name="player2" placeholder="Jugador1" class="player1">
+                    <input type="text" name="player3" placeholder="Jugador2" class="player2">
+                    <input type="text" name="player4" placeholder="Jugador3" class="player3">
+                    <input type="text" name="player5" placeholder="Jugador4" class="player4">
+                    <input type="text" name="player6" placeholder="Jugador5" class="player5">
+                <input type="submit" name="cteam" value="Crear Equipo" class="cteam">
             </form>
             <?php endif; ?>
             <p style="color: white;"><?= $msm;  ?></p>
