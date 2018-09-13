@@ -10,6 +10,9 @@ $id        = $_SESSION['id'];
 $query   = "SELECT * FROM equip WHERE EquipCreator='$id' OR EquipMenber2='$id' OR EquipMenber3='$id' OR EquipMenber4='$id' OR EquipMenber5='$id' OR EquipMenber6='$id'";
 $menbers = mysqli_query($Conectar, $query);
 $menbers = mysqli_fetch_array($menbers);
+$ownerteam = "SELECT `user`.UsHGTAG, `user`.UsNickname FROM `user` INNER JOIN equip ON UsHGTAG=EquipCreator WHERE EquipCreator='$id' OR EquipMenber2='$id' OR EquipMenber3='$id' OR EquipMenber4='$id' OR EquipMenber5='$id' OR EquipMenber6='$id';";
+$ownexecute = mysqli_query($Conectar, $ownerteam);
+$ownexecutes = mysqli_fetch_array($ownexecute);
 if (!empty($menbers)) {
 $mlead = $menbers['EquipCreator'];
 $m2 = $menbers['EquipMenber2'];
@@ -17,9 +20,8 @@ $m3 = $menbers['EquipMenber3'];
 $m4 = $menbers['EquipMenber4'];
 $m5 = $menbers['EquipMenber5'];
 $m5 = $menbers['EquipMenber6'];
-$teamnicks = "SELECT `user`.UsNickname FROM `user` INNER JOIN equip ON UsHGTAG=EquipCreator OR UsHGTAG=EquipMenber2 OR UsHGTAG=EquipMenber3 OR UsHGTAG=EquipMenber4 OR UsHGTAG=EquipMenber5 OR UsHGTAG=EquipMenber6 WHERE EquipCreator='$id' OR EquipMenber2='$id' OR EquipMenber3='$id' OR EquipMenber4='$id' OR EquipMenber5='$id' OR EquipMenber6='$id';";
-$teamnicksex = mysqli_query($Conectar, $teamnicks);
-$teamnicksex = mysqli_fetch_array($teamnicksex);
+$teamnicks = "SELECT `user`.UsHGTAG, `user`.UsNickname FROM `user` INNER JOIN equip ON  UsHGTAG=EquipMenber2 OR UsHGTAG=EquipMenber3 OR UsHGTAG=EquipMenber4 OR UsHGTAG=EquipMenber5 OR UsHGTAG=EquipMenber6 WHERE EquipCreator='$id' OR EquipMenber2='$id' OR EquipMenber3='$id' OR EquipMenber4='$id' OR EquipMenber5='$id' OR EquipMenber6='$id';";
+$team = mysqli_query($Conectar, $teamnicks);
 }
  ?>
  <!DOCTYPE html>
@@ -57,7 +59,11 @@ $teamnicksex = mysqli_fetch_array($teamnicksex);
           <ul>
             <?php if (!empty($menbers)): ?>
             <li class="integrantes">Integrantes de (<?php echo $menbers['EquipName']; ?>)</li>
-              <li><?php echo $teamnicksex['UsNickname'] ?> (Líder)</li>
+              <li><?php echo $ownexecutes['UsNickname']; ?> (Lider)</li>
+
+            <?php while ($teamnicksex = mysqli_fetch_array($team)) : ?>
+              <?php echo "<li>".$teamnicksex['UsNickname']."</li>" ?> 
+            <?php endwhile; ?>
 
             <?php endif; ?>
         </ul>

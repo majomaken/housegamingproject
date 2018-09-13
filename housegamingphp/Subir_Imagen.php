@@ -9,7 +9,7 @@
 	$Destino="Avatar/".$Foto;
 	copy($Ruta,$Destino);
 
-	$Insert="INSERT INTO avatar (AvatarName,AvatarSrc) values ('$Name','$Foto')";
+	$Insert="INSERT INTO avatar (AvatarName,AvatarSrc) values ('$Name','$Destino')";
 	$Datos=mysqli_query($Conectar,$Insert);
   }
 ?>

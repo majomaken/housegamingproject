@@ -10,9 +10,9 @@
     }
 
     //Muestra en Indexx.php el Name
-    $UsFirstname=mysqli_query($Conectar,"SELECT UsFirstname From user where UsEmail='$Email'");
+    $UsFirstname=mysqli_query($Conectar,"SELECT UsNickname From user where UsEmail='$Email'");
     $Resultad=mysqli_fetch_array($UsFirstname);
-    $Nam=$Resultad["UsFirstname"];
+    $Nam=$Resultad["UsNickname"];
     $_SESSION['userr']=$Nam;
 
     //Muestra en el Indexx.php el Avatar
