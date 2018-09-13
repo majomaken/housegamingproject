@@ -17,7 +17,7 @@
 
       if ($inviUs['InviReceive'] == $id) {
           $ownersql = "SELECT UsNickname FROM user INNER JOIN invitations ON user.UsHGTAG=invitations.invisend WHERE user.UsHGTAG='$inviUsid';";
-          $ownerteam = mysqli_query($Conectar, $ownersql);
+          $ownerteam = mysqli_query($Conectar, $ownersql); 
           $ownerteam = mysqli_fetch_array($ownerteam);
       }
   }
@@ -25,19 +25,52 @@
       $equipname = "SELECT EquipName FROM equip WHERE EquipCreator='$inviUsid';";
       $sqls      = mysqli_query($Conectar, $equipname);
       $sqls      = mysqli_fetch_array($sqls);
+      //Validación de equipo
+      $team = "SELECT * FROM equip WHERE EquipCreator = '$inviUsid';";
+      $resultT = mysqli_query($Conectar, $team);
+      $resultT = mysqli_fetch_array($resultT);
       //Validacion de pertenecia a un equipo
       $pertenecia = "SELECT * FROM equip WHERE EquipCreator='$id' OR EquipMenber2='$id' OR EquipMenber3='$id' OR EquipMenber4='$id' OR EquipMenber5='$id' OR EquipMenber6='$id'";
       $resultp = mysqli_query($Conectar, $pertenecia);
       $resultp = mysqli_fetch_array($resultp);
+      if (!empty($resultT['EquipMenber2']) && !empty($resultT['EquipMenber3']) && !empty($resultT['EquipMenber4']) && !empty($resultT['EquipMenber5']) && !empty($resultT['EquipMenber6'])) {
+        $msm = "El equipo ya esta lleno. Sorry men!";
+      }
       if ($resultp > 0) {
         $msm = "Ya tienes un equipo";
-      } else {
-        $acept = "UPDATE equip SET EquipMenber2='$id' WHERE EquipCreator='$inviUsid'";
-        $Insert = mysqli_query($Conectar, $acept);
-        $acepts = "UPDATE invitations SET InviStatus='ACEPTED', InviReply='Me uno a tu team my nigga!!' WHERE InviReceive='$id'";
-        mysqli_query($Conectar, $acepts);
-        $msm = "Bienvenido a ".$sqls['EquipName'];
       }
+        if (empty($resultT['EquipMenber2']) || $resultT['EquipMenber2'] == null) {
+          $acept = "UPDATE equip SET EquipMenber2='$id' WHERE EquipCreator='$inviUsid'";
+          $Insert = mysqli_query($Conectar, $acept);
+          $acepts = "UPDATE invitations SET InviStatus='ACEPTED', InviReply='Me uno a tu team my nigga!!' WHERE InviReceive='$id'";
+          mysqli_query($Conectar, $acepts);
+          $msm = "Bienvenido a ".$sqls['EquipName'];
+        } if (!empty($resultT['EquipMenber2']) && empty($resultT['EquipMenber3'])) {
+                $acept = "UPDATE equip SET EquipMenber3='$id' WHERE EquipCreator='$inviUsid'";
+                $Insert = mysqli_query($Conectar, $acept);
+                $acepts = "UPDATE invitations SET InviStatus='ACEPTED', InviReply='Me uno a tu team my nigga!!' WHERE InviReceive='$id'";
+                mysqli_query($Conectar, $acepts);
+                $msm = "Bienvenido a ".$sqls['EquipName'];
+        } if (!empty($resultT['EquipMenber3']) && empty($resultT['EquipMenber4'])) {
+                $acept = "UPDATE equip SET EquipMenber4='$id' WHERE EquipCreator='$inviUsid'";
+                $Insert = mysqli_query($Conectar, $acept);
+                $acepts = "UPDATE invitations SET InviStatus='ACEPTED', InviReply='Me uno a tu team my nigga!!' WHERE InviReceive='$id'";
+                mysqli_query($Conectar, $acepts);
+                $msm = "Bienvenido a ".$sqls['EquipName'];
+        } if (!empty($resultT['EquipMenber4']) && empty($resultT['EquipMenber5'])) {
+                $acept = "UPDATE equip SET EquipMenber5='$id' WHERE EquipCreator='$inviUsid'";
+                $Insert = mysqli_query($Conectar, $acept);
+                $acepts = "UPDATE invitations SET InviStatus='ACEPTED', InviReply='Me uno a tu team my nigga!!' WHERE InviReceive='$id'";
+                mysqli_query($Conectar, $acepts);
+                $msm = "Bienvenido a ".$sqls['EquipName'];
+        } if (!empty($resultT['EquipMenber5']) && empty($resultT['EquipMenber6'])) {
+                $acept = "UPDATE equip SET EquipMenber6='$id' WHERE EquipCreator='$inviUsid'";
+                $Insert = mysqli_query($Conectar, $acept);
+                $acepts = "UPDATE invitations SET InviStatus='ACEPTED', InviReply='Me uno a tu team my nigga!!' WHERE InviReceive='$id'";
+                mysqli_query($Conectar, $acepts);
+                $msm = "Bienvenido a ".$sqls['EquipName'];
+        }
+
   } else if (isset($_POST['rejected'])) {
             $reject = "UPDATE invitations SET InviStatus='REJECTED' WHERE InviReceive='$inviUsidR' ";
             $Insert=mysqli_query($Conectar,$reject);
@@ -73,7 +106,7 @@
             <p><?php echo $msm; ?></p>
             <input  class="aceptar" type="submit" name="accept" value="Aceptar">
             <input class="rechazar" type="submit" name="rejected" value="Rechazar">
-          
+
           <?php else : ?>
           <p class="texto" style="color: white;">No tienes invitaciónes</p>
           <?php endif; ?>

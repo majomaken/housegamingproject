@@ -20,8 +20,9 @@ $m3 = $menbers['EquipMenber3'];
 $m4 = $menbers['EquipMenber4'];
 $m5 = $menbers['EquipMenber5'];
 $m5 = $menbers['EquipMenber6'];
-$teamnicks = "SELECT `user`.UsHGTAG, `user`.UsNickname FROM `user` INNER JOIN equip ON  UsHGTAG=EquipMenber2 OR UsHGTAG=EquipMenber3 OR UsHGTAG=EquipMenber4 OR UsHGTAG=EquipMenber5 OR UsHGTAG=EquipMenber6 WHERE EquipCreator='$id' OR EquipMenber2='$id' OR EquipMenber3='$id' OR EquipMenber4='$id' OR EquipMenber5='$id' OR EquipMenber6='$id';";
+$teamnicks = "SELECT `user`.UsHGTAG, `user`.UsNickname FROM `user` INNER JOIN equip ON  UsHGTAG=EquipMenber2 OR UsHGTAG=EquipMenber3 OR UsHGTAG=EquipMenber4 OR UsHGTAG=EquipMenber5 OR UsHGTAG=EquipMenber6 WHERE EquipCreator='$mlead';";
 $team = mysqli_query($Conectar, $teamnicks);
+
 }
  ?>
  <!DOCTYPE html>
@@ -52,7 +53,7 @@ $team = mysqli_query($Conectar, $teamnicks);
          <img src="assets/images/Menu.png" class="menu">
          <div class="banner">
          </div>
-         <div class="contequipo">
+      <div class="contequipo">
          <img src="teamslogos/Spartan.jpg" class="logoequipo">
        </div>
           <div class="equipos">
@@ -62,7 +63,7 @@ $team = mysqli_query($Conectar, $teamnicks);
               <li><?php echo $ownexecutes['UsNickname']; ?> (Lider)</li>
 
             <?php while ($teamnicksex = mysqli_fetch_array($team)) : ?>
-              <?php echo "<li>".$teamnicksex['UsNickname']."</li>" ?> 
+              <li> <?= $teamnicksex['UsNickname']; ?> </li>
             <?php endwhile; ?>
 
             <?php endif; ?>

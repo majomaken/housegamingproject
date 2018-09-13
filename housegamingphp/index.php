@@ -23,14 +23,14 @@
         </section>
 				<section>
 					<h2 id="palabra">Juegos en los que puedes crear tus equipos</h2>
-	       
+
 	            <a href=""><img src="assets/images/lolr.jpg" class="lol"  alt=""></a>
 	            <a href=""><img src="assets/images/paladins.jpg" class="paladins" alt=""></a>>
 	            <a href=""><img src="assets/images/fornite.jpg" class="fornite" alt=""></a>
 	            <a href=""><img src="assets/images/dota2.jpg" class="dota" alt=""></a>
 	            <a href=""><img src="assets/images/fifa18.jpg" class="fifa" alt=""></a>
-                <a href=""><img src="assets/images/overwatch.jpg" class="overwatch" alt=""></a>
-                 <a href=""><img src="assets/images/starcraft.jpg" class="starcraft" alt=""></a>
+              <a href=""><img src="assets/images/overwatch.jpg" class="overwatch" alt=""></a>
+              <a href=""><img src="assets/images/starcraft.jpg" class="starcraft" alt=""></a>
 	         <a href=""><img src="assets/images/hearthstone.jpg" class="hearthstone" alt=""></a>
 
 				</section>
