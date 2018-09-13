@@ -9,6 +9,8 @@ $id        = $_SESSION['id'];
 $query     = "SELECT * FROM equip WHERE EquipCreator='$id' OR EquipMenber2='$id' OR EquipMenber3='$id' OR EquipMenber4='$id' OR EquipMenber5='$id' OR EquipMenber6='$id';";
 $sql       = mysqli_query($Conectar, $query);
 $sql       = mysqli_fetch_array($sql);
+$msm       =  "";
+
 if (isset($_POST['cteam'])) {
     //Info Variables
     $teamname  = $_POST['teamname'];
@@ -18,6 +20,7 @@ if (isset($_POST['cteam'])) {
     $menber4   = $_POST['player4'];
     $menber5   = $_POST['player5'];
     $menber6   = $_POST['player6'];
+
     //Querys
       //Insert EquipName and EquipCreator from HGTAG
     $insert    = "INSERT INTO equip (EquipName, EquipCreator) VALUES ('$teamname', '$owner');";
@@ -52,8 +55,19 @@ if (isset($_POST['cteam'])) {
     $idmenber5  = $menber5ex['UsHGTAG'];
     $idmenber6  = $menber6ex['UsHGTAG'];
 
-    //Execute Insert Create Team
-    if (empty($sql['EquipCreator'])) {
+    //Validación de existencia en la base de datos
+    $sqlexist = "SELECT UsNickname FROM user WHERE UsHGTAG='$menber2' OR UsHGTAG='$menber3' OR UsHGTAG='$menber4' OR UsHGTAG='$menber5' OR UsHGTAG='$menber6';";
+    $exisitexecute = mysqli_query($Conectar, $sqlexist);
+    $exist = mysqli_fetch_array($exisitexecute);
+
+    $equipname = "SELECT EquipName FROM equip WHERE EquipCreator='$id';";
+    $sqls      = mysqli_query($Conectar, $equipname);
+    $sqls      = mysqli_fetch_array($sqls);
+
+    if (!empty($sqls['EquipName'])) {
+      $msm = "Ya tienes el equipo ".$sqls['EquipName'];
+    }
+    if (!isset($sql['EquipCreator']) && !empty($teamname)) {
       $sql = mysqli_query($Conectar, $insert);
       if ($sql == true) {
         //Nombre de equipo
@@ -126,7 +140,7 @@ if (isset($_POST['cteam'])) {
             } else if ($menbersv['EquipMenber4'] !== null) {
                 echo $menber4." ya tiene un equipo.";
             }
-            
+
         }
         //Validate Field Player5
         if (!empty($menber5)) {
@@ -173,12 +187,9 @@ if (isset($_POST['cteam'])) {
         echo "Tu equipo a sido creado";
         header ("Location: equipo.php");
 
-      } else {
-        $equipname = "SELECT EquipName FROM equip WHERE EquipCreator='$id';";
-        $sqls      = mysqli_query($Conectar, $equipname);
-        $sqls      = mysqli_fetch_array($sqls);
-        echo "Ya tienes el equipo ".$sqls['EquipName'];
       }
+    } else {
+          $msm = "Llena el Nombre de Equipo";
     }
 }
 ?>
@@ -198,19 +209,23 @@ if (isset($_POST['cteam'])) {
         <div id="trnegra">
           <?php if($sql['EquipCreator'] == $id || $sql['EquipMenber2'] == $id  || $sql['EquipMenber3'] == $id || $sql['EquipMenber4'] == $id || $sql['EquipMenber5'] == $id || $sql['EquipMenber6'] == $id): ?>
             <?php header("Location: equipo.php"); ?>
-          <?php else: ?>
-          <label class="crear">CREA TU EQUIPO AHORA</label>
-          <form method="post" action="Equip.php">
-              <img src="assets/images/Menu.png" class="menu">
-                <input type="text" name="teamname" placeholder="Nombre de Equipo" class="teamname">
-                <input type="text" name="player2" placeholder="Jugador1" class="player1">
-                <input type="text" name="player3" placeholder="Jugador2" class="player2">
-                <input type="text" name="player4" placeholder="Jugador3" class="player3">
-                <input type="text" name="player5" placeholder="Jugador4" class="player4">
-                <input type="text" name="player6" placeholder="Jugador5" class="player5">
-            <input type="submit" name="cteam" value="Crear Equipo" class="cteam">
-          </form>
-        <?php endif; ?>
+
+            <label class="crear">CREA TU EQUIPO AHORA</label>
+            <form method="post" action="Equip.php">
+                <img src="assets/images/Menu.png" class="menu">
+                  <input type="text" name="teamname" placeholder="Nombre de Equipo" class="teamname">
+                  <input type="text" name="player2" placeholder="Jugador1" class="player1">
+                  <input type="text" name="player3" placeholder="Jugador2" class="player2">
+                  <input type="text" name="player4" placeholder="Jugador3" class="player3">
+                  <input type="text" name="player5" placeholder="Jugador4" class="player4">
+                  <input type="text" name="player6" placeholder="Jugador5" class="player5">
+              <input type="submit" name="cteam" value="Crear Equipo" class="cteam">
+            <?php else: ?>
+            </form>
+            <?php endif; ?>
+            <p style="color: white;"><?= $msm;  ?></p>
+            <p style="color: white;"><?= $msm;  ?></p>
+
         </div>
       </div>
       <a href="CerrarSesion.php">

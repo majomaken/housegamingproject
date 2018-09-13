@@ -72,7 +72,7 @@ $team = mysqli_query($Conectar, $teamnicks);
                 <?php while ($teamnicksex = mysqli_fetch_array($team)) : ?>
                     <li> <?= $teamnicksex['UsNickname']; ?> </li>
                 <?php endwhile; ?>
-                
+
             <?php endif; ?>
         </ul>
 </div>
