@@ -28,8 +28,9 @@ $team = mysqli_query($Conectar, $teamnicks);
  <!DOCTYPE html>
  <html>
  <head>
-  <script src=" http://localhost:35729/livereload.js"></script>
      <meta charset="utf-8">
+     <script type="text/javascript" src="assets/js/all.js"></script>
+     <script src=" http://localhost:35729/livereload.js"></script>
      <link rel="stylesheet" type="text/css" href="assets/css/stylep.css">
      <link rel="stylesheet" type="text/css" href="assets/css/internoequip.css">
      <title>Tú equipo</title>
@@ -58,14 +59,20 @@ $team = mysqli_query($Conectar, $teamnicks);
        </div>
           <div class="equipos">
           <ul>
-            <?php if (!empty($menbers)): ?>
-            <li class="integrantes">Integrantes de (<?php echo $menbers['EquipName']; ?>)</li>
-              <li><?php echo $ownexecutes['UsNickname']; ?> (Lider)</li>
+            <li class="integrantes"><?php echo $menbers['EquipName']; ?></li>
+            <li><?php echo $ownexecutes['UsNickname']; ?> <i class="fas fa-crown"></i> </li>
+            <?php if ($id == $mlead): ?>
 
             <?php while ($teamnicksex = mysqli_fetch_array($team)) : ?>
-              <li> <?= $teamnicksex['UsNickname']; ?> </li>
+              <li> <?= $teamnicksex['UsNickname']; ?><a href="#"><i class="far fa-dizzy"></i> </a> </li>
             <?php endwhile; ?>
+              <li> <a href="#"> <i class="fas fa-plus-circle"></i> </a></li>
+            <?php else: ?>
+                <li><?php echo $ownexecutes['UsNickname']; ?> (Lider)</li>
 
+              <?php while ($teamnicksex = mysqli_fetch_array($team)) : ?>
+                <li> <?= $teamnicksex['UsNickname']; ?> </li>
+              <?php endwhile; ?>
             <?php endif; ?>
         </ul>
 </div>
