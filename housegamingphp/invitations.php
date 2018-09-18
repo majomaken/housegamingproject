@@ -17,7 +17,7 @@
 
       if ($inviUs['InviReceive'] == $id) {
           $ownersql = "SELECT UsNickname FROM user INNER JOIN invitations ON user.UsHGTAG=invitations.invisend WHERE user.UsHGTAG='$inviUsid';";
-          $ownerteam = mysqli_query($Conectar, $ownersql); 
+          $ownerteam = mysqli_query($Conectar, $ownersql);
           $ownerteam = mysqli_fetch_array($ownerteam);
       }
   }
@@ -85,6 +85,7 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="assets/css/stylep.css">
     <link rel="stylesheet" href="assets/css/invitaciones.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/iconos.css">
 
     <script src="http://localhost:35729/livereload.js"></script>
 
@@ -114,11 +115,6 @@
         </form>
       </div>
     </div>
-    <a href="CerrarSesion.php">
-      <button type="button" class="Logout">
-        <span>Cerrar sesión</span>
-      </button>
-  </a>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script type="text/javascript" src="assets/js/abrir.js"></script>
   </body>

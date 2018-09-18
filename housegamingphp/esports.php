@@ -14,6 +14,7 @@
   <script src="http://localhost:35729/livereload.js"></script>
 
     <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="assets/css/iconos.css">
     <link rel="stylesheet" type="text/css" href="assets/css/stylep.css">
     <title>Tú perfil</title>
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -63,11 +64,6 @@
         </div>
     </div>
 
-    <a href="CerrarSesion.php">
-      <button type="button" class="Logout">
-        <span>Cerrar sesión</span>
-      </button>
-  </a>
      <script src="http://code.jquery.com/jquery-latest.js"></script>
      <script type="text/javascript" src="assets/js/abrir.js"></script>
 </body>

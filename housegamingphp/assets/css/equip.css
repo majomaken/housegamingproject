@@ -9,7 +9,6 @@
 		position:absolute;
 		background-image:url('../images/esports/Fondo4.png');
 		background-size: cover;
-		border-left: 1px solid #FFF;
 		transition:0.7s;
 		width:100%;
 		height:100%;
@@ -90,4 +89,7 @@
 left:19%;
 font-size:200%;
 color:#FFF;
+}
+.alert{
+	background:#00afef;
 }

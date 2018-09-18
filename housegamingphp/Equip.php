@@ -197,16 +197,17 @@ if (isset($_POST['cteam'])) {
 <html>
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="assets/css/equip.css">
-    <link rel="stylesheet" href="assets/css/stylep.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/equip.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/stylep.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/iconos.css">
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
     <link rel="icon" type="image/jpg" href="../assets/images/iconhg.png">
     <title>Equipo</title>
 </head>
     <body class="body3">
-      <?php require 'partials/menu.php' ?>
       <div class="contenido abrir">
         <div id="trnegra">
+        </div>
           <?php if($sql['EquipCreator'] == $id || $sql['EquipMenber2'] == $id  || $sql['EquipMenber3'] == $id || $sql['EquipMenber4'] == $id || $sql['EquipMenber5'] == $id || $sql['EquipMenber6'] == $id): ?>
             <?php header("Location: equipo.php"); ?>
             <?php else: ?>
@@ -225,8 +226,8 @@ if (isset($_POST['cteam'])) {
             <p style="color: white;"><?= $msm;  ?></p>
             <p style="color: white;"><?= $msm;  ?></p>
 
-        </div>
       </div>
+      <?php require 'partials/menu.php' ?>
       <a href="CerrarSesion.php">
         <button type="button" class="Logout">
           <span>Cerrar sesión</span>

@@ -60,7 +60,6 @@
  .contenido1{
      position:absolute;
      background-color:#000;
-     border-left: 1px solid #FFF;
      transition:0.7s;
      width:100%;
      height:100%;
@@ -293,11 +292,16 @@
 }
  .Logout{
      position:absolute;
-     height:4%;
-     width:10%;
-     left:88%;
-     top:1%;
+     height:5%;
+     width:41%;
+     left:30%;
+     top:70%;
      background:rgba(0, 173, 239,0.5);
      color:#FFF;
      border:1px solid #00afef;
+     cursor:pointer;
+}
+.Logout:hover{
+  transition:1s;
+  background:rgba(0, 173, 239, 0.3);
 }

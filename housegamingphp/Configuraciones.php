@@ -42,12 +42,13 @@
 	<meta charset="utf-8">
   <link rel="stylesheet" href="assets/css/stylep.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/Conf.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/iconos.css">
 	<link rel="icon" type="image/jpg" href="../assets/images/iconhg.png">
+
 	<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
 	<title>Configuraciones</title>
 </head>
 <body class="body3">
-  <?php require 'partials/menu.php' ?>
   <div class="contenido abrir">
     <div id="trnegra"></div>
   <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'])?> "method="POST">
@@ -70,12 +71,7 @@
 </button>
  </div>
 </form>
- <a href="CerrarSesion.php">
-      <button type="button" class="Logout">
-        <span>Cerrar sesión</span>
-      </button>
-  </a>
+  <?php require 'partials/menu.php' ?>
  <script src="http://code.jquery.com/jquery-latest.js"></script>
- <script type="text/javascript" src="assets/js/abrir.js"></script>
 </body>
 </html>

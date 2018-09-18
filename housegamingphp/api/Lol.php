@@ -3,7 +3,7 @@
 <head>
 	<title>Api</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="../assets/css/api.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/Api.css">
 </head>
 <body id="lol">
 	<form class="" action="Api.php" method="get">
@@ -25,7 +25,7 @@
 			</select>
 			<h1 for="informacion">Digite su nick<br><h2>(Sin espacios)</h2></h1>
 			<input id="l" type="text" name="informacion" placeholder="Digite su nick" required="required">
-			<button id="z" type="submit" name="button">Enviar</button>
+			<button id="bl" type="submit" name="button">Enviar</button>
 		</div>
 	</form>
 </body>

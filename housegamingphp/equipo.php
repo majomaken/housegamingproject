@@ -33,11 +33,15 @@ $team = mysqli_query($Conectar, $teamnicks);
      <script src=" http://localhost:35729/livereload.js"></script>
      <link rel="stylesheet" type="text/css" href="assets/css/stylep.css">
      <link rel="stylesheet" type="text/css" href="assets/css/internoequip.css">
+     <link rel="stylesheet" type="text/css" href="assets/css/iconos.css">
+
      <title>Tú equipo</title>
      <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
      <link rel="icon" type="image/jpg" href="../images/iconhg.png">
  </head>
  <body >
+   <?php require 'partials/menu.php' ?>
+
    <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -64,9 +68,9 @@ $team = mysqli_query($Conectar, $teamnicks);
             <?php if ($id == $mlead): ?>
 
                 <?php while ($teamnicksex = mysqli_fetch_array($team)) : ?>
-                  <li> <?= $teamnicksex['UsNickname']; ?><a href="#"><i class="far fa-dizzy"></i> </a> </li>
+                  <li> <?= $teamnicksex['UsNickname']; ?>
                 <?php endwhile; ?>
-                  <li> <a href="#"> <i class="fas fa-plus-circle"></i> </a></li>
+                  <li> <a href="equipoconfi.php"> <i class="fas fa-plus-circle"></i> </a></li>
             <?php else: ?>
                 <li><?php echo $ownexecutes['UsNickname']; ?> (Lider)</li>
                 <?php while ($teamnicksex = mysqli_fetch_array($team)) : ?>

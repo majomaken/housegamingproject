@@ -99,3 +99,14 @@ text-align:center;
       height:100%;
 
  }
+.confi{
+  position:absolute;
+  top:1%;
+  right:1%;
+  width:4%;
+  cursor:pointer;
+}
+.confi:hover{
+  top:0.5%;
+  transition: 1s;
+}

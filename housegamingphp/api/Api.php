@@ -3,15 +3,14 @@
 <head>
 	<title>League of legends</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="../assets/css/api.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/Api.css">
 </head>
 <body>
 
 	<div id="cas">
 		<?php
-
 			error_reporting(0);
-			$key="RGAPI-4b014456-cba9-4876-b36b-538453471483";
+			$key="RGAPI-342c2faf-bb44-4d3b-b007-7f5faf8afc7e";
 
 			/*Mediante el siguiente if se obtiene la informacion basica del nick gracias a la variable isset que permite determinar si una variable esta definida*/
 
