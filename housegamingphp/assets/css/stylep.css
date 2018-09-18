@@ -2,9 +2,15 @@
      padding:0;
      margin:0;
 }
+a {
+  text-decoration: none;
+  color:#fff;
+}
+a:hover{
+  color: red;
+}
  .body1{
-   overflow-x: hidden;
-   background-color:#000;
+   background-image: url('../images/esports/background.jpg');
 }
 
 .body3{

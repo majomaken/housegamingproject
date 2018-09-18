@@ -9,12 +9,12 @@
   <body>
       <section>
         <h1 id="palabra">Consulta tus datos</h1>
-        <h2 id="palabra">Juegos en los que puedes crear tus equipos</h2>
+        <h2 id="palabra">Consulta los datos de tus MOBAS favoritos</h2>
         <div class="container-games">
 
             <a href="Lol.php"><img src="../assets/images/lolr.jpg" class="games"  alt="League Of Legends"></a>
             <a href="Bliza.php"><img src="../assets/images/wow.jpg" class="games" alt="Wow"></a>>
-            <a href="Star.php"><img src="../assets/images/starcraft.jpg" class="games" alt="Starcraft"></a>>
+            <a href="Star.php"><img src="../assets/images/starcraft.jpg" class="games" alt="Starcraft"></a>
 
         </div>
       </section>

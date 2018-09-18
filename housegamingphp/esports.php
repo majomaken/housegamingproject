@@ -40,27 +40,27 @@
         </div>
         <div class="dt1">
             <p class="cam">CAMPEONATO MUNDIAL</p>
-            El fin de un imperio
+            <a href="https://eu.lolesports.com/es/articulos/el-fin-de-un-imperio">El fin de un imperio</a>
         </div>
         <div class="dt2">
             <p class="cam">CAMPEONATO MUNDIAL</p>
-            Cuestión de confianza
+            <a href="https://eu.lolesports.com/es/articulos/cuestion-de-confianza">Cuestión de confianza</a>
         </div>
         <div class="dt3">
             <p class="cam">CAMPEONATO MUNDIAL</p>
-            La renovación del metajuego
+            <a href="https://eu.lolesports.com/es/articulos/la-renovacion-del-metajuego">La renovación del metajuego</a>
         </div>
         <div class="dt4">
             <p class="cam">JUEGO</p>
-            Juega mundo como WHITENIGHT
+            <a href="https://eu.lolesports.com/es/articulos/Juega-a-Mundo-como-WhiteKnight">Juega mundo como WHITENIGHT</a>
         </div>
         <div class="dt5">
             <p class="cam">JUEGO</p>
-            Juega a kindrer como BROXAH
+            <a href="https://eu.lolesports.com/es/articulos/Jugad-a-Kindred-como-Broxah">Juega a kindrer como BROXAH</a>
         </div>
         <div class="dt6">
             <p class="cam">LCS</p>
-            Los primeros premios fan
+            <a href="https://eu.lolesports.com/es/articulos/Los-primeros-premios-Fan-Favourites">Los primeros premios fan</a>
         </div>
     </div>
 

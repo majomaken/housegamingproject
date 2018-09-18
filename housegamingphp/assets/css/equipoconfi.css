@@ -30,7 +30,7 @@ body{
   font-size:220%;
 }
 .m1{
-  position:absolute;
+  position:relative;
 	width:220px;
 	height:30px;
 	top:11%;
@@ -76,8 +76,8 @@ body{
 }
 .eliminar{
   cursor:pointer;
-  position:absolute;
-  left:60%;
+  position:relative;
+  left:45%;
   top:11%;
   height:4%;
   width:10%;

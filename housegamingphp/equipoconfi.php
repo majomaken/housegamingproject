@@ -47,10 +47,8 @@ $team = mysqli_query($Conectar, $teamnicks);
      <?php if ($id == $mlead): ?>
 <!-- Terminar esta parte -->
          <?php while ($teamnicksex = mysqli_fetch_array($team)) : ?>
-           <li><input class="m1" type="text" value="<?= $teamnicksex['UsNickname']; ?>">
-           <button type="button" class="eliminar">
-             <span>Expulsar jugador</span>
-           </button></li>
+           <li></li><input class="m1" type="text" value="<?php echo $teamnicksex['UsNickname']; ?>">
+           <button type="button" class="eliminar">Expulsar jugador</button>
 
          <?php endwhile; ?>
      <?php else: ?>
