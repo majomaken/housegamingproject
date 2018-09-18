@@ -52,7 +52,6 @@
   <div class="contenido abrir">
     <div id="trnegra"></div>
   <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'])?> "method="POST">
- 	<img src="assets/images/Menu.png" class="menu">
  <fieldset>
  	<label class="Nm">Cambiar nick</label>
  	<input type="text" name="nick" class="inNm" placeholder="Nuevo nick" value="<?php echo $nick; ?>">
@@ -62,12 +61,9 @@
  	<label class="Tl">Cambiar teléfono</label>
  	<input type="number" name="Varibale_phone" class="inTl" placeholder="Teléfono" value="<?php echo $phone; ?>">
  </fieldset>
- <fieldset>
- 	<label class="Ne">Cambiar equipo</label>
- 	<input type="text" name="Varible_equipo" class="inNe" placeholder="Equipo" value="">
- </fieldset>
+
  <button type="submit" class="Boton" name="update">
- 	<span>¡Vamos!</span>
+ 	<span>Guardar cambios!</span>
 </button>
  </div>
 </form>
