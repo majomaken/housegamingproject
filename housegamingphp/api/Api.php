@@ -32,7 +32,7 @@
 					echo " Nivel: ". ($datos["summonerLevel"])."<br>"."<br>";
 				}
 				else{
-					echo "El nick no existe en la ragión que escogio";
+					echo "El nick no existe en la región que escogio";
 					exit();
 				}
 			}
