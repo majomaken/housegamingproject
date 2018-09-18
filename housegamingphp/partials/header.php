@@ -3,13 +3,7 @@
     <nav class="nav">
         <ul class="menumain">
         <a href="index.php"><img src="assets/images/logohg.png" alt="" class="logo"></a>
-        <li>
-            <a href="">Consultas</a>
-            <ul class="submenu">
-                <li><a href="api/games.php">Jugadores</a></li>
-                <li><a href="games.php">Juegos</a></li>
-                </li>
-            </ul>
+        <li><a href="api/games.php">Jugadores</a></li>
         <li><a href="">Locales</a></li>
         <li><a href="competitivo.php">Competitivo</a></li>
         <li><a href="Nosotros.php">Nosotros</a></li>
