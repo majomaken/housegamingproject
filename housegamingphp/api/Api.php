@@ -10,7 +10,7 @@
 	<div id="cas">
 		<?php
 			error_reporting(0);
-			$key="RGAPI-342c2faf-bb44-4d3b-b007-7f5faf8afc7e";
+			$key="RGAPI-ec7e9412-0036-4272-9077-15265b7c8303";
 
 			/*Mediante el siguiente if se obtiene la informacion basica del nick gracias a la variable isset que permite determinar si una variable esta definida*/
 
