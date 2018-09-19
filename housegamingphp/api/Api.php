@@ -3,14 +3,14 @@
 <head>
 	<title>League of legends</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="../assets/css/api.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/Api.css">
 </head>
 <body>
 
 	<div id="cas">
 		<?php
 			error_reporting(0);
-			$key="RGAPI-ec7e9412-0036-4272-9077-15265b7c8303";
+			$key="RGAPI-342c2faf-bb44-4d3b-b007-7f5faf8afc7e";
 
 			/*Mediante el siguiente if se obtiene la informacion basica del nick gracias a la variable isset que permite determinar si una variable esta definida*/
 
@@ -32,7 +32,7 @@
 					echo " Nivel: ". ($datos["summonerLevel"])."<br>"."<br>";
 				}
 				else{
-					echo "El nick no existe en la región que escogio";
+					echo "El nick no existe en la ragión que escogio";
 					exit();
 				}
 			}
