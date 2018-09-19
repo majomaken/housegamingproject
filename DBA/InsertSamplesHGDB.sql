@@ -614,7 +614,7 @@ insert into course (CourseId, CourseName, CourseClass, CoursePrice, GameId) valu
 (2, 'MMR', 4, 12000, 10),
 (3, 'FARM TIMING', 4, 12000, 10),
 (4, 'JUNGLA TIMING', 4, 12000, 10),
-(5, 'GA'NK/COUNTER GANK', 4, 12000, 10),
+(5, 'GANK/COUNTER GANK', 4, 12000, 10),
 (6, 'MACRO GAME', 4, 12000, 10),
 (7, 'SOLO STRATEGY', 4, 12000, 10),
 (8, 'CHAMPIONS', 4, 12000, 10),
@@ -625,8 +625,8 @@ insert into course (CourseId, CourseName, CourseClass, CoursePrice, GameId) valu
 (13, 'TILT', 4, 12000, 10),
 (14, 'TEAM COMP', 4, 12000, 10),
 (15, 'TEAM STRATEGY', 4, 12000, 10),
-(16, 'M'AP/ MAP TIMERS', 4, 12000, 10),
-(17, 'EAR'LY/M'ID/LATE', 4, 12000, 10),
+(16, 'MAP/ MAP TIMERS', 4, 12000, 10),
+(17, 'EARLY/MID/LATE', 4, 12000, 10),
 (18, 'LANES', 4, 12000, 10);
 insert into Enrolment (EnrolId, EnrolPay, EnrolAproval, UsHGTAG, Hgcoach, CourseId) values
 (1, '1', '1', 345, 2, 11),
