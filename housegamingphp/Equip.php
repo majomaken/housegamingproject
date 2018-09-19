@@ -228,11 +228,6 @@ if (isset($_POST['cteam'])) {
 
       </div>
       <?php require 'partials/menu.php' ?>
-      <a href="CerrarSesion.php">
-        <button type="button" class="Logout">
-          <span>Cerrar sesión</span>
-        </button>
-    </a>
       <script src="http://code.jquery.com/jquery-latest.js"></script>
       <script type="text/javascript" src="assets/js/abrir.js"></script>
     </body>
