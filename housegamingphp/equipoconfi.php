@@ -64,6 +64,14 @@ if (isset($_POST['invi'])) {
       }
     }
 }
+if (isset($_POST['delete'])) {
+    $delete = "DELETE FROM `equip` WHERE `equip`.`EquipId` = '$id';";
+    $deleteteam = mysqli_query($Conectar, $delete);
+}
+  if ($deleteteam = true)
+  {
+    $delmsm = "El equipo".$sqls['EquipName']." a sido eliminado correctamente";
+  }
  ?>
  <!DOCTYPE>
  <html>
@@ -95,8 +103,8 @@ if (isset($_POST['invi'])) {
      <?php if ($id == $mlead): ?>
 <!-- Terminar esta parte -->
          <?php while ($teamnicksex = mysqli_fetch_array($team)) : ?>
-           <input class="m1" type="text" value="<?php echo $teamnicksex['UsNickname']; ?>">
-           <button type="submit" class="eliminar">Expulsar jugador</button>
+           <span class="m1"><?php echo $teamnicksex['UsNickname']; ?></span>
+           <input type="submit" class="eliminar" name="delete" value="Expulsar jugador"/>
 
          <?php endwhile; ?>
      <?php else: ?>

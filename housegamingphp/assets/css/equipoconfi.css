@@ -5,6 +5,7 @@
 body{
   overflow-x: hidden;
   background-color:#000;
+
 }
 #trnegra{
 	width:100%;
@@ -33,7 +34,7 @@ body{
   position:absolute;
 	width:220px;
 	height:30px;
-	top:11%;
+	top:9%;
 	left:42%;
 	background:rgba(0,0,0,.7);
 	color:#FFF
@@ -50,13 +51,13 @@ border:1px solid red;
 color:#FFF;
 }
 .m1{
+  font-size: 30px;
+  text-decoration: none;
   position:relative;
-	width:220px;
-	height:30px;
 	top:11%;
 	left:42%;
-	background:rgba(0,0,0,.7);
 	color:#FFF
+
 }
 .m2{
   position:absolute;
@@ -192,6 +193,8 @@ color:#FFF;
 }
 .msm {
   color: white;
-  position: relative;
+  position: absolute;
   text-align: center;
+  top: 5%;
+  left: 42%;
 }
