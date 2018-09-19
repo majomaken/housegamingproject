@@ -14,7 +14,7 @@
 
             <a href="Lol.php"><img src="../assets/images/lolr.jpg" class="games"  alt="League Of Legends"></a>
             <a href="Bliza.php"><img src="../assets/images/wow.jpg" class="games" alt="Wow"></a>>
-            <a href="Star.php"><img src="../assets/images/starcraft.jpg" class="games" alt="Starcraft"></a>
+            <a href="Star.php"><img src="../assets/images/star2.jpg" class="games" alt="Starcraft"></a>
 
         </div>
       </section>
