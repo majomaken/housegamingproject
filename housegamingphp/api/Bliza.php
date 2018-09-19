@@ -3,7 +3,7 @@
 <head>
 	<title>Warcraft</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="../assets/css/Apis.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/Api.css">
 </head>
 <body id="warcraft">
 	<form class="" action="War.php" method="get">

@@ -3,7 +3,7 @@
 <head>
 	<title>League of legends</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="../assets/css/api.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/Api.css">
 </head>
 <body>
 
@@ -32,7 +32,7 @@
 					echo " Nivel: ". ($datos["summonerLevel"])."<br>"."<br>";
 				}
 				else{
-					echo "El nick no existe en la región que escogio";
+					echo "El nick no existe en la ragión que escogio";
 					exit();
 				}
 			}
