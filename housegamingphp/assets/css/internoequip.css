@@ -3,9 +3,14 @@ margin:0;
 padding:0;
 }
 body{
-  background-image:url('../images/Fondo6.jpg');
-  background-size:cover;
   overflow-x:hidden;
+}
+#fondo1{
+  position:fixed;
+  width:100%;
+  height:100%;
+  background-image:url('../images/Fondo7.jpg');
+  background-size:cover;
 }
 .logoequipo{
   position:absolute;
@@ -17,6 +22,7 @@ body{
 
 }
 .banner{
+  position:absolute;
   width:100%;
   height:50%;
   background-image:url('../images/banneruno.jpg');
@@ -38,7 +44,7 @@ font-size:130%;
 }
 .conteam{
   position:absolute;
-	top:40%;
+	top:41%;
   right:39%;
 	width:15%;
 	height:5%;
@@ -48,6 +54,8 @@ background:rgba(0, 0, 0, 0.6);
 text-align:center;
 }
 .equipos{
+  position: absolute;
+  top:50.5%;
   width:30%;
   font-size:39.5px;
   background:rgba(78, 63, 63,0.3);
@@ -80,20 +88,16 @@ text-align:center;
   left:0%;
 }
 .blanco{
-  position:absolute;
+  position:relative;
   width:70%;
-  height:90%;
   left:30%;
   top:50%;
-  background:rgba(255, 255, 255, 0.5);
+  background:rgba(255, 255, 255, 0.7);
 
   }
 
   .contenido {
       position:absolute;
-      background-image:url('../images/Fondo6.jpg');
-      background-size: cover;
-      border-left: 1px solid #FFF;
       transition:0.7s;
       width:100%;
       height:100%;

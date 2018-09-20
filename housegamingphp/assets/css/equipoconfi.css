@@ -5,7 +5,6 @@
 body{
   overflow-x: hidden;
   background-color:#000;
-
 }
 #trnegra{
 	width:100%;
@@ -30,34 +29,14 @@ body{
   color:#FFF;
   font-size:220%;
 }
-.invit{
-  position:absolute;
+.m1{
+  position:relative;
 	width:220px;
 	height:30px;
-	top:9%;
+	top:11%;
 	left:42%;
 	background:rgba(0,0,0,.7);
 	color:#FFF
-}
-.invitSend{
-  cursor:pointer;
-  position:relative;
-  left:59%;
-  top:9%;
-  height:4%;
-  width:10%;
-background:rgba(255, 0, 0, 0.5);
-border:1px solid red;
-color:#FFF;
-}
-.m1{
-  font-size: 30px;
-  text-decoration: none;
-  position:relative;
-	top:11%;
-	left:42%;
-	color:#FFF
-
 }
 .m2{
   position:absolute;
@@ -183,18 +162,11 @@ color:#FFF;
 .elimininarequipo{
   cursor:pointer;
   position:absolute;
-  bottom:3%;
+  bottom:5%;
   left:33%;
   height:4%;
   width:10%;
   background:rgba(255, 0, 0, 0.5);
   border:1px solid red;
   color:#FFF;
-}
-.msm {
-  color: white;
-  position: absolute;
-  text-align: center;
-  top: 5%;
-  left: 42%;
 }
