@@ -29,6 +29,14 @@ create table `user`(
      primary key (UsHGTAG),
      FOREIGN KEY (UsAvatar) REFERENCES Avatar(AvatarId) ON DELETE CASCADE ON UPDATE CASCADE
 );
+create table Medals(
+          MedalId int auto_increment,
+          MedalUser int,
+          MedalAvatar int,
+          primary key (MedalId),
+          FOREIGN key (MedalUser) REFERENCES `user` (UsHGTAG) on DELETE CASCADE on UPDATE CASCADE,
+          FOREIGN key (MedalAvatar) REFERENCES Avatar (AvatarId)
+);
 /*tabla de juegos*/
 create table game(
      GameId int auto_increment unique,
@@ -150,6 +158,7 @@ create table GameReg(
      GameLevel Varchar(32),
      GameRange Varchar(32),
      GameSince date,
+     GameServer 
      primary key (GameRegId),
      FOREIGN KEY (GameId) REFERENCES game(GameId) ON DELETE CASCADE ON UPDATE CASCADE,
      FOREIGN KEY (UsHGTAG) REFERENCES `user`(UsHGTAG) ON DELETE CASCADE ON UPDATE CASCADE
@@ -158,4 +167,3 @@ create table GameReg(
      PromoId Int auto_increment unique,
      PromoName varchar(32),
 );*/
-select AvatarId from avatar where AvatarId=(select UsAvatar from `user` where UsHGTAG= [EquipCreator] )
