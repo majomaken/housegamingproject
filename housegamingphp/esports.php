@@ -12,7 +12,6 @@
 
 <head>
   <script src="http://localhost:35729/livereload.js"></script>
-
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="assets/css/iconos.css">
     <link rel="stylesheet" type="text/css" href="assets/css/stylep.css">
@@ -23,7 +22,8 @@
 <body class="body1">
   <?php require 'partials/menu.php' ?>
     <div class="contenido1">
-        <div id="trnegra1"></div>
+      <div id="fondo"></div>
+      <div id="trnegra"></div>
         <img src="assets/images/Menu.png" class="menu">
         <label class="Nt">Noticias recientes</label>
         <div class="n1">
@@ -66,5 +66,6 @@
 
      <script src="http://code.jquery.com/jquery-latest.js"></script>
      <script type="text/javascript" src="assets/js/abrir.js"></script>
+
 </body>
 </html>
