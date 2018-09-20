@@ -52,12 +52,15 @@ $team = mysqli_query($Conectar, $teamnicks);
 }(document, 'script', 'facebook-jssdk'));</script>
      <?php require 'partials/menu.php' ?>
      <div class="contenido">
-       <div class="conteam">
-  <label name="Varibale_nombreequipo" class="team"><?php echo $menbers['EquipName']; ?></label>
-</div>
-         <img src="assets/images/Menu.png" class="menu">
+       <div id="fondo1"></div>
+
+
          <div class="banner">
          </div>
+          <img src="assets/images/Menu.png" class="menu">
+         <div class="conteam">
+    <label name="Varibale_nombreequipo" class="team"><?php echo $menbers['EquipName']; ?></label>
+  </div>
       <div class="contequipo">
          <img src="teamslogos/Spartan.jpg" class="logoequipo">
        </div>
