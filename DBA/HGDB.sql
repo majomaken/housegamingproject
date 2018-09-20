@@ -158,7 +158,6 @@ create table GameReg(
      GameLevel Varchar(32),
      GameRange Varchar(32),
      GameSince date,
-     GameServer 
      primary key (GameRegId),
      FOREIGN KEY (GameId) REFERENCES game(GameId) ON DELETE CASCADE ON UPDATE CASCADE,
      FOREIGN KEY (UsHGTAG) REFERENCES `user`(UsHGTAG) ON DELETE CASCADE ON UPDATE CASCADE
