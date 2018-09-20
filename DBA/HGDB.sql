@@ -47,16 +47,16 @@ create table game(
 );
 /*tabla de los pc*/
 /* PcActive es la suma de las sessiones del dia en esse Pc*/
-create table Pc(
+/*create table Pc(
      PcId int auto_increment unique,
      PcIp varchar(15),
      PcStatus varchar(10),
      PcActive datetime,
      PcUnactive datetime,
      primary key (PcId)
-);
+);*/
 /*tabla de cursos de la academia*/
-create table course(
+/*create table course(
      CourseId int auto_increment unique,
      CourseName Varchar(64) NOT NUll,
      CourseClass int(2) NOT NUll,
@@ -64,9 +64,9 @@ create table course(
      GameId int,
      primary key (CourseId),
      FOREIGN KEY (GameId) REFERENCES game(GameId) ON DELETE CASCADE ON UPDATE CASCADE
-);
+);*/
 /*tabla de matriculas o registros a los cursos*/
-create table Enrolment(
+/*create table Enrolment(
      EnrolId int auto_increment unique,
      EnrolPay boolean,
      EnrolAproval boolean,
@@ -77,9 +77,9 @@ create table Enrolment(
      FOREIGN KEY (Hgcoach) REFERENCES `user`(UsHGTAG) ON DELETE CASCADE ON UPDATE CASCADE,
      FOREIGN KEY (UsHGTAG) REFERENCES `user`(UsHGTAG) ON DELETE CASCADE ON UPDATE CASCADE,
      FOREIGN KEY (CourseId) REFERENCES course(CourseId) ON DELETE CASCADE ON UPDATE CASCADE
-);
+);*/
 /*tabla para las medallas que se obtienen al pasar los cursos*/
-create table certificate(
+/*create table certificate(
      CertiId int auto_increment unique,
      CertiDate date,
      CertiMaster int,
@@ -91,9 +91,9 @@ create table certificate(
      FOREIGN KEY (UsHGTAG) REFERENCES `user`(UsHGTAG) ON DELETE CASCADE ON UPDATE CASCADE,
      FOREIGN KEY (CourseId) REFERENCES course(CourseId) ON DELETE CASCADE ON UPDATE CASCADE,
      FOREIGN KEY (CertiMedal) REFERENCES Avatar(AvatarId) ON DELETE CASCADE ON UPDATE CASCADE
-);
+);*/
 /*tabla de sessiones que se generan al usar las pc's*/
-create table session(
+/*create table session(
      SessionId int auto_increment unique,
      SessionIni time,
      SessionFin time,
@@ -102,10 +102,10 @@ create table session(
      primary key (SessionId),
      FOREIGN KEY (UsHGTAG) REFERENCES `user`(UsHGTAG) ON DELETE CASCADE ON UPDATE CASCADE,
      FOREIGN KEY (PcId) REFERENCES Pc(PcId) ON DELETE CASCADE ON UPDATE CASCADE
-);
+);*/
 /*tabla de las recargas de saldo realizadas por los usuarios*/
 /* el campo RecAmmount solo puede ser positivo*/
-create table recharge(
+/*create table recharge(
      RecNumero Int auto_increment unique,
      RecAmount Int NOT NUll,
      RecDate datetime,
@@ -114,7 +114,7 @@ create table recharge(
      RecCoins int,
      primary key (RecNumero),
      FOREIGN KEY (UsHGTAG) REFERENCES `user`(UsHGTAG) ON DELETE CASCADE ON UPDATE CASCADE
-);
+);*/
 /*tabla de equipos*/
 /*EquipAvatar se refiere al logo del Team*/
 create table equip(
