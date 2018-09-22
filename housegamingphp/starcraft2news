@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+     <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <meta http-equiv="X-UA-Compatible" content="ie=edge">
+          <script type="text/javascript" src="assets/js/all.js"></script>
+          <link rel="stylesheet" type="text/css" href="assets/css/news.css">
+          <title>starcraft2news</title>
+     </head>
+     <body>
+          <article class="main">
+               <section>
+                    <h1>Why Maru Will Dominate the Asian Games</h1>
+                    <p>The Asian Games are bringing some of the region’s top players to Jakarta for a showdown that should help move StarCraft II one step closer to becoming the game of choice for the international sports community. To help that cause, South Korea’s representative will be Jin Air Green Wing’s Cho “Maru” Seong Ju, the two-time GSL champion who began his career at 13 and turned into a grizzled veteran of pro StarCraft II. He is in perfect position to show the Asian Games’ audience just how good one of the world’s best can be. </p>
+                    <br>
+                    <p>Like other international sports competitions, this year’s Asian Games identified players from countries throughout Asia. As home to some of the most talented StarCraft II players in the world, South Korea’s entrant for the Asian Games was always going to be the favorite to win. With all that he’s shown throughout his career, here’s why Maru will dominate the Asian Games. </p>
+                    <br>
+                    <pre>
+                    <div class="video-responsive" data-layer="0">
+                         <iframe src="https://www.youtube.com/embed/a0IijqePUsA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </div>
+                    </pre>
+
+               </section>
+               <section class="redirect">
+                    <a href="https://wcs.starcraft2.com/en-us/news/">puedes saber mas starcraft2 E-sport: "https://wcs.starcraft2.com/en-us/news/""</a>
+                    <a href="https://news.blizzard.com/es-es/starcraft2">noticias y actualizaciones de starcraft2 en español: "https://news.blizzard.com/es-es/starcraft2""</a>
+               </section>
+          </article>
+
+     </body>
+</html>

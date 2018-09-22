@@ -1,0 +1,102 @@
+
+#trnegra{
+	width:100%;
+    height:100%;
+    position:inherit;
+	 background:rgba(0,0,0,.7);
+}
+.contenido {
+		position:absolute;
+		background-image:url('../images/esports/Fondo4.png');
+		background-size: cover;
+		border-left: 1px solid #FFF;
+		transition:0.7s;
+		width:100%;
+		height:100%;
+}
+.menu{
+		position:absolute;
+		cursor:pointer;
+		width:50px;
+		height:50px;
+	}
+.teamname{
+  position:absolute;
+  width:220px;
+  height:30px;
+  top:17%;
+  left:30%;
+  background:rgba(0,0,0,.7);
+  color:#FFF;
+}
+.player1{
+  position:absolute;
+  width:220px;
+  height:30px;
+  top:24%;
+	left:30%;
+  background:rgba(0,0,0,.7);
+  color:#FFF;
+}
+.player2{
+  position:absolute;
+  width:220px;
+  height:30px;
+  top:32%;
+	left:30%;
+  background:rgba(0,0,0,.7);
+  color:#FFF;
+}
+.player3{
+  position:absolute;
+  width:220px;
+  height:30px;
+  top:40%;
+	left:30%;
+  background:rgba(0,0,0,.7);
+  color:#FFF;
+}
+.player4{
+  position:absolute;
+  width:220px;
+  height:30px;
+  top:48%;
+	left:30%;
+  background:rgba(0,0,0,.7);
+  color:#FFF;
+}
+.player5{
+  position:absolute;
+  width:220px;
+  height:30px;
+  top:56%;
+	left:30%;
+  background:rgba(0,0,0,.7);
+  color:#FFF;
+}
+.cteam{
+  position:absolute;
+	top:64%;
+  left:33%;
+	width:10%;
+	height:4%;
+  color:#FFF;
+  border:1px solid #00afef;
+  background:rgba(4, 50, 86, 0.6);
+}
+.cteam:hover{
+  transition:1s;
+  background:rgba(255,255,255,0.4);
+	color:#000;
+  border:solid 1px #FFF
+}
+.crear{
+  position:absolute;
+  top:7%;
+left:23%;
+font-size:200%;
+color:#FFF;
+}
+.alert{
+	background:#00afef;
+}

@@ -1,0 +1,320 @@
+*{
+     padding:0;
+     margin:0;
+}
+a {
+  text-decoration: none;
+  color:#fff;
+}
+a:hover{
+  color: red;
+}
+ .body1{
+   background:rgba(0,0,0,0.7);
+}
+#trnegra{
+	width:100%;
+    height:100%;
+    position:fixed;
+	 background:rgba(0,0,0,0.7);
+}
+#fondo {
+    width:100%;
+    height:100%;
+    position:fixed;
+    background-image:url('../images/esports/Fondo4.png');
+}
+.body3{
+	background-image:url('../images/esports/Fondo4.png');
+	background-size: cover;
+	overflow:hidden;
+}
+ .left-panel{
+   position:fixed;
+     font-size:30px;
+     width:25%;
+     height:100%;
+     background-image:url('../images/esports/Panel.png');
+     background-size:cover;
+     background-repeat:no-repeat;
+
+}
+ .left-panel h2{
+     text-align:center;
+     margin:0;
+     padding:10px;
+     background: rgba(0,0,0,0.4);
+}
+
+ .left-panel ul{
+     list-style:none;
+     padding:0;
+     margin:0;
+}
+ .left-panel a{
+     display:block;
+     color:#fff;
+     text-decoration:none;
+     padding:10px;
+}
+ .left-panel li{
+     outline:1px solid #00afef;
+     transition: all 0.7s;
+}
+ .left-panel li:hover{
+     background:rgba(0,0,0,0.6);
+     border-left:5px solid #FFF;
+}
+ .imgd{
+     position:absolute;
+     top:4%;
+     left:26%;
+     width:100px;
+     height:100px;
+     border-radius:20%;
+
+
+}
+ .contenido1{
+     position:absolute;
+     background:#0E494E;
+     transition:0.7s;
+     width:100%;
+     height:100%;
+}
+ .menu{
+     position:absolute;
+     cursor:pointer;
+     width:50px;
+     height:50px;
+}
+ .abrir{
+     margin-left:25%
+}
+ .Nombre{
+     color:#00afef;
+     font-size:25px;
+     position:relative;
+     top:160px;
+}
+ .Nombre:hover{
+     color:rgba(0, 173, 239, 0.7);
+     transition:0.5s;
+}
+ .Nt{
+     position:absolute;
+     top:4%;
+     left:42%;
+     font-size:180%;
+     color:#FFF;
+}
+ .n1{
+     cursor:pointer;
+     border:1px solid white;
+     border-bottom:none;
+     position:relative;
+     top:13%;
+     left:15%;
+     width:33%;
+     height:35%;
+     background-image:url('../images/esports/1n.jpg');
+     background-size:100% 70%;
+     background-repeat:no-repeat;
+}
+ .dt1{
+     border:1px solid #00afef;
+     text-align:center;
+     border-radius:10px;
+     font-size:30px;
+     position:absolute;
+     top:35%;
+     left:15%;
+     color:#FFF;
+     background-color:#1F1F1F;
+     width:33%;
+     height:14%;
+   }
+ .dt1:hover{
+     transition:1s;
+     background:rgba(110, 105, 105,0.9);
+     color:#000;
+}
+ .n2{
+     cursor:pointer;
+     border:1px solid white;
+     border-bottom:none;
+     position:absolute;
+     top:13%;
+     left:52%;
+     width:33%;
+     height:35%;
+     background-image:url('../images/esports/2n.jpg');
+     background-size:100% 70%;
+     background-repeat:no-repeat;
+}
+ .dt2{
+     border:1px solid #00afef;
+     text-align:center;
+     border-radius:10px;
+     font-size:30px;
+     position:absolute;
+     top:35%;
+     left:52%;
+     background-color:#1F1F1F;
+     color:#FFF;
+     width:33%;
+     height:14%;
+}
+ .dt2:hover{
+     transition:1s;
+     background:rgba(110, 105, 105,0.9);
+     color:#000;
+}
+ .n3{
+     cursor:pointer;
+     border:1px solid white;
+     border-bottom:none;
+     position:absolute;
+     top:53%;
+     left:15%;
+     width:33%;
+     height:35%;
+     background-image:url('../images/esports/3n.jpg');
+     background-size:100% 70%;
+     background-repeat:no-repeat;
+}
+ .dt3{
+     border:1px solid #00afef;
+     position:absolute;
+     top:75%;
+     left:15%;
+     width:33%;
+     height:14%;
+     text-align:center;
+     border-radius:10px;
+     font-size:30px;
+     background-color:#1F1F1F;
+     color:#FFF;
+}
+ .dt3:hover{
+     transition:1s;
+     background:rgba(110, 105, 105,0.9);
+     color:#000;
+}
+ .n4{
+   cursor:pointer;
+   border:1px solid white;
+   border-bottom:none;
+   position:absolute;
+   top:53%;
+   left:52%;
+   width:33%;
+   height:35%;
+   background-image:url('../images/esports/4n.jpg');
+   background-size:100% 70%;
+   background-repeat:no-repeat;
+}
+ .dt4{
+     border:1px solid #00afef;
+     position:absolute;
+     top:75%;
+     left:52%;
+     width:33%;
+     height:14%;
+     text-align:center;
+     border-radius:10px;
+     font-size:30px;
+     background-color:#1F1F1F;
+     color:#FFF;
+}
+ .dt4:hover{
+     transition:1s;
+     background:rgba(110, 105, 105,0.9);
+     color:#000;
+}
+ .n5{
+     cursor:pointer;
+     border:1px solid white;
+      border-bottom:none;
+     position:absolute;
+     top:92%;
+     left:15%;
+     width:33%;
+     height:35%;
+     background-image:url('../images/esports/5n.jpg');
+     background-size:100% 70%;
+     background-repeat:no-repeat;
+}
+ .dt5{
+     border:1px solid #00afef;
+     text-align:center;
+     border-radius:10px;
+     font-size:30px;
+     position:absolute;
+     top:116%;
+     left:15%;
+     background-color:#1F1F1F;
+     color:#FFF;
+     width:33%;
+     height:14%;
+}
+ .dt5:hover{
+     transition:1s;
+     background:rgba(110, 105, 105,0.9);
+     color:#000;
+}
+ .n6{
+     cursor:pointer;
+     border:1px solid white;
+      border-bottom:none;
+     position:absolute;
+     top:92%;
+     left:52%;
+     width:33%;
+     height:35%;
+     background-image:url('../images/esports/6n.jpg');
+     background-size:100% 70%;
+     background-repeat:no-repeat;
+}
+ .dt6{
+     border:1px solid #00afef;
+     text-align:center;
+     border-radius:10px;
+     font-size:30px;
+     position:absolute;
+     top:116%;
+     left:52%;
+     background-color:#1F1F1F;
+     color:#FFF;
+     width:33%;
+     height:14%;
+}
+ .dt6:hover{
+     transition:1s;
+     background:rgba(110, 105, 105,0.9);
+     color:#000;
+}
+ .cam{
+     text-align:center;
+     color:#00afef;
+}
+ .cam:hover{
+     transition:1s;
+     color:#FFF;
+}
+
+ .Logout{
+     position:absolute;
+     height:5%;
+     width:41%;
+     left:30%;
+     top:72%;
+     background:rgba(0, 173, 239,0.5);
+     color:#FFF;
+     border:1px solid #00afef;
+     cursor:pointer;
+}
+.Logout:hover{
+  transition:1s;
+  background:rgba(0, 173, 239, 0.3);
+}

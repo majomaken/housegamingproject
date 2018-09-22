@@ -1,0 +1,28 @@
+#title-query {
+  font-family: 'Noto Serif KR', sans-serif;
+  font-family: 'Notable', sans-serif;
+  color:#00afef;
+  text-align: center;
+  font-size: 2.8em;
+  margin: 5%;
+}
+#title-query:hover {
+  color: white;
+}
+.container-games {
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+ .games{
+     position:relative;
+     height:500px;
+     width:380px;
+     margin: 20px;
+}
+
+ .games:hover{
+     transform : scale(1.1);
+     z-index: 1;
+     transition-duration: 1s;
+}
