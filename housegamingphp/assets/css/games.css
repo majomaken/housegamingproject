@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #title-query {
   font-family: 'Noto Serif KR', sans-serif;
   font-family: 'Notable', sans-serif;
@@ -10,8 +9,6 @@
 #title-query:hover {
   color: white;
 }
-=======
->>>>>>> 3955bc0ab1b8106b5a4a3cada90d754f23f40cf5
 .container-games {
     position: relative;
     text-align: center;
@@ -19,13 +16,8 @@
 }
  .games{
      position:relative;
-<<<<<<< HEAD
      height:500px;
      width:380px;
-=======
-     height:25%;
-     width:20%;
->>>>>>> 3955bc0ab1b8106b5a4a3cada90d754f23f40cf5
      margin: 20px;
 }
 
