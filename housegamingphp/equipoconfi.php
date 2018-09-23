@@ -30,12 +30,12 @@ $team = mysqli_query($Conectar, $teamnicks);
  <head>
    <meta charset="utf-8">
    <title>Configuraciones</title>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
    <script type="text/javascript" src="assets/js/all.js"></script>
    <script src=" http://localhost:35729/livereload.js"></script>
    <link rel="stylesheet" href="assets/css/stylep.css">
    <link rel="stylesheet" href="assets/css/equipoconfi.css">
    <link rel="stylesheet" type="text/css" href="assets/css/iconos.css">
-
    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
  </head>
  <body>
@@ -43,13 +43,12 @@ $team = mysqli_query($Conectar, $teamnicks);
    <div class="contenido abrir">
      <div id="trnegra"></div>
 
-     <img src="assets/images/Menu.png" class="menu">
 
      <label class="miembros">Integrantes de equipo</label>
      <?php if ($id == $mlead): ?>
 <!-- Terminar esta parte -->
          <?php while ($teamnicksex = mysqli_fetch_array($team)) : ?>
-           <li></li><input class="m1" type="text" value="<?php echo $teamnicksex['UsNickname']; ?>">
+           <li></li><input class="m1" type="hideen" value="<?php echo $teamnicksex['UsNickname']; ?>">
            <button type="button" class="eliminar">Expulsar jugador</button>
 
          <?php endwhile; ?>
@@ -70,11 +69,12 @@ $team = mysqli_query($Conectar, $teamnicks);
     <button type="bottom" class="elegirh">
       <span>Examinar</span>
     </button>
-    <button type="bottom" class="elimininarequipo">
+    <button id="alert" type="bottom" class="elimininarequipo">
       <span>¡Eliminar equipo!</span>
     </button>
   </div>
 <script src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript" src="assets/js/alert.js"></script>
 <script type="text/javascript" src="assets/js/abrir.js"></script>
  </body>
  </html>

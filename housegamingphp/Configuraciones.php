@@ -44,7 +44,7 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/Conf.css">
   <link rel="stylesheet" type="text/css" href="assets/css/iconos.css">
 	<link rel="icon" type="image/jpg" href="../assets/images/iconhg.png">
-
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 	<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
 	<title>Configuraciones</title>
 </head>
@@ -62,12 +62,13 @@
  	<input type="number" name="Varibale_phone" class="inTl" placeholder="Teléfono" value="<?php echo $phone; ?>">
  </fieldset>
 
- <button type="submit" class="Boton" name="update">
+ <button  type="submit" class="Boton" name="update">
  	<span>Guardar cambios!</span>
 </button>
  </div>
 </form>
   <?php require 'partials/menu.php' ?>
+  <script type="text/javascript" src="assets/js/alert.js"></script>
  <script src="http://code.jquery.com/jquery-latest.js"></script>
 </body>
 </html>
