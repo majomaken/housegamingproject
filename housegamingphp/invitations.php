@@ -4,7 +4,7 @@
   if (!isset($_SESSION['userr'])) {
       echo '<script> window.location="index.php"; </script>';
   }
-  $msm = '';
+  $msm = "";
   if (isset($_SESSION['userr'])) {
       $id = $_SESSION['id'];
       $inviquery = "SELECT * FROM invitations WHERE InviReceive='$id' AND InviStatus='PENDING';";
@@ -106,7 +106,7 @@
               <?php echo "Tienes una invitacón de ".$ownerteam['UsNickname']; ?>
               <?php  echo "$inviMsg"; ?>
             </p>
-            <p><?php echo $msm; ?></p>
+            <p class="invi"><?php echo $msm; ?></p>
             <input  id="prueba" class="aceptar" type="submit" name="accept" value="Aceptar">
             <input id="prueba1" class="rechazar" type="submit" name="rejected" value="Rechazar">
 

@@ -64,6 +64,9 @@ if (isset($_POST['invi'])) {
       }
     }
 }
+// if (isset()$_POST['deleteplayer']) {
+//     $deleteplayersql = "UPDATE FROM `equip` WHERE EquipMenber2=''";
+// }
 if (isset($_POST['delete'])) {
     $delete = "DELETE FROM `equip` WHERE `equip`.`EquipCreator` = '$id';";
     $deleteteam = mysqli_query($Conectar, $delete);
@@ -108,7 +111,11 @@ if (isset($_POST['delete'])) {
          <li><?php echo $ownexecutes['UsNickname']; ?> (Lider)</li>
          <?php while ($teamnicksex = mysqli_fetch_array($team)) : ?>
            <input class="m1" type="text" value="<?php echo $teamnicksex['UsNickname']; ?>">
-           <button type="submit" class="eliminar">Expulsar jugador</button>
+           <form class="" action="equipoconfi.php" method="post">
+
+             <input type="submit" class="eliminar" value="Expulsar jugador" name="deleteplayer">
+
+           </form>
      <?php endwhile; ?>
 
      <?php endif; ?>
