@@ -63,11 +63,14 @@ if (isset($_POST['invi'])) {
       }
     }
 }
-  if (isset($deleteteam))
+if (isset($_POST['delete'])) {
+    $delete = "DELETE FROM `equip` WHERE `equip`.`EquipId` = '$id';";
+    $deleteteam = mysqli_query($Conectar, $delete);
+}
+  if ($deleteteam = true)
   {
     $delmsm = "El equipo".$sqls['EquipName']." a sido eliminado correctamente";
   }
-
  ?>
  <!DOCTYPE>
  <html>
@@ -121,7 +124,9 @@ if (isset($_POST['invi'])) {
     <button type="bottom" class="elegirh">
       <span>Examinar</span>
     </button>
-    <input type="submit" class="elimininarequipo" value="¡Eliminar equipo!">
+
+    <input type="submit" class="elimininarequipo" value="¡Eliminar equipo!" name="delete">
+    <p class="msm"><?= $delmsm; ?></p>
   </div>
 <script src="http://code.jquery.com/jquery-latest.js"></script>
 <script type="text/javascript" src="assets/js/abrir.js"></script>
