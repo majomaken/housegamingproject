@@ -14,6 +14,7 @@
   ?>
 </div>
 <label class="Nombre"><h2><?php echo "Welcome ". $nickname['UsNickname'];?></label></h2>
+<li><a href="perfil.php">Perfil</li></a>
     <li><a href="esports.php">Noticias</li></a>
     <li><a href="Equip.php">Equipo</li></a>
     <li><a href="invitations.php">Invitaciones</li></a>
