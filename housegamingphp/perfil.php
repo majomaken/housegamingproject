@@ -37,7 +37,7 @@ $ciudad=mysqli_fetch_array($consulta);
   <link rel="stylesheet" type="text/css" href="assets/css/iconos.css">
   <link rel="stylesheet" type="text/css" href="assets/css/stylep.css">
   <link rel="stylesheet" type="text/css" href="assets/css/perfil.css">
-  <title>Noticias</title>
+  <title>Perfil</title>
   <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
   <link rel="icon" type="image/jpg" href="../images/iconhg.png">
 </head>
@@ -70,7 +70,7 @@ $ciudad=mysqli_fetch_array($consulta);
 <div class="gris">
   <div id="particles-js"></div>
   <label class="juegos">Juegos y ligas:<br></label>
-  <label name="Varibale_equipos" class="lista">-League of legends<br><img src="assets/images/diamond.png"><br>-Paladins<br><img class="ligaas"src="assets/images/ligas.png"></label>
+  <label name="Varibale_equipos" class="lista">-League of legends<br><img src="assets/images/lolr.jpg"><br>-Paladins<br><img class="ligaas"src="assets/images/paladins.jpg"></label>
   <label class="equipo">Equipo:</label><br>
   <label name="Varibale_nombreequipo" class="team"><?php echo $menbers['EquipName'];?></label>
   <label class="ciudadd">Ciudad:</label><br>
