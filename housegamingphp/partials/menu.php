@@ -11,38 +11,16 @@
     echo '<img class="imgd" src="'.$icono['AvatarSrc'].'" id="modal">';
     $nick=mysqli_query($Conectar,"SELECT UsNickname From user where UsHGTAG='$id'");
     $nickname=mysqli_fetch_array($nick);
-    if (isset($_SESSION['userr'])) {
-        $id = $_SESSION['id'];
-        $inviquery = "SELECT * FROM invitations WHERE InviReceive='$id' AND InviStatus='PENDING';";
-        $inviUs = mysqli_query($Conectar, $inviquery);
-        $inviUs = mysqli_fetch_array($inviUs);
-        $inviMsg= $inviUs['InviMsg'];
-        $inviStatus = $inviUs['InviStatus'];
-        $inviUsid = $inviUs['InviSend'];
-        $inviUsidR = $inviUs['InviReceive'];
-    }
   ?>
 </div>
-<label class="Nombre"><h2><?php echo "Bienvenido ". $nickname['UsNickname'];?></label></h2>
+<label class="Nombre"><h2><?php echo "Welcome ". $nickname['UsNickname'];?></label></h2>
 <li><a href="perfil.php">Perfil</li></a>
     <li><a href="esports.php">Noticias</li></a>
     <li><a href="Equip.php">Equipo</li></a>
-
-    <li><a href="invitations.php">Invitaciones
-      <?php if ($inviUs['InviReceive'] == $id && $inviUs['InviStatus'] == 'PENDING'): ?>
-         <i class="fas fa-exclamation"></i>
-       <?php else: ?>
-       <?php endif; ?></li></a>
-    <li><a href="Configuraciones.php">Configuración</li></a>
-    <li><a href="Regis api/regislol.php">Registro Juegos</li></a>
-    <li><a href="Regis api/api.php">Juegos</li></a>
+    <li><a href="invitations.php">Invitaciones</li></a>
+    <li><a href="Configuraciones.php">Configuraciones</li></a>
+    <li style="background:rgba(0, 173, 239, 0.4)"><a href="CerrarSesion.php">Cerrar sesión</li></a>
   </ul>
-
-  <a href="CerrarSesion.php">
-    <button type="button" class="Logout">
-      <span>Cerrar sesión</span>
-    </button>
-</a>
 </div>
 <div id="lamascara" class="mascara">
 	 <div class="modall">
