@@ -18,6 +18,8 @@
     <li><a href="Equip.php">Equipo</li></a>
     <li><a href="invitations.php">Invitaciones</li></a>
     <li><a href="Configuraciones.php">Configuraciones</li></a>
+    <li><a href="Regis api/regislol.php">Registro Juegos</li></a>
+    <li><a href="Regis api/api.php">Juegos</li></a>
   </ul>
 
   <a href="CerrarSesion.php">
