@@ -17,9 +17,21 @@
 <li><a href="perfil.php">Perfil</li></a>
     <li><a href="esports.php">Noticias</li></a>
     <li><a href="Equip.php">Equipo</li></a>
+<<<<<<< HEAD
     <li><a href="invitations.php">Invitaciones</li></a>
     <li><a href="Configuraciones.php">Configuraciones</li></a>
     <li style="background:rgba(0, 173, 239, 0.4)"><a href="CerrarSesion.php">Cerrar sesión</li></a>
+=======
+
+    <li><a href="invitations.php">Invitaciones
+      <?php if ($inviUs['InviReceive'] == $id && $inviUs['InviStatus'] == 'PENDING'): ?>
+         <i class="fas fa-exclamation"></i>
+       <?php else: ?>
+       <?php endif; ?></li></a>
+    <li><a href="Configuraciones.php">Configuración</li></a>
+    <li><a href="Regis api/regislol.php">Registro de Juegos</li></a>
+    <li><a href="Regis api/api.php">Juegos</li></a>
+>>>>>>> a61fc4d639748891dad64e5077b5b7e9c8278d76
   </ul>
 </div>
 <div id="lamascara" class="mascara">
