@@ -10,6 +10,7 @@ body{
     background-image: url('../images/Fondo1.jpg');
     background-size:cover;
     background-attachment:fixed;
+    text-decoration: none;
 }
 
 #particles-js {
@@ -308,6 +309,7 @@ body{
 
 }
  footer{
+   text-decoration: none;
     position:absolute;
    top:250%;
     width:100%;
@@ -379,7 +381,7 @@ body{
 }
  .information a{
      text-decoration: none;
-     color: #C7C7C7;
+     color: #white;
 }
  @media screen and (max-width: 1100px){
      .container-body{

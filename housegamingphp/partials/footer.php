@@ -49,7 +49,7 @@
             © 2018 Todos los derechos reservados | HouseGaming
         </div>
         <div class="Information">
-            <a href="">Información compañia</a> | <a href="privacy.php">Privacidad y politica </a>|<a href="terminos.php"> Terminos y condiciones</a>
+            <a href="Nosotros.php">Información compañia</a> | <a href="privacy.php">Privacidad y politica </a>|<a href="terminos.php"> Terminos y condiciones</a>
         </div>
     </div>
 </footer>

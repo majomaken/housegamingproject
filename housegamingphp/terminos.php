@@ -121,9 +121,9 @@
                </section>
           </article>
           <section class="volversection">
-               <h1><a class="volverbutton" href="signup.html">Crear una cuenta</a></h1>
+               <h1><a class="volverbutton" href="signup.php">Crear una cuenta</a></h1>
                <br>
-               <h3><a class="volverbutton" href="index.html">volver a la pagina principal</a></h3>
+               <h3><a class="volverbutton" href="index.php">volver a la pagina principal</a></h3>
 
           </section>
 

@@ -197,9 +197,12 @@ if (isset($_POST['cteam'])) {
 <html>
 <head>
     <meta charset="utf-8">
+    <script src=" http://localhost:35729/livereload.js"></script>
+
     <link rel="stylesheet" type="text/css" href="assets/css/equip.css">
     <link rel="stylesheet" type="text/css" href="assets/css/stylep.css">
     <link rel="stylesheet" type="text/css" href="assets/css/iconos.css">
+    <script type="text/javascript" src="assets/js/all.js"></script>
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
     <link rel="icon" type="image/jpg" href="../assets/images/iconhg.png">
     <title>Equipo</title>
@@ -213,7 +216,6 @@ if (isset($_POST['cteam'])) {
             <?php else: ?>
               <label class="crear">CREA TU EQUIPO AHORA</label>
               <form method="post" action="Equip.php">
-                  <img src="assets/images/Menu.png" class="menu">
                     <input type="text" name="teamname" placeholder="Nombre de Equipo" class="teamname">
                     <input type="text" name="player2" placeholder="Jugador1" class="player1">
                     <input type="text" name="player3" placeholder="Jugador2" class="player2">
@@ -225,16 +227,10 @@ if (isset($_POST['cteam'])) {
             <?php endif; ?>
             <p style="color: white;"><?= $msm;  ?></p>
             <p style="color: white;"><?= $msm;  ?></p>
-
       </div>
       <?php require 'partials/menu.php' ?>
-      <a href="CerrarSesion.php">
-        <button type="button" class="Logout">
-          <span>Cerrar sesión</span>
-        </button>
-    </a>
+
       <script src="http://code.jquery.com/jquery-latest.js"></script>
-      <script type="text/javascript" src="assets/js/abrir.js"></script>
     </body>
 </html>
 <!-- <form class="" action="Equip.php" method="post">

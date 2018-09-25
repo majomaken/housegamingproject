@@ -4,7 +4,7 @@
   if (!isset($_SESSION['userr'])) {
       echo '<script> window.location="index.php"; </script>';
   }
-  $msm = '';
+  $msm = "";
   if (isset($_SESSION['userr'])) {
       $id = $_SESSION['id'];
       $inviquery = "SELECT * FROM invitations WHERE InviReceive='$id' AND InviStatus='PENDING';";
@@ -83,10 +83,12 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
     <link rel="stylesheet" href="assets/css/stylep.css">
     <link rel="stylesheet" href="assets/css/invitaciones.css">
     <link rel="stylesheet" type="text/css" href="assets/css/iconos.css">
-
+    <script type="text/javascript" src="assets/js/all.js"></script>
     <script src="http://localhost:35729/livereload.js"></script>
 
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -100,22 +102,23 @@
         <form method="post" action="invitations.php">
             <img src="assets/images/Menu.png" class="menu">
             <?php if ($inviStatus == 'PENDING'): ?>
-              <p>
+              <p class="invi">
               <?php echo "Tienes una invitacón de ".$ownerteam['UsNickname']; ?>
               <?php  echo "$inviMsg"; ?>
             </p>
-            <p><?php echo $msm; ?></p>
-            <input  class="aceptar" type="submit" name="accept" value="Aceptar">
-            <input class="rechazar" type="submit" name="rejected" value="Rechazar">
+            <p class="invi"><?php echo $msm; ?></p>
+            <input  id="prueba" class="aceptar" type="submit" name="accept" value="Aceptar">
+            <input id="prueba1" class="rechazar" type="submit" name="rejected" value="Rechazar">
 
           <?php else : ?>
-          <p class="texto" style="color: white;">No tienes invitaciónes</p>
+          <p class="texto" style="color: white;">No tienes invitaciones</p>
           <?php endif; ?>
 
         </form>
       </div>
     </div>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript" src="assets/js/invi.js"></script>
     <script type="text/javascript" src="assets/js/abrir.js"></script>
   </body>
 </html>

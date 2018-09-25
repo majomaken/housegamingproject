@@ -23,11 +23,28 @@ body{
   height:100%;
 }
 .miembros{
-  position:absolute;
+  position:relative;
   top:10%;
   left:13%;
   color:#FFF;
   font-size:220%;
+}
+.invit{
+  position:relative;
+  margin-left: 45%;
+	width:220px;
+	height:30px;
+	background:rgba(0,0,0,.7);
+	color:#FFF
+}
+.invitSend{
+  cursor:pointer;
+  position:relative;
+  height:4%;
+  width:10%;
+  background:rgba(255, 0, 0, 0.5);
+  border:1px solid red;
+  color:#FFF;
 }
 .m1{
   position:relative;
@@ -37,6 +54,11 @@ body{
 	left:42%;
 	background:rgba(0,0,0,.7);
 	color:#FFF
+}
+.msm {
+  color: white;
+  position: relative;
+  text-align: center;
 }
 .m2{
   position:absolute;
@@ -162,7 +184,7 @@ color:#FFF;
 .elimininarequipo{
   cursor:pointer;
   position:absolute;
-  bottom:3%;
+  bottom:5%;
   left:33%;
   height:4%;
   width:10%;

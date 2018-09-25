@@ -18,7 +18,7 @@ function launchParticlesJS(tag_id, params){
       h: canvas_el.offsetHeight
     },
     particles: {
-      color: '#fff',
+      color: '#00afef',
       color_random: false,
       shape: 'circle', // "circle", "edge" or "triangle"
       opacity: {
@@ -163,7 +163,7 @@ function launchParticlesJS(tag_id, params){
   /* detect retina */
   if(pJS.retina_detect && window.devicePixelRatio > 1){
     pJS.retina = true;
-  
+
     pJS.canvas.pxratio = window.devicePixelRatio
     pJS.canvas.w = pJS.canvas.el.offsetWidth * pJS.canvas.pxratio;
     pJS.canvas.h = pJS.canvas.el.offsetHeight * pJS.canvas.pxratio;
@@ -237,7 +237,7 @@ function launchParticlesJS(tag_id, params){
       }else{
         pJS.fn.vendors.interactivity.removeParticles(missing_particles);
       }
-      
+
     }
   };
 
@@ -312,7 +312,7 @@ function launchParticlesJS(tag_id, params){
     }
 
     pJS.canvas.ctx.fill();
-    
+
   };
 
   pJS.fn.particlesCreate = function(){
@@ -355,7 +355,7 @@ function launchParticlesJS(tag_id, params){
           else if(p.x + p.radius < 0) p.x = pJS.canvas.w + p.radius;
           if(p.y - p.radius > pJS.canvas.h) p.y = p.radius;
           else if(p.y + p.radius < 0) p.y = pJS.canvas.h + p.radius;
-        break;        
+        break;
       }
 
 

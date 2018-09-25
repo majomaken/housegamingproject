@@ -1,0 +1,124 @@
+body{
+  font-family: 'Roboto', sans-serif;
+}
+.negro{
+  position:relative;
+  width:100%;
+  background:rgba(0, 0, 0, 0.5);
+
+}
+.imgd1{
+width:200px;
+height:200px;
+position:relative;
+left:6%;
+top:2%;
+}
+.nombre{
+  color:#FFF;
+  position:absolute;
+  left:23%;
+  top:0%;
+  font-size:200%;
+}
+.liga{
+  background:rgba(0, 173, 239,);
+font-size:80%;
+}
+.blanco{
+  position:relative;
+  background:rgba(255, 255, 255, 0.4);
+}
+.blanco h2{
+  padding:10px;
+  margin:0;
+  background: rgba(0,0,0,0.4);
+}
+.blanco ul{
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+.blanco a{
+  outline:1px solid #00afef;
+  transition: all 0.7s;
+  display:block;
+  color:#fff;
+  text-decoration:none;
+
+}
+.blanco li{
+  transition: all 0.7s;
+}
+.gris{
+  position:relative;
+  width:100%;
+  background:rgba(0, 0, 0, 0.5);
+}
+
+#particles-js {
+    position:absolute;
+    width:100%;
+    height:100%;
+   background:rgba(0,0,0,.7);
+
+}
+.team{
+  color:#fff;
+  position:absolute;
+  left:25%;
+top:8%;
+  font-size:160%;
+}
+
+.juegos{
+  color:#00afef;
+  left:1%;
+  position:relative;
+  font-size:210%;
+
+}
+.equipo{
+  color:#00afef;
+  font-size:210%;
+  position:absolute;
+  left:25%;
+ top:0%;
+}
+.lista{
+  color:#fff;
+  position:relative;
+  left:1%;
+  top:0;
+  font-size:160%;
+}
+.ligaicono{
+  position:relative;
+  left:7%;
+}
+.ligaicono1{
+  width:20%;
+
+}
+.ligaas{
+  position:relative;
+  margin-top:2%;
+  left:2%;
+}
+.ciudadd{
+  color:#00afef;
+  font-size:210%;
+  position:absolute;
+  left:45%;
+ top:0%;
+}
+.ciudad{
+  color:#fff;
+  position:absolute;
+  left:45%;
+top:8%;
+  font-size:160%;
+  color:#fff;
+  font-size:160%;
+
+}
