@@ -1,4 +1,10 @@
-    		.mascara {
+
+.imag:hover {
+  transform : scale(1.1);
+  z-index: 1;
+  transition-duration: 1s;
+}
+.mascara {
  display: none;
  position: fixed;
  z-index: 1;
@@ -33,7 +39,17 @@
 	height: 70px;
 	width: 70px;
 	margin-right: 15px;
+  cursor: pointer;
 }
+.imag:active{
+  border: 1px solid black;
+    border-color:
+}
+.imag:checked {
+  border: 1px solid black;
+    border-color:
+}
+
 .radioo{
 	display: none;
 }

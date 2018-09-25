@@ -72,12 +72,9 @@
 
                 <ul id="help-links">
                     <li>
-                        <a href="signup.php">Crea una cuenta de HG gratis</a>
+                        <a href="signup.php">¡Crea una cuenta en HG gratis!</a>
                     </li>
 
-                    <li>
-                        <a href="#">¿No puedes iniciar sesión?</a>
-                    </li>
                 </ul>
         </div>
         <script src="http://code.jquery.com/jquery-latest.js"></script>

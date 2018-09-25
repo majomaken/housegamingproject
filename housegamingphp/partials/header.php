@@ -14,7 +14,7 @@
                     <button class="login-hg" onclick="window.location.href='login.php';">Login</button>
                 </li>
                 <li>
-                    <a id="kevin" href="signup.php">Crear una cuenta gratis</a>
+                    <a id="kevin" href="signup.php">¡Crear una cuenta gratis!</a>
                 </li>
                 </li>
             </ul>
