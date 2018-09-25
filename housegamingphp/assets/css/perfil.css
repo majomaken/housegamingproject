@@ -11,7 +11,6 @@ body{
 .imgd1{
 width:200px;
 height:200px;
-border-radius:100%;
 position:relative;
 left:6%;
 top:2%;
@@ -122,5 +121,41 @@ font-size:80%;
   position:relative;
   left:0;
  top:20px;
+}
 
+.ligas{
+  color:#00afef;
+  font-size:130%;
+  position:relative;
+  left:60%;
+  top:0%;
+}
+
+.liga{
+  color:#fff;
+  font-size:130%;
+  position:relative;
+  left:60%;
+ top:0%;
+
+}
+.nivel{
+  color:#00afef;
+  font-size:130%;
+  position:relative;
+  left:40%;
+ top:0%;
+}
+.level{
+  color:#fff;
+  font-size:130%;
+  position:relative;
+  left:40%;
+ top:0%;
+
+}
+
+#lol{
+  margin-left: 75%;
+  margin-top: -10px;
 }
