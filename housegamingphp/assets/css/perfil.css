@@ -1,6 +1,7 @@
 body{
   font-family: 'Roboto', sans-serif;
 }
+
 .negro{
   position:relative;
   width:100%;
@@ -25,29 +26,31 @@ top:2%;
   background:rgba(0, 173, 239,);
 font-size:80%;
 }
-.blanco{
+.blancos{
   position:relative;
   background:rgba(255, 255, 255, 0.4);
 }
-.blanco h2{
+.blancos h2{
   padding:10px;
   margin:0;
   background: rgba(0,0,0,0.4);
 }
-.blanco ul{
+.blancos ul{
   list-style:none;
   padding:0;
   margin:0;
 }
-.blanco a{
-  outline:1px solid #00afef;
+.blancos a{
+  border-top:1px solid #00afef;
+  border-bottom:1px solid #00afef;
+
   transition: all 0.7s;
   display:block;
   color:#fff;
   text-decoration:none;
 
 }
-.blanco li{
+.blancos li{
   transition: all 0.7s;
 }
 .gris{
