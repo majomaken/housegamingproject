@@ -27,12 +27,15 @@
 <li><a href="perfil.php">Perfil</li></a>
     <li><a href="esports.php">Noticias</li></a>
     <li><a href="Equip.php">Equipo</li></a>
+
     <li><a href="invitations.php">Invitaciones
       <?php if ($inviUs['InviReceive'] == $id && $inviUs['InviStatus'] == 'PENDING'): ?>
          <i class="fas fa-exclamation"></i>
        <?php else: ?>
        <?php endif; ?></li></a>
     <li><a href="Configuraciones.php">Configuración</li></a>
+    <li><a href="Regis api/regislol.php">Registro Juegos</li></a>
+    <li><a href="Regis api/api.php">Juegos</li></a>
   </ul>
 
   <a href="CerrarSesion.php">
