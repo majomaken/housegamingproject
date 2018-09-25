@@ -13,10 +13,11 @@
           <article style="color:#dfc7c7;">
                <h1>Como eliminar una equipo</h1>
                <ol type="1" class="numberlist">
-                    <li><img src="ayudasIMG/eliminarequipo/eliminar1.png"></li>
-                    <li><img src="ayudasIMG/eliminarequipo/eliminar2.png"></li>
-                    <li><img src="ayudasIMG/eliminarequipo/eliminar3.png"></li>
-                    <li><img src="ayudasIMG/eliminarequipo/eliminar4.png"></li>
+                    <li><img class="img1" src="ayudasIMG/eliminarequipo/eliminar1.png"></li>
+                    <li><img class="img2" src="ayudasIMG/eliminarequipo/eliminar2.png"></li>
+                    <li><img class="img3" src="ayudasIMG/eliminarequipo/eliminar3.png"></li>
+                    <li><img class="img4" src="ayudasIMG/eliminarequipo/eliminar4.png"></li>
+
                </ol>
           </article>
           <section class="volversection">

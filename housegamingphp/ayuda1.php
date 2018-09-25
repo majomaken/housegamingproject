@@ -2,6 +2,8 @@
 <html lang="en" dir="ltr">
      <head>
           <meta charset="UTF-8">
+
+          <script src="http://localhost:35729/livereload.js"></script>
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
           <meta http-equiv="X-UA-Compatible" content="ie=edge">
           <script type="text/javascript" src="assets/js/all.js"></script>
@@ -13,11 +15,11 @@
           <article style="color:#dfc7c7;">
                <h1>Como crear una equipo</h1>
                <ol type="1" class="numberlist">
-                    <li><img src="ayudasIMG/crearequipo/crearequipo1.png"></li>
-                    <li><img src="ayudasIMG/crearequipo/crearequipo2.png"></li>
-                    <li><img src="ayudasIMG/crearequipo/crearequipo3.png"></li>
-                    <li><img src="ayudasIMG/crearequipo/crearequipo4.png"></li>
-                    <li><img src="ayudasIMG/crearequipo/crearequipo5.png"></li>
+                    <li><img class="img1" src="ayudasIMG/crearequipo/crearequipo1.png"></li>
+                    <li><img class="img2" src="ayudasIMG/crearequipo/crearequipo2.png"></li>
+                    <li><img class="img3" src="ayudasIMG/crearequipo/crearequipo3.png"></li>
+                    <li><img class="img4" src="ayudasIMG/crearequipo/crearequipo4.png"></li>
+                    <li><img class="img5" src="ayudasIMG/crearequipo/crearequipo5.png"></li>
                </ol>
           </article>
           <section class="volversection">
