@@ -30,9 +30,10 @@ background-size:100% 100%;
 border-bottom:solid 2px #FFF;
 }
 .contequipo{
-  position:absolute;
-  top:3%;
-  left:44%;
+  position:relative;
+  top:-3%;
+  margin-left: auto;
+  margin-right:auto;
   background:rgba(0, 0, 0, 0.7);
   width:230px;
   height:230px;
@@ -43,9 +44,10 @@ border-bottom:solid 2px #FFF;
 font-size:130%;
 }
 .conteam{
-  position:absolute;
-	top:41%;
-  right:39%;
+  position:relative;
+	top:270px;
+  margin-left: auto;
+  margin-right: auto;
 	width:15%;
 	height:5%;
   color:#FFF;
@@ -91,7 +93,7 @@ text-align:center;
   position:relative;
   width:70%;
   left:30%;
-  top:50%;
+  top:7.5%;
   background:rgba(255, 255, 255, 0.7);
 
   }
