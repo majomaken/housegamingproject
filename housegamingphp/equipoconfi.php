@@ -13,6 +13,7 @@ $menbers = mysqli_fetch_array($menbers);
 $ownerteam = "SELECT `user`.UsHGTAG, `user`.UsNickname FROM `user` INNER JOIN equip ON UsHGTAG=EquipCreator WHERE EquipCreator='$id' OR EquipMenber2='$id' OR EquipMenber3='$id' OR EquipMenber4='$id' OR EquipMenber5='$id' OR EquipMenber6='$id';";
 $ownexecute = mysqli_query($Conectar, $ownerteam);
 $ownexecutes = mysqli_fetch_array($ownexecute);
+$delmsm = "";
 
 $newplayer = $_POST['newplayer'];
 //Fetch HGTAG Menber2
@@ -63,14 +64,15 @@ if (isset($_POST['invi'])) {
       }
     }
 }
+// if (isset()$_POST['deleteplayer']) {
+//     $deleteplayersql = "UPDATE FROM `equip` WHERE EquipMenber2=''";
+// }
 if (isset($_POST['delete'])) {
-    $delete = "DELETE FROM `equip` WHERE `equip`.`EquipId` = '$id';";
+    $delete = "DELETE FROM `equip` WHERE `equip`.`EquipCreator` = '$id';";
     $deleteteam = mysqli_query($Conectar, $delete);
+    header("location:perfil.php");
 }
-  if ($deleteteam = true)
-  {
-    $delmsm = "El equipo".$sqls['EquipName']." a sido eliminado correctamente";
-  }
+
  ?>
  <!DOCTYPE>
  <html>
@@ -110,7 +112,11 @@ if (isset($_POST['delete'])) {
          <li><?php echo $ownexecutes['UsNickname']; ?> (Lider)</li>
          <?php while ($teamnicksex = mysqli_fetch_array($team)) : ?>
            <input class="m1" type="text" value="<?php echo $teamnicksex['UsNickname']; ?>">
-           <button type="submit" class="eliminar">Expulsar jugador</button>        
+           <form class="" action="equipoconfi.php" method="post">
+
+             <input type="submit" class="eliminar" value="Expulsar jugador" name="deleteplayer">
+
+           </form>
      <?php endwhile; ?>
 
      <?php endif; ?>
@@ -124,9 +130,14 @@ if (isset($_POST['delete'])) {
     <button type="bottom" class="elegirh">
       <span>Examinar</span>
     </button>
+<form class="" action="equipoconfi.php" method="post">
+  <input type="submit" class="elimininarequipo" value="¡Eliminar equipo!" name="delete">
+  <?php  if ($deleteteam == true): ?>
 
-    <input type="submit" class="elimininarequipo" value="¡Eliminar equipo!" name="delete">
-    <p class="msm"><?= $delmsm; ?></p>
+      <p class="msm"> <?php echo "El equipo ".$sqls['EquipName']." a sido eliminado correctamente"; ?></p>
+
+  <?php endif; ?>
+</form>
 
   </div>
 <script src="http://code.jquery.com/jquery-latest.js"></script>

@@ -184,12 +184,12 @@ if (isset($_POST['cteam'])) {
                 echo $menber6." ya tiene un equipo.";
             }
         }
-        echo "Tu equipo a sido creado";
+        echo "<script>alert('Equipo creado exitosamente, ¡Diviertete!')</script>";
         header ("Location: equipo.php");
 
       }
     } else {
-          $msm = "Llena el Nombre de Equipo";
+          echo"<script>alert('Llena el Nombre de Equipo')</script>";
     }
 }
 ?>
@@ -221,13 +221,14 @@ if (isset($_POST['cteam'])) {
                     <input type="text" name="player4" placeholder="Jugador3" class="player3">
                     <input type="text" name="player5" placeholder="Jugador4" class="player4">
                     <input type="text" name="player6" placeholder="Jugador5" class="player5">
-                <input type="submit" name="cteam" value="Crear Equipo" class="cteam">
+                <input type="submit" name="cteam" value="Crear equipo" class="cteam">
             </form>
             <?php endif; ?>
             <p style="color: white;"><?= $msm;  ?></p>
             <p style="color: white;"><?= $msm;  ?></p>
       </div>
       <?php require 'partials/menu.php' ?>
+      <script type="text/javascript" src="assets/js/alert.js"></script>
 
       <script src="http://code.jquery.com/jquery-latest.js"></script>
     </body>
