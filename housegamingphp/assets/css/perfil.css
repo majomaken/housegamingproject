@@ -1,5 +1,5 @@
 body{
-  font-family: 'Roboto', sans-serif;
+
 }
 
 .negro{
@@ -68,10 +68,10 @@ font-size:80%;
 }
 .team{
   color:#fff;
-  position:absolute;
-  left:25%;
-top:8%;
-  font-size:160%;
+  position:relative;
+  left:0;
+ top:10px;
+  font-size:130%;
 }
 
 .juegos{
@@ -83,10 +83,10 @@ top:8%;
 }
 .equipo{
   color:#00afef;
-  font-size:210%;
-  position:absolute;
-  left:25%;
- top:0%;
+  font-size:130%;
+  position:relative;
+  left:0;
+ top:10px;
 }
 .lista{
   color:#fff;
@@ -110,18 +110,16 @@ top:8%;
 }
 .ciudadd{
   color:#00afef;
-  font-size:210%;
-  position:absolute;
-  left:45%;
- top:0%;
+  font-size:130%;
+  position:relative;
+  left:0;
+ top:20px;
 }
 .ciudad{
   color:#fff;
-  position:absolute;
-  left:45%;
-top:8%;
-  font-size:160%;
-  color:#fff;
-  font-size:160%;
+  font-size:130%;
+  position:relative;
+  left:0;
+ top:20px;
 
 }
