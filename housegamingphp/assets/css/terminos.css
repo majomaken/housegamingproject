@@ -72,3 +72,44 @@ border-color: lightgray;
 border-style:dashed;
 border-width: 2px;
 }
+.img1{
+  position:relative;
+  left:10%;
+  width:80%;
+  height:80%;
+
+}
+.img2{
+  position:relative;
+  left:10%;
+  width:80%;
+  height:80%;
+  margin-top:2%;
+
+}
+.img3{
+  position:relative;
+  left:10%;
+  width:80%;
+  height:80%;
+  margin-top:2%;
+
+}
+.img4{
+  position:relative;
+  left:10%;
+  width:80%;
+  height:80%;
+  margin-top:2%;
+
+}
+.img5{
+  position:relative;
+  left:10%;
+  width:80%;
+  height:80%;
+  margin-top:2%;
+
+
+
+}
