@@ -13,7 +13,7 @@ $juego=$_POST['juego'];
 			}
 			else{
 				echo "<script> alert('No se han registrado sus datos con exito');</script>";
-			}	
+			}
 		}
 */
 ?>

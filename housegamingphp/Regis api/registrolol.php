@@ -9,7 +9,14 @@
 
 	<div id="cas">
 		<?php
-			error_reporting();
+		include 'conexion.php';
+		session_start();
+		error_reporting(0);
+
+		if (!isset($_SESSION['userr'])) {
+		    echo '<script> window.location="index.php"; </script>';
+		}
+		$id        = $_SESSION['id'];
 			$key="RGAPI-f7d0af1a-5aea-4a94-a35c-08f5d8d3cc69";
 
 			/*Mediante el siguiente if se obtiene la informacion basica del nick gracias a la variable isset que permite determinar si una variable esta definida*/
@@ -208,9 +215,9 @@
 			if (!isset($_SESSION['userr'])) {
 			    echo '<script> window.location="index.php"; </script>';
 			}
-					$registro= mysqli_query($Conectar,"INSERT INTO GameReg(GameNick, GameLevel, GameRange) values('$informacion', '$level', '$liga' )");
+					$registro= mysqli_query($Conectar,"INSERT INTO GameReg(UsHGTAG ,GameNick, GameLevel, GameRange) values('$id','$informacion', '$level', '$liga' )");
 
-					$registro2= mysqli_query($Conectar,"INSERT INTO game(GameName, GameServer) values('$game', '$Region' ) ");
+					$registro2= mysqli_query($Conectar,"INSERT INTO game(GameServer, GameName) values('$Region' , '$game') ");
 
 					if ($registro && $registro2) {
 						echo "<script> alert('Se han registrado sus datos con éxito');</script>";
