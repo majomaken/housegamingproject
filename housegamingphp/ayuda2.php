@@ -17,6 +17,7 @@
                     <li><img class="img2" src="ayudasIMG/eliminarequipo/eliminar2.png"></li>
                     <li><img class="img3" src="ayudasIMG/eliminarequipo/eliminar3.png"></li>
                     <li><img class="img4" src="ayudasIMG/eliminarequipo/eliminar4.png"></li>
+
                </ol>
           </article>
           <section class="volversection">

@@ -2,8 +2,8 @@
 <html lang="en" dir="ltr">
      <head>
           <meta charset="UTF-8">
-          <script src="http://localhost:35729/livereload.js"></script>
 
+          <script src="http://localhost:35729/livereload.js"></script>
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
           <meta http-equiv="X-UA-Compatible" content="ie=edge">
           <script type="text/javascript" src="assets/js/all.js"></script>

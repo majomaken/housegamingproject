@@ -156,7 +156,7 @@ h2{
 	background-color:rgba(140,140,140,0.5);
 	border: 2px solid #00947B;
 	font-family: Arial;
-	font-size: 150%; 
+	font-size: 150%;
 	margin:auto;
 	margin-top: 15%;
 	height:20%;
@@ -168,7 +168,7 @@ h2{
 	background-color:rgba(140,140,140,0.5);
 	border: 2px solid #000000;
 	font-family: Arial;
-	font-size: 150%; 
+	font-size: 150%;
 	margin:auto;
 	margin-top: 15%;
 	height:20%;
@@ -209,10 +209,10 @@ h2{
 .container-leaguePoints img {
 	min-width: 10%;
 }
-::-webkit-input-placeholder { color: white; } 
- 
-:-moz-placeholder { /* Firefox 18- */ color: white; } 
- 
-::-moz-placeholder { /* Firefox 19+ */ color: white; } 
- 
+::-webkit-input-placeholder { color: white; }
+
+:-moz-placeholder { /* Firefox 18- */ color: white; }
+
+::-moz-placeholder { /* Firefox 19+ */ color: white; }
+
 :-ms-input-placeholder { color: white; }

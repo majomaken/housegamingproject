@@ -38,7 +38,7 @@ $ciudad=mysqli_fetch_array($consulta);
   <link rel="stylesheet" type="text/css" href="assets/css/stylep.css">
   <link rel="stylesheet" type="text/css" href="assets/css/internoequip.css">
   <link rel="stylesheet" type="text/css" href="assets/css/perfil.css">
-
+  <link rel="stylesheet" type="text/css" href="assets/css/Api.css">
   <title>Perfil</title>
   <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
   <link rel="icon" type="image/jpg" href="../images/iconhg.png">
@@ -76,13 +76,15 @@ $ciudad=mysqli_fetch_array($consulta);
   <li><a href="perfil.php"><h2>Información</li></a></h2>
 </ul>
 </div>
-<div class="gris">
+
   <div id="particles-js"></div>
   <label class="juegos">Juegos y ligas:</label><br>
-  <label name="Varibale_equipos" class="lista">-League of legends<br><img src="assets/images/paladins.png"><br>-Paladins<br><img class="ligaas"src="assets/images/paladins.jpg"></label>
+  <label name="Varibale_equipos" class="lista">-League of legends
+</div>
+</div>
+</div>
+</div>
 
-</div>
-</div>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script type="text/javascript" src="assets/js/abrir.js"></script>
     <script src="Particulas/particles.js"></script>
