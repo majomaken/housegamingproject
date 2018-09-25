@@ -70,6 +70,7 @@ if (isset($_POST['invi'])) {
 if (isset($_POST['delete'])) {
     $delete = "DELETE FROM `equip` WHERE `equip`.`EquipCreator` = '$id';";
     $deleteteam = mysqli_query($Conectar, $delete);
+    header("location:perfil.php");
 }
 
  ?>

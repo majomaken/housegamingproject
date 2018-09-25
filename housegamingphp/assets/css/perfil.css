@@ -1,6 +1,7 @@
 body{
-  font-family: 'Roboto', sans-serif;
+
 }
+
 .negro{
   position:relative;
   width:100%;
@@ -10,6 +11,7 @@ body{
 .imgd1{
 width:200px;
 height:200px;
+border-radius:100%;
 position:relative;
 left:6%;
 top:2%;
@@ -25,29 +27,31 @@ top:2%;
   background:rgba(0, 173, 239,);
 font-size:80%;
 }
-.blanco{
+.blancos{
   position:relative;
   background:rgba(255, 255, 255, 0.4);
 }
-.blanco h2{
+.blancos h2{
   padding:10px;
   margin:0;
   background: rgba(0,0,0,0.4);
 }
-.blanco ul{
+.blancos ul{
   list-style:none;
   padding:0;
   margin:0;
 }
-.blanco a{
-  outline:1px solid #00afef;
+.blancos a{
+  border-top:1px solid #00afef;
+  border-bottom:1px solid #00afef;
+
   transition: all 0.7s;
   display:block;
   color:#fff;
   text-decoration:none;
 
 }
-.blanco li{
+.blancos li{
   transition: all 0.7s;
 }
 .gris{
@@ -65,10 +69,10 @@ font-size:80%;
 }
 .team{
   color:#fff;
-  position:absolute;
-  left:25%;
-top:8%;
-  font-size:160%;
+  position:relative;
+  left:0;
+ top:10px;
+  font-size:130%;
 }
 
 .juegos{
@@ -80,10 +84,10 @@ top:8%;
 }
 .equipo{
   color:#00afef;
-  font-size:210%;
-  position:absolute;
-  left:25%;
- top:0%;
+  font-size:130%;
+  position:relative;
+  left:0;
+ top:10px;
 }
 .lista{
   color:#fff;
@@ -107,18 +111,16 @@ top:8%;
 }
 .ciudadd{
   color:#00afef;
-  font-size:210%;
-  position:absolute;
-  left:45%;
- top:0%;
+  font-size:130%;
+  position:relative;
+  left:0;
+ top:20px;
 }
 .ciudad{
   color:#fff;
-  position:absolute;
-  left:45%;
-top:8%;
-  font-size:160%;
-  color:#fff;
-  font-size:160%;
+  font-size:130%;
+  position:relative;
+  left:0;
+ top:20px;
 
 }

@@ -54,7 +54,7 @@
 					echo "El nick no existe en la ragión que escogio";
 					exit();
 				}
-			
+
 		?>
 	</div>
 
@@ -110,7 +110,7 @@
 								echo '<img src="../assets/images/images_api/ligas/7.png" />'."<br>";
 							break;
 					}
-			
+
 					echo " Rango: ". ($datos2[0]["rank"])."<br>";
 					echo " Victorias: ". ($datos2[0]["wins"])."<br>";
 					echo " Derrotas: ". ($datos2[0]["losses"])."<br>";

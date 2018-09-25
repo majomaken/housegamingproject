@@ -76,7 +76,6 @@ $ciudad=mysqli_fetch_array($consulta);
 <label class="ciudadd">Ciudad:</label>
 <label class="ciudad"><?php echo $ciudad['UsCity'];?></label>
 
-
 </div>
 <div class="blancos">
 <ul>
@@ -121,9 +120,12 @@ $ciudad=mysqli_fetch_array($consulta);
   ?>
 </label>
 
-  
+
+  <div id="particles-js"></div>
+  <label class="juegos">Juegos y ligas:</label><br>
+  <label name="Varibale_equipos" class="lista">-League of legends
 </div>
-</div>
+
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script type="text/javascript" src="assets/js/abrir.js"></script>
     <script src="Particulas/particles.js"></script>
