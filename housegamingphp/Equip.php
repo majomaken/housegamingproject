@@ -202,6 +202,7 @@ if (isset($_POST['cteam'])) {
     <link rel="stylesheet" type="text/css" href="assets/css/equip.css">
     <link rel="stylesheet" type="text/css" href="assets/css/stylep.css">
     <link rel="stylesheet" type="text/css" href="assets/css/iconos.css">
+    <script type="text/javascript" src="assets/js/all.js"></script>
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
     <link rel="icon" type="image/jpg" href="../assets/images/iconhg.png">
     <title>Equipo</title>

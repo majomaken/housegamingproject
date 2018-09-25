@@ -153,14 +153,14 @@ create table invitations(
 create table GameReg(
      GameRegId int auto_increment unique,
      GameId int,
-     UsHGTAG int,
+     GameHGTAG int,
      GameNick Varchar(32) not null,
      GameLevel Varchar(32),
      GameRange Varchar(32),
      GameSince date,
      primary key (GameRegId),
      FOREIGN KEY (GameId) REFERENCES game(GameId) ON DELETE CASCADE ON UPDATE CASCADE,
-     FOREIGN KEY (UsHGTAG) REFERENCES `user`(UsHGTAG) ON DELETE CASCADE ON UPDATE CASCADE
+     FOREIGN KEY (GameHGTAG) REFERENCES `user`(UsHGTAG) ON DELETE CASCADE ON UPDATE CASCADE
 );
 /*create table promotions(
      PromoId Int auto_increment unique,

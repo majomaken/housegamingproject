@@ -111,6 +111,12 @@ a {
   width: 42%;
   max-width: 250px;
 }
+.set-sided {
+  width: 30%;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
 .set-sideb {
   margin-bottom: 10px;
   padding: 10px;
@@ -119,9 +125,12 @@ a {
 }
 .terms {
   color: #00afef;
-
 }
-
+legend {
+  color: #00afef;
+  padding: 1%;
+  font-size: 1.2em;
+}
 .container-actionbtn {
   display: block;
   text-align: center;
