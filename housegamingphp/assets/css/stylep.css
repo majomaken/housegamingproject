@@ -12,6 +12,7 @@ a:hover{
 }
  .body1{
    background:rgba(0,0,0,0.7);
+   overflow-x:hidden;
 }
 #trnegra{
 	width:100%;
@@ -43,11 +44,13 @@ a:hover{
  .left-panel h2{
      text-align:center;
      margin:0;
-     padding:10px;
+     padding:8px;
      background: rgba(0,0,0,0.4);
 }
 
  .left-panel ul{
+   position:relative;
+   top:-130px;
      list-style:none;
      padding:0;
      margin:0;
@@ -56,7 +59,7 @@ a:hover{
      display:block;
      color:#fff;
      text-decoration:none;
-     padding:10px;
+     padding:7px;
 }
  .left-panel li{
      outline:1px solid #00afef;
@@ -67,12 +70,13 @@ a:hover{
      border-left:5px solid #FFF;
 }
  .imgd{
-     position:absolute;
-     top:4%;
-     left:26%;
-     width:100px;
-     height:100px;
-     border-radius:20%;
+     position:relative;
+     top:70px;
+     margin-left:auto;
+     margin-right: auto;
+     width:150px;
+     height:150px;
+     border-radius:50%;
 
 
 }
@@ -217,11 +221,10 @@ a:hover{
 }
  .dt4{
      border:1px solid #00afef;
-     position:absolute;
-     top:75%;
+     position:relative;
+     top:4%;
      left:52%;
      width:33%;
-     height:14%;
      text-align:center;
      border-radius:10px;
      font-size:30px;
@@ -268,8 +271,8 @@ a:hover{
      cursor:pointer;
      border:1px solid white;
       border-bottom:none;
-     position:absolute;
-     top:92%;
+     position:relative;
+     top:62%;
      left:52%;
      width:33%;
      height:35%;
@@ -282,8 +285,8 @@ a:hover{
      text-align:center;
      border-radius:10px;
      font-size:30px;
-     position:absolute;
-     top:116%;
+     position:relative;
+     top:32%;
      left:52%;
      background-color:#1F1F1F;
      color:#FFF;
