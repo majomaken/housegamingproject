@@ -198,7 +198,7 @@
 			}
 				//Datos para registrar en base de datos
 					$level=$datos["summonerLevel"];
-					$liga=$datos2[0]["tier"];	
+					$liga=$datos2[0]["tier"];
 					$game="League of legends";
 		?>
 		<?php
@@ -208,17 +208,17 @@
 			if (!isset($_SESSION['userr'])) {
 			    echo '<script> window.location="index.php"; </script>';
 			}
-					$registro= mysqli_query($Conectar,"INSERT INTO gamereg(GameNick, GameLevel, GameRange) values('$informacion', '$level', '$liga' )");
+					$registro= mysqli_query($Conectar,"INSERT INTO GameReg(GameNick, GameLevel, GameRange) values('$informacion', '$level', '$liga' )");
 
-					$registro2= mysqli_query($Conectar,"INSERT INTO game(GameServer, GameName) values('$Region' , '$game') ");
+					$registro2= mysqli_query($Conectar,"INSERT INTO game(GameName, GameServer) values('$game', '$Region' ) ");
 
 					if ($registro && $registro2) {
 						echo "<script> alert('Se han registrado sus datos con éxito');</script>";
 					}
 					else{
 						echo "<script> alert('No se han registrado sus datos con éxito');</script>";
-					}		
-		?>	
+					}
+		?>
 	</div>
 </div>
 </body>

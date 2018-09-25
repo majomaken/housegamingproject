@@ -37,7 +37,7 @@
       exit;
     }
     if (isset($Terms)) {
-      $date = "$year.'-'.$month.'-'.$day";
+      $date = "$year"."-"."$month"."-"."$day";
       $Terms = 1;
       $Insert="INSERT into user(UsFirstname, UsLastname, UsNickname, UsBirthday, UsCity, UsEmail, UsPassword, UsPhone, UsAvatar, UsConditions) VALUES ('$Nombre','$Apellido', '$nick','$date','$Ciudad','$Email','$Password','$Phone', '$Avatar', '$Terms')";
       $IN=mysqli_query($Conectar,$Insert);
@@ -169,15 +169,15 @@
                        <option value="1945">1945</option>
                 </select>
                 <select class="set-sided" name="datebirthmonth">
-                      <option value="1">Enero</option>
-                      <option value="2">Febrero</option>
-                      <option value="3">Marzo</option>
-                      <option value="4">Abril</option>
-                      <option value="5">Mayo</option>
-                      <option value="6">Junio</option>
-                      <option value="7">Julio</option>
-                      <option value="8">Agosto</option>
-                      <option value="9">Septiembre</option>
+                      <option value="01">Enero</option>
+                      <option value="02">Febrero</option>
+                      <option value="03">Marzo</option>
+                      <option value="04">Abril</option>
+                      <option value="05">Mayo</option>
+                      <option value="06">Junio</option>
+                      <option value="07">Julio</option>
+                      <option value="08">Agosto</option>
+                      <option value="09">Septiembre</option>
                       <option value="10">Octubre</option>
                       <option value="11">Noviembre</option>
                       <option value="12">Diciembre</option>
