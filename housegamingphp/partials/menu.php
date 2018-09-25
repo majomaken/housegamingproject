@@ -34,7 +34,7 @@
        <?php else: ?>
        <?php endif; ?></li></a>
     <li><a href="Configuraciones.php">Configuración</li></a>
-    <li><a href="Regis api/regislol.php">Registro Juegos</li></a>
+    <li><a href="Regis api/regislol.php">Registro de Juegos</li></a>
     <li><a href="Regis api/api.php">Juegos</li></a>
   </ul>
 
