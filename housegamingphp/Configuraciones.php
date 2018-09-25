@@ -44,6 +44,7 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/Conf.css">
   <link rel="stylesheet" type="text/css" href="assets/css/iconos.css">
 	<link rel="icon" type="image/jpg" href="../assets/images/iconhg.png">
+  <script type="text/javascript" src="assets/js/all.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 	<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
 	<title>Configuraciones</title>

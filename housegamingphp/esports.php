@@ -15,7 +15,9 @@
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="assets/css/iconos.css">
     <link rel="stylesheet" type="text/css" href="assets/css/stylep.css">
-    <title>Tú perfil</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
+    <title>eSports</title>
+    <script type="text/javascript" src="assets/js/all.js"></script>
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
     <link rel="icon" type="image/jpg" href="../images/iconhg.png">
 </head>

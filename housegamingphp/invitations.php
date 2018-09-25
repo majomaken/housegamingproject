@@ -88,7 +88,7 @@
     <link rel="stylesheet" href="assets/css/stylep.css">
     <link rel="stylesheet" href="assets/css/invitaciones.css">
     <link rel="stylesheet" type="text/css" href="assets/css/iconos.css">
-
+    <script type="text/javascript" src="assets/js/all.js"></script>
     <script src="http://localhost:35729/livereload.js"></script>
 
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -111,7 +111,7 @@
             <input id="prueba1" class="rechazar" type="submit" name="rejected" value="Rechazar">
 
           <?php else : ?>
-          <p class="texto" style="color: white;">No tienes invitaciónes</p>
+          <p class="texto" style="color: white;">No tienes invitaciones</p>
           <?php endif; ?>
 
         </form>
